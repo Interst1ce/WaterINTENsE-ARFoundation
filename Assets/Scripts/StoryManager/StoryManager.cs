@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(HighlightManager))]
 [RequireComponent(typeof(AudioListener))]
 public class StoryManager : MonoBehaviour {
     public int currentStep;
@@ -21,16 +22,27 @@ public class StoryManager : MonoBehaviour {
     AudioClip missTapAudio;
 
     public List<Step> steps = new List<Step>();
+    Dictionary<int,List<GameObject>> objectTargets = new Dictionary<int,List<GameObject>>();
 
     bool interactionMatch;
 
-    private void Awake() {
+    private async void Awake() {
         audioSource = GetComponent<AudioSource>();
+        highlightManager = GetComponent<HighlightManager>();
+        await PopulateTargetDictionary();
+        GameObject.Find("EventSystem").GetComponent<StoryManager>().StartStory();
+    }
+
+    private async Task PopulateTargetDictionary() {
+        for(int i = 0; i < steps.Count; i++) {
+            objectTargets.Add(i,new List<GameObject>());
+            foreach (Target target in steps[i].targets) objectTargets[i].Add(GameObject.Find(target.objectTarget));
+            foreach (GameObject target in objectTargets[i]) Debug.Log("" + target);
+        }
     }
 
     void Update() {
-        EndStory();
-        StartStory();
+        //EndStory();
         for (int i = 0; i < Input.touchCount; i++) {
             Touch tap = Input.GetTouch(i);
             if (tap.phase == TouchPhase.Began) {
@@ -39,8 +51,10 @@ public class StoryManager : MonoBehaviour {
                     foreach (Target target in steps[currentStep].targets) {
                         interactionMatch = false;
                         StartCoroutine(DetectInput(target.interaction,tap.position));
-                        if (hit.transform.gameObject == target.objectTarget && interactionMatch) {
-                            ContinueStory(target);
+                        for(int j = 0; j < steps[currentStep].targets.Count - 1; j++) {
+                            if(hit.transform.gameObject == objectTargets[currentStep][j] && interactionMatch) {
+                                ContinueStory(target);
+                            }
                         }
                     }
                 }
@@ -58,8 +72,9 @@ public class StoryManager : MonoBehaviour {
     public async void StartStory() {
         PlayAudio(introAudio);
         await Task.Delay(TimeSpan.FromSeconds(introAudio.length));
-        foreach (Target target in steps[currentStep].targets) {
-            if (target.objectTarget != null) highlightManager.StartGlow(target.objectTarget);
+        foreach (GameObject target in objectTargets[0]) {
+            Debug.Log("" + target);
+            if (target != null) highlightManager.StartGlow(target);
         }
     }
 

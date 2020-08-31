@@ -27,8 +27,7 @@ public class ARObjectPlacement : MonoBehaviour {
                     scene.transform.position = new Vector3(hitPose.position.x,scene.transform.position.y,hitPose.position.z);
                     scene.transform.rotation = hitPose.rotation;
                     scene.transform.Rotate(0,180,0,Space.Self);
-                    StoryManager storyManager = GameObject.Find("EventSystem").GetComponent<StoryManager>();
-                    storyManager.StartStory();
+                    //GameObject.Find("EventSystem").GetComponent<StoryManager>().StartStory();
                 }
             }
         }

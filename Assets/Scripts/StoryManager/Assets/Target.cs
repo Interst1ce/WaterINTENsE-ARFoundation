@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class Target : ScriptableObject {
     public TargetType type;
     public Interaction interaction;
-    public GameObject objectTarget;
+    public string objectTarget;
     public Slider sliderTarget;
     public int targetStep;
     public AnimationClip targetAnim;
@@ -21,10 +21,10 @@ public class Target : ScriptableObject {
     }
 
     public enum Interaction {
+        Tap,
         SwipeUp,
         SwipeDown,
         SwipeLeft,
-        SwipeRight,
-        Tap
+        SwipeRight
     }
 }
