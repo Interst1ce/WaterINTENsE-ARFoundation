@@ -12,6 +12,8 @@ public class ARObjectPlacement : MonoBehaviour {
 
     static List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
+    public bool sceneSpawned = false;
+
     private void Start() {
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Application.targetFrameRate = 30;
@@ -20,14 +22,15 @@ public class ARObjectPlacement : MonoBehaviour {
     void Update() {
         if(Input.touchCount > 0) {
             Touch touch = Input.GetTouch(0);
-            if(touch.phase == TouchPhase.Began) {
+            if(touch.phase == TouchPhase.Began && !sceneSpawned) {
                 if (raycastManager.Raycast(touch.position,hits,TrackableType.PlaneWithinPolygon)) {
+                    sceneSpawned = true;
                     Pose hitPose = hits[0].pose;
                     scene.SetActive(true);
-                    scene.transform.position = new Vector3(hitPose.position.x,scene.transform.position.y,hitPose.position.z);
+                    scene.transform.position = hitPose.position;
                     scene.transform.rotation = hitPose.rotation;
                     scene.transform.Rotate(0,180,0,Space.Self);
-                    //GameObject.Find("EventSystem").GetComponent<StoryManager>().StartStory();
+                    GameObject.Find("EventSystem").GetComponent<StoryManager>().StartStory();
                 }
             }
         }

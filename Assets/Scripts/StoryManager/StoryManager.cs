@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
@@ -29,8 +30,8 @@ public class StoryManager : MonoBehaviour {
     private async void Awake() {
         audioSource = GetComponent<AudioSource>();
         highlightManager = GetComponent<HighlightManager>();
-        await PopulateTargetDictionary();
-        GameObject.Find("EventSystem").GetComponent<StoryManager>().StartStory();
+        //await PopulateTargetDictionary();
+        //GameObject.Find("EventSystem").GetComponent<StoryManager>().StartStory();
     }
 
     private async Task PopulateTargetDictionary() {
@@ -38,6 +39,7 @@ public class StoryManager : MonoBehaviour {
             objectTargets.Add(i,new List<GameObject>());
             foreach (Target target in steps[i].targets) objectTargets[i].Add(GameObject.Find(target.objectTarget));
             foreach (GameObject target in objectTargets[i]) Debug.Log("" + target);
+            await Task.Yield();
         }
     }
 
@@ -51,10 +53,14 @@ public class StoryManager : MonoBehaviour {
                     foreach (Target target in steps[currentStep].targets) {
                         interactionMatch = false;
                         StartCoroutine(DetectInput(target.interaction,tap.position));
+                        Debug.Log("" + interactionMatch);
                         for(int j = 0; j < steps[currentStep].targets.Count - 1; j++) {
+                            Debug.Log("Checking if valid object was tapped");
                             if(hit.transform.gameObject == objectTargets[currentStep][j] && interactionMatch) {
+                                Debug.Log("Continuing story");
                                 ContinueStory(target);
                             }
+                            Debug.Log("User didn't tap a valid object");
                         }
                     }
                 }
@@ -69,21 +75,33 @@ public class StoryManager : MonoBehaviour {
         }
     }
 
+    public void PlaySFX(AudioClip audio) {
+        if(audio != null) {
+            AudioSource source = gameObject.AddComponent<AudioSource>();
+            source.PlayOneShot(audio);
+            Destroy(source,audio.length);
+        }
+    }
+
     public async void StartStory() {
+        await PopulateTargetDictionary();
         PlayAudio(introAudio);
         await Task.Delay(TimeSpan.FromSeconds(introAudio.length));
         foreach (GameObject target in objectTargets[0]) {
             Debug.Log("" + target);
             if (target != null) highlightManager.StartGlow(target);
         }
+        currentStep = 0;
     }
 
     void ContinueStory(Target target) {
-        highlightManager.glow = false;
-        //play animation
-        //play naration/sfx
-        //run any extensions
-        //increment the step counter
+        if (!audioSource.isPlaying) {
+            highlightManager.glow = false;
+            PlayAudio(target.targetAudio);
+            //play animation
+            //run any extensions
+            currentStep++;
+        }
     }
 
     void EndStory() {

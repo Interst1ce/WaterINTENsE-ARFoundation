@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7724f3a7be35c474281dd776e9ae3b10, type: 3}
-  m_Name: Step_1Target
+  m_Name: Step_2Target_1
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: Safety Hat
+  objectTarget: Jigsaw
   sliderTarget: {fileID: 0}
-  targetStep: 0
+  targetStep: 2
   targetAnim: {fileID: 0}
   targetAudio: {fileID: 0}
   extensions:
