@@ -27,11 +27,9 @@ public class StoryManager : MonoBehaviour {
 
     bool interactionMatch;
 
-    private async void Awake() {
+    private void Awake() {
         audioSource = GetComponent<AudioSource>();
         highlightManager = GetComponent<HighlightManager>();
-        //await PopulateTargetDictionary();
-        //GameObject.Find("EventSystem").GetComponent<StoryManager>().StartStory();
     }
 
     private async Task PopulateTargetDictionary() {
