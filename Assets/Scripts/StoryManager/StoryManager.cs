@@ -16,6 +16,8 @@ public class StoryManager : MonoBehaviour {
     HighlightManager highlightManager;
 
     [SerializeField]
+    bool reviewMode = false;
+    [SerializeField]
     AudioClip introAudio;
     [SerializeField]
     AudioClip introSFX;
@@ -27,6 +29,9 @@ public class StoryManager : MonoBehaviour {
 
     bool interactionMatch;
 
+    Animator lastAnimator;
+    AnimationClip lastAnim;
+
     private void Awake() {
         audioSource = GetComponent<AudioSource>();
         highlightManager = GetComponent<HighlightManager>();
@@ -36,7 +41,6 @@ public class StoryManager : MonoBehaviour {
         for(int i = 0; i < steps.Count; i++) {
             objectTargets.Add(i,new List<GameObject>());
             foreach (Target target in steps[i].targets) objectTargets[i].Add(GameObject.Find(target.objectTarget));
-            foreach (GameObject target in objectTargets[i]) Debug.Log("" + target);
             await Task.Yield();
         }
     }
@@ -51,33 +55,14 @@ public class StoryManager : MonoBehaviour {
                     foreach (Target target in steps[currentStep].targets) {
                         interactionMatch = false;
                         StartCoroutine(DetectInput(target.interaction,tap.position));
-                        Debug.Log("" + interactionMatch);
-                        for(int j = 0; j < steps[currentStep].targets.Count - 1; j++) {
-                            Debug.Log("Checking if valid object was tapped");
-                            if(hit.transform.gameObject == objectTargets[currentStep][j] && interactionMatch) {
-                                Debug.Log("Continuing story");
+                        for(int j = 0; j < steps[currentStep].targets.Count; j++) {
+                            if (hit.transform.gameObject == objectTargets[currentStep][j] && interactionMatch) {
                                 ContinueStory(target);
-                            }
-                            Debug.Log("User didn't tap a valid object");
+                            } else PlaySFX(missTapAudio);
                         }
                     }
                 }
             }
-        }
-    }
-
-    public void PlayAudio(AudioClip audio) {
-        if(audio != null) {
-            audioSource.clip = audio;
-            audioSource.Play();
-        }
-    }
-
-    public void PlaySFX(AudioClip audio) {
-        if(audio != null) {
-            AudioSource source = gameObject.AddComponent<AudioSource>();
-            source.PlayOneShot(audio);
-            Destroy(source,audio.length);
         }
     }
 
@@ -86,19 +71,32 @@ public class StoryManager : MonoBehaviour {
         PlayAudio(introAudio);
         await Task.Delay(TimeSpan.FromSeconds(introAudio.length));
         foreach (GameObject target in objectTargets[0]) {
-            Debug.Log("" + target);
             if (target != null) highlightManager.StartGlow(target);
         }
         currentStep = 0;
     }
 
     void ContinueStory(Target target) {
-        if (!audioSource.isPlaying) {
+        if (!audioSource.isPlaying && (lastAnim == null || lastAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !lastAnimator.IsInTransition(0))) {
             highlightManager.glow = false;
-            PlayAudio(target.targetAudio);
-            //play animation
-            //run any extensions
-            currentStep++;
+            if (!reviewMode) {
+                if (!target.playAudioAfterAnim) {
+                    PlayAudio(target.targetAudio);
+                } else {
+                    PlayAudio(target.targetAudio,target.targetAnim.length);
+                }
+            }
+            Animator targetAnimator = GetTargetAnimator(GameObject.Find(target.objectTarget));
+            lastAnimator = targetAnimator;
+            lastAnim = target.targetAnim;
+            if (targetAnimator != null) targetAnimator.Play(target.targetAnim.name);
+            target.extensions.Invoke();
+            List<GameObject> highlightTargets = new List<GameObject>();
+            foreach(Target nextTarget in steps[currentStep + 1].targets) {
+                highlightTargets.Add(GameObject.Find(nextTarget.objectTarget));
+            }
+            highlightManager.StartGlow(highlightTargets,1f); //once animation and audio stuff is added adjust the delay to be the greater length of the two
+            currentStep = target.targetStep;
         }
     }
 
@@ -109,6 +107,28 @@ public class StoryManager : MonoBehaviour {
                 //pause the story
             }
         }
+    }
+
+    public void PlayAudio(AudioClip audio,float delay = 0) {
+        if (audio != null) {
+            audioSource.clip = audio;
+            audioSource.PlayDelayed(delay);
+        }
+    }
+
+    public void PlaySFX(AudioClip audio) {
+        if (audio != null) {
+            AudioSource source = gameObject.AddComponent<AudioSource>();
+            source.PlayOneShot(audio);
+            Destroy(source,audio.length);
+        }
+    }
+
+    Animator GetTargetAnimator(GameObject target) {
+        Animator animator = target.GetComponent<Animator>();
+        if (animator == null) animator = target.GetComponentInParent<Animator>();
+        if (animator == null) animator = target.transform.parent.GetComponentInParent<Animator>();
+        return animator;
     }
 
     IEnumerator DetectInput(Target.Interaction toCheck, Vector2 startPos) {

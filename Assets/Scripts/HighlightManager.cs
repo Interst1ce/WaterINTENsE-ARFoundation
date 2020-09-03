@@ -20,9 +20,22 @@ public class HighlightManager : MonoBehaviour {
         Glow();
     }
 
+    public void StartGlow(List<GameObject> highlightObjs) {
+        foreach (GameObject obj in highlightObjs) MatSwap(obj.GetComponent<MeshRenderer>());
+        glow = true;
+        Glow();
+    }
+
     public async void StartGlow(GameObject highlightObj, float delay) {
         await Task.Delay(TimeSpan.FromSeconds(delay));
         MatSwap(highlightObj.GetComponent<MeshRenderer>());
+        glow = true;
+        Glow();
+    }
+
+    public async void StartGlow(List<GameObject> highlightObjs, float delay) {
+        await Task.Delay(TimeSpan.FromSeconds(delay));
+        foreach (GameObject obj in highlightObjs) MatSwap(obj.GetComponent<MeshRenderer>());
         glow = true;
         Glow();
     }
@@ -56,5 +69,6 @@ public class HighlightManager : MonoBehaviour {
         }
         for (int i = 0; i < glowObjects.Count; i++) glowObjects[i].material = ogMats[i];
         glowObjects.Clear();
+        ogMats.Clear();
     }
 }

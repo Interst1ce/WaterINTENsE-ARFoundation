@@ -43,32 +43,12 @@ public class ARObjectPlacement : MonoBehaviour {
                             scene.transform.rotation = ghostScene.transform.rotation;
                             sceneSpawned = true;
                             //pull up the scaling UI
+                            //wait until user hit confirm button
+                            GameObject.Find("EventSystem").GetComponent<StoryManager>().StartStory();
                         }
                     }
                 }
             } else ghostScene.SetActive(false);
         }
-
-        //cast ray from center of the screen along the forward vector of the camera
-        //if ray hits trackable plane make ghost version of scene visible
-        //user taps on ghost version of the scene to place the full version of the scene
-        //scale and height sliders appear to allow fine tuning of placement
-        //user taps on UI button to confirm final placement
-        //start story
-        /*
-        if(Input.touchCount > 0) {
-            Touch touch = Input.GetTouch(0);
-            if(touch.phase == TouchPhase.Began && !sceneSpawned) {
-                if (raycastManager.Raycast(touch.position,hits,TrackableType.PlaneWithinPolygon)) {
-                    sceneSpawned = true;
-                    Pose hitPose = hits[0].pose;
-                    scene.SetActive(true);
-                    scene.transform.position = hitPose.position;
-                    scene.transform.rotation = hitPose.rotation;
-                    scene.transform.Rotate(0,180,0,Space.Self);
-                    GameObject.Find("EventSystem").GetComponent<StoryManager>().StartStory();
-                }
-            }
-        }*/
     }
 }

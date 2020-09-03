@@ -13,11 +13,12 @@ public class Target : ScriptableObject {
     public int targetStep;
     public AnimationClip targetAnim;
     public AudioClip targetAudio;
+    public bool playAudioAfterAnim;
     public UnityEvent extensions;
 
     public enum TargetType {
         Object,
-        Slider
+        Slider_NotImplementedYet
     }
 
     public enum Interaction {
