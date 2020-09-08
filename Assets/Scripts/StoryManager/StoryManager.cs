@@ -20,9 +20,10 @@ public class StoryManager : MonoBehaviour {
     [SerializeField]
     AudioClip introAudio;
     [SerializeField]
-    AudioClip introSFX;
+    AudioClip backgroundSFX;
     [SerializeField]
     AudioClip missTapAudio;
+    public List<AudioSource> loopingSFX = new List<AudioSource>();
 
     public List<Step> steps = new List<Step>();
     Dictionary<int,List<GameObject>> objectTargets = new Dictionary<int,List<GameObject>>();
@@ -46,7 +47,7 @@ public class StoryManager : MonoBehaviour {
     }
 
     void Update() {
-        //EndStory();
+        EndStory();
         for (int i = 0; i < Input.touchCount; i++) {
             Touch tap = Input.GetTouch(i);
             if (tap.phase == TouchPhase.Began) {
@@ -95,16 +96,19 @@ public class StoryManager : MonoBehaviour {
             foreach(Target nextTarget in steps[currentStep + 1].targets) {
                 highlightTargets.Add(GameObject.Find(nextTarget.objectTarget));
             }
-            highlightManager.StartGlow(highlightTargets,1f); //once animation and audio stuff is added adjust the delay to be the greater length of the two
+            if(target.targetAnim != null && target.targetAudio != null) {
+                highlightManager.StartGlow(highlightTargets,Mathf.Max(target.targetAnim.length,target.targetAudio.length));
+            } else highlightManager.StartGlow(highlightTargets,1f);
             currentStep = target.targetStep;
         }
     }
 
     void EndStory() {
-        if (currentStep == steps.Count && !audioSource.isPlaying && !finished) {
+        if (currentStep == steps.Count && !audioSource.isPlaying && !finished && (lastAnim == null || lastAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !lastAnimator.IsInTransition(0))) {
             finished = true;
             if (steps[currentStep]) {
-                //pause the story
+                GameObject.Find("PauseUI").GetComponent<PauseMenu>().Pause();
+                GameObject.Find("PlayButton").SetActive(false);
             }
         }
     }
@@ -116,11 +120,18 @@ public class StoryManager : MonoBehaviour {
         }
     }
 
-    public void PlaySFX(AudioClip audio) {
+    public void PlaySFX(AudioClip audio, bool loop = false) {
         if (audio != null) {
-            AudioSource source = gameObject.AddComponent<AudioSource>();
-            source.PlayOneShot(audio);
-            Destroy(source,audio.length);
+            if (loop) {
+                AudioSource source = gameObject.AddComponent<AudioSource>();
+                source.clip = audio;
+                source.loop = loop;
+                source.Play();
+                loopingSFX.Add(source);
+                //Destroy(source,audio.length);
+            } else {
+                audioSource.PlayOneShot(audio);
+            } 
         }
     }
 
