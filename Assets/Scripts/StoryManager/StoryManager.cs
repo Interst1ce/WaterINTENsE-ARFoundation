@@ -25,13 +25,19 @@ public class StoryManager : MonoBehaviour {
     AudioClip missTapAudio;
     public List<AudioSource> loopingSFX = new List<AudioSource>();
 
-    public List<Step> steps = new List<Step>();
+    public List<StepExt> steps = new List<StepExt>();
     Dictionary<int,List<GameObject>> objectTargets = new Dictionary<int,List<GameObject>>();
 
     bool interactionMatch;
 
     Animator lastAnimator;
     AnimationClip lastAnim;
+
+    [Serializable]
+    public struct StepExt {
+        public Step step;
+        public UnityEvent extensions;
+    }
 
     private void Awake() {
         audioSource = GetComponent<AudioSource>();
@@ -41,7 +47,7 @@ public class StoryManager : MonoBehaviour {
     private async Task PopulateTargetDictionary() {
         for(int i = 0; i < steps.Count; i++) {
             objectTargets.Add(i,new List<GameObject>());
-            foreach (Target target in steps[i].targets) objectTargets[i].Add(GameObject.Find(target.objectTarget));
+            foreach (Target target in steps[i].step.targets) objectTargets[i].Add(GameObject.Find(target.objectTarget));
             await Task.Yield();
         }
     }
@@ -53,10 +59,10 @@ public class StoryManager : MonoBehaviour {
             if (tap.phase == TouchPhase.Began) {
                 RaycastHit hit;
                 if (Physics.Raycast(Camera.main.ScreenPointToRay(tap.position),out hit)) {
-                    foreach (Target target in steps[currentStep].targets) {
+                    foreach (Target target in steps[currentStep].step.targets) {
                         interactionMatch = false;
                         StartCoroutine(DetectInput(target.interaction,tap.position));
-                        for(int j = 0; j < steps[currentStep].targets.Count; j++) {
+                        for(int j = 0; j < steps[currentStep].step.targets.Count; j++) {
                             if (hit.transform.gameObject == objectTargets[currentStep][j] && interactionMatch) {
                                 ContinueStory(target);
                             } else PlaySFX(missTapAudio);
@@ -91,9 +97,9 @@ public class StoryManager : MonoBehaviour {
             lastAnimator = targetAnimator;
             lastAnim = target.targetAnim;
             if (targetAnimator != null) targetAnimator.Play(target.targetAnim.name);
-            target.extensions.Invoke();
+            steps[currentStep].extensions.Invoke();
             List<GameObject> highlightTargets = new List<GameObject>();
-            foreach(Target nextTarget in steps[currentStep + 1].targets) {
+            foreach(Target nextTarget in steps[currentStep + 1].step.targets) {
                 highlightTargets.Add(GameObject.Find(nextTarget.objectTarget));
             }
             if(target.targetAnim != null && target.targetAudio != null) {
@@ -106,7 +112,7 @@ public class StoryManager : MonoBehaviour {
     void EndStory() {
         if (currentStep == steps.Count && !audioSource.isPlaying && !finished && (lastAnim == null || lastAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !lastAnimator.IsInTransition(0))) {
             finished = true;
-            if (steps[currentStep]) {
+            if (steps[currentStep].step) {
                 GameObject.Find("PauseUI").GetComponent<PauseMenu>().Pause();
                 GameObject.Find("PlayButton").SetActive(false);
             }

@@ -14,7 +14,6 @@ public class Target : ScriptableObject {
     public AnimationClip targetAnim;
     public AudioClip targetAudio;
     public bool playAudioAfterAnim;
-    public UnityEvent extensions;
 
     public enum TargetType {
         Object,
