@@ -47,6 +47,7 @@ public class HighlightManager : MonoBehaviour {
             Material ogMat = ogMats[ogMats.Count - 1];
             highlightMat = glowMat;
             highlightMat.SetTexture("Albedo",ogMat.mainTexture);
+            highlightMat.SetColor("Albedo_Tint",ogMat.color);
             highlightMat.SetTexture("Normal",ogMat.GetTexture("_BumpMap"));
             highlightMat.SetTexture("Metallic",ogMat.GetTexture("_MetallicGlossMap"));
             highlightMat.SetTexture("Occlusion",ogMat.GetTexture("_OcclusionMap"));

@@ -52,11 +52,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - HighlightIntensity: 1.6423225
-    - Smoothness: 1
+    - HighlightIntensity: 1
+    - Smoothness: 0
     - Vector1_46813515: 5
     - Vector1_B0B772FF: 1
     m_Colors:
+    - Color_19408109: {r: 1, g: 1, b: 1, a: 1}
     - Color_E2C685AC: {r: 8, g: 8, b: 0, a: 0}
-    - HighlightColor: {r: 2, g: 2, b: 0, a: 0}
+    - HighlightColor: {r: 2.1185474, g: 2.1185474, b: 0, a: 0}
   m_BuildTextureStacks: []
