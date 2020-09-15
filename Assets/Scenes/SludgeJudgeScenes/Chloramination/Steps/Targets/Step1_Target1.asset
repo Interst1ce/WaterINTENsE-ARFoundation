@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: Chloramination_Graph_1_7/Graph
+  objectTarget: Chart1_Graph
   sliderTarget: {fileID: 0}
   targetStep: 1
   targetAnim: {fileID: 1827226128182048838, guid: 7a22fba6c25196942aa430d68844ec91, type: 3}

@@ -947,6 +947,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 91e11c1588ce4dc4d9395a7bb731f1db, type: 2}
+    - target: {fileID: 6985191468526126516, guid: 7a22fba6c25196942aa430d68844ec91, type: 3}
+      propertyPath: m_Name
+      value: Chart1_Graph
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a22fba6c25196942aa430d68844ec91, type: 3}
 --- !u!4 &1872814702 stripped
@@ -1144,6 +1148,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba29a7c0616b3484ea627d4ca70959b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2052986618 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6985191468526126516, guid: 7a22fba6c25196942aa430d68844ec91, type: 3}
+  m_PrefabInstance: {fileID: 1872814701}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2052986619
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052986618}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3940992, y: 0.31533945, z: 1.5637078}
+  m_Center: {x: 0.2470496, y: -0.10766969, z: 0.75685394}
 --- !u!1 &2135473133
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,5 +1671,9 @@ PrefabInstance:
       propertyPath: steps.Array.data[0].extensions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 11400000, guid: 37e3781c8c9e4144fbe5c5a345469809, type: 2}
+    - target: {fileID: 8903520555988982160, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
+      propertyPath: missTapAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a9784e3ab5748d439c0888d8ba8d78a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
