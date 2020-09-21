@@ -17,3 +17,7 @@ MonoBehaviour:
     chapterSummary: 
     chapterIcon: {fileID: 21300000, guid: 53553cf5326fdd547b115f11da8c40cc, type: 3}
     chapterScene: 2
+  - chapterTitle: Titration
+    chapterSummary: 
+    chapterIcon: {fileID: 21300000, guid: 53553cf5326fdd547b115f11da8c40cc, type: 3}
+    chapterScene: 3
