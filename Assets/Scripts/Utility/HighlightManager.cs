@@ -57,17 +57,17 @@ public class HighlightManager : MonoBehaviour {
     }
 
     async void Glow() {
-        float t = 0;
+        //float t = 0;
         do {
-            t = Mathf.PingPong(Time.time,1);
-            foreach(MeshRenderer objRenderer in glowObjects) objRenderer.material.SetFloat("HighlightIntensity",Mathf.Lerp(1,4,t));
+            //t = Mathf.PingPong(Time.time,1);
+            //foreach(MeshRenderer objRenderer in glowObjects) objRenderer.material.SetFloat("HighlightIntensity",Mathf.Lerp(1,4,t));
             await Task.Yield();
         } while (glow);
-        while(t > 0) {
+        /*while(t > 0) {
             t -= Time.deltaTime;
             foreach(MeshRenderer objRenderer in glowObjects) objRenderer.material.SetFloat("HighlightIntensity",Mathf.Lerp(4,1,t));
             await Task.Yield();
-        }
+        }*/
         for (int i = 0; i < glowObjects.Count; i++) glowObjects[i].material = ogMats[i];
         glowObjects.Clear();
         ogMats.Clear();
