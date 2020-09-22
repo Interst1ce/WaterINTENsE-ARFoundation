@@ -493,6 +493,7 @@ GameObject:
   - component: {fileID: 1611842162}
   - component: {fileID: 1611842164}
   - component: {fileID: 1611842163}
+  - component: {fileID: 1611842165}
   m_Layer: 0
   m_Name: Chart1_Graph
   m_TagString: Untagged
@@ -565,6 +566,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611842161}
   m_Mesh: {fileID: -1826544233891484027, guid: 7a22fba6c25196942aa430d68844ec91, type: 3}
+--- !u!65 &1611842165
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611842161}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3940992, y: 0.31533945, z: 1.5637078}
+  m_Center: {x: 0.2470496, y: -0.10766969, z: 0.75685394}
 --- !u!1 &1848536715 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7753893311317267498, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
