@@ -8,6 +8,7 @@ public class HighlightManager : MonoBehaviour {
     public Material glowMat;
     List<Material> ogMats = new List<Material>();
     Material highlightMat;
+    //Material alphaHighlightMat;
     MeshRenderer objRenderer;
     //[HideInInspector]
     public bool glow = true;

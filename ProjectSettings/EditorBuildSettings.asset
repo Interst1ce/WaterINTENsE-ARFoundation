@@ -18,6 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SludgeJudgeScenes/Titration.unity
     guid: 6df6e1b41dba8624e81898f37081c857
   m_configObjects:
-    com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: 0aebba2708f4e1248a88d61171098cec, type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 0aebba2708f4e1248a88d61171098cec, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 8b6b54832a83b224cadcf75cdc03b537, type: 2}
     com.unity.xr.arkit.PlayerSettings: {fileID: 11400000, guid: 8b6b54832a83b224cadcf75cdc03b537, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c18b0c4c190adfa458234b4c5f67279d, type: 2}

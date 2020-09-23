@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Highlight Test
-  m_Shader: {fileID: -6465566751694194690, guid: 0f06ad031828a03478093cc7160514f7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 3cc8bf92e344cf74693908f0a755b4ba, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
@@ -53,10 +53,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - HighlightIntensity: 1
-    - Smoothness: 0
+    - Smoothness: 1
     - Vector1_46813515: 5
     - Vector1_B0B772FF: 1
     m_Colors:
+    - Albedo_Tint: {r: 0.58799994, g: 0.58799994, b: 0.58799994, a: 1}
     - Color_19408109: {r: 1, g: 1, b: 1, a: 1}
     - Color_E2C685AC: {r: 8, g: 8, b: 0, a: 0}
     - HighlightColor: {r: 2.1185474, g: 2.1185474, b: 0, a: 0}

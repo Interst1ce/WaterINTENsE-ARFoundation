@@ -61,7 +61,7 @@ ModelImporter:
       name: Chlorine Residual
       takeName: Take 001
       internalID: 0
-      firstFrame: 0
+      firstFrame: 20
       lastFrame: 1100
       wrapMode: 0
       orientationOffsetY: 0
