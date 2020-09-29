@@ -21,7 +21,22 @@ ModelImporter:
   - first:
       74: 4431989744644882228
     second: Empty SJ
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sludge_Judge_Mat
+    second: {fileID: 2100000, guid: 3c6beb9413352aa4e9a0fda222ac0f2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sludge_Judge_T_Mat
+    second: {fileID: 2100000, guid: 58b901d046d53dd4c9898866b133193e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sludge_Mat
+    second: {fileID: 2100000, guid: c45186288dd7187499e683a614b93172, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -286,7 +301,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
