@@ -57,7 +57,7 @@ Material:
     - Vector1_46813515: 5
     - Vector1_B0B772FF: 1
     m_Colors:
-    - Albedo_Tint: {r: 0.58799994, g: 0.58799994, b: 0.58799994, a: 1}
+    - Albedo_Tint: {r: 0.58799994, g: 0.58799994, b: 0.58799994, a: 0.5}
     - Color_19408109: {r: 1, g: 1, b: 1, a: 1}
     - Color_E2C685AC: {r: 8, g: 8, b: 0, a: 0}
     - HighlightColor: {r: 2.1185474, g: 2.1185474, b: 0, a: 0}

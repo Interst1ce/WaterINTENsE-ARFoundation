@@ -42,7 +42,7 @@ public class StoryManager : MonoBehaviour {
     private void Awake() {
         audioSource = GetComponent<AudioSource>();
         highlightManager = GetComponent<HighlightManager>();
-        StartStory();
+        //StartStory();
     }
 
     private async Task PopulateTargetDictionary() {
