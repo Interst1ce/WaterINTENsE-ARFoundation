@@ -25,7 +25,7 @@ public class ResizeScene : MonoBehaviour {
     }
 
     public void UpdateHeight(float height) {
-        scene.transform.localPosition = new Vector3(scene.transform.localPosition.x,height,scene.transform.localPosition.z);
+        scene.transform.localPosition = new Vector3(scene.transform.localPosition.x,oldHeight + height,scene.transform.localPosition.z);
     }
 
     public void RevertHeight(Slider slider) {

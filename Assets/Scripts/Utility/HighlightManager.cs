@@ -16,33 +16,66 @@ public class HighlightManager : MonoBehaviour {
     List<MeshRenderer> glowObjects = new List<MeshRenderer>();
 
     public void StartGlow(GameObject highlightObj) {
-        MatSwap(highlightObj.GetComponent<MeshRenderer>());
+        if (highlightObj.GetComponent<MeshRenderer>() != null) {
+            MatSwap(highlightObj.GetComponent<MeshRenderer>());
+        } else {
+            MeshRenderer[] renderers = highlightObj.GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer rend in renderers) {
+                if (rend != null) MatSwap(rend);
+            }
+        }
         glow = true;
         Glow();
     }
 
     public void StartGlow(List<GameObject> highlightObjs) {
-        foreach (GameObject obj in highlightObjs) MatSwap(obj.GetComponent<MeshRenderer>());
+        foreach (GameObject obj in highlightObjs) {
+            if (obj.GetComponent<MeshRenderer>() != null) {
+                MatSwap(obj.GetComponent<MeshRenderer>());
+            } else {
+                MeshRenderer[] renderers = obj.GetComponentsInChildren<MeshRenderer>();
+                foreach (MeshRenderer rend in renderers) {
+                    if(rend != null) MatSwap(rend);
+                }
+            }
+        }
         glow = true;
         Glow();
     }
 
-    public async void StartGlow(GameObject highlightObj, float delay) {
+    public async void StartGlow(GameObject highlightObj,float delay) {
         await Task.Delay(TimeSpan.FromSeconds(delay));
-        MatSwap(highlightObj.GetComponent<MeshRenderer>());
+        if (highlightObj.GetComponent<MeshRenderer>() != null) {
+            MatSwap(highlightObj.GetComponent<MeshRenderer>());
+        } else {
+            MeshRenderer[] renderers = highlightObj.GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer rend in renderers) {
+                if (rend != null) MatSwap(rend);
+            }
+        }
         glow = true;
         Glow();
     }
 
-    public async void StartGlow(List<GameObject> highlightObjs, float delay) {
+    public async void StartGlow(List<GameObject> highlightObjs,float delay) {
         await Task.Delay(TimeSpan.FromSeconds(delay));
-        foreach (GameObject obj in highlightObjs) MatSwap(obj.GetComponent<MeshRenderer>());
+        foreach (GameObject obj in highlightObjs) {
+            if (obj.GetComponent<MeshRenderer>() != null) {
+                MatSwap(obj.GetComponent<MeshRenderer>());
+            } else {
+                MeshRenderer[] renderers = obj.GetComponentsInChildren<MeshRenderer>();
+                foreach (MeshRenderer rend in renderers) {
+                    if (rend != null) MatSwap(rend);
+                }
+            }
+        }
         glow = true;
         Glow();
     }
 
     public void MatSwap(MeshRenderer objRenderer) {
         highlightMat = objRenderer.material;
+        Debug.Log(highlightMat.name);
         if (highlightMat.shader != glowMat.shader) {
             ogMats.Add(highlightMat);
             Material ogMat = ogMats[ogMats.Count - 1];

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
@@ -11,6 +12,11 @@ public class ARObjectPlacement : MonoBehaviour {
     GameObject ghostScene;
     [SerializeField]
     GameObject scene;
+
+    [SerializeField]
+    GameObject startConfirmButton;
+    [SerializeField]
+    GameObject confirmButton;
 
     static List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
@@ -42,13 +48,23 @@ public class ARObjectPlacement : MonoBehaviour {
                             scene.transform.position = ghostScene.transform.position;
                             scene.transform.rotation = ghostScene.transform.rotation;
                             sceneSpawned = true;
-                            //pull up the scaling UI
-                            //wait until user hit confirm button
-                            GameObject.Find("EventSystem").GetComponent<StoryManager>().StartStory();
+                            PauseMenu pauseMenu = GameObject.Find("PauseUI").GetComponent<PauseMenu>();
+                            pauseMenu.Pause();
+                            pauseMenu.ToggleSubMenu(0);
+                            GameObject.Find("ResizePanel").GetComponent<ResizeScene>().Init();
                         }
                     }
                 }
             } else ghostScene.SetActive(false);
         }
+    }
+
+    public void SwapConfirmButtons(StoryManager storyManager) {
+        PauseMenu pauseMenu = GameObject.Find("PauseUI").GetComponent<PauseMenu>();
+        pauseMenu.ToggleSubMenu(0);
+        pauseMenu.Pause();
+        storyManager.StartStory();
+        startConfirmButton.SetActive(false);
+        confirmButton.SetActive(true);
     }
 }
