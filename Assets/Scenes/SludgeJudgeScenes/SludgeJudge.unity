@@ -412,6 +412,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1756238991}
+    - target: {fileID: 2604033735749571388, guid: f7b1e6b341fc73047b556b58b2971657, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1161379255}
+    - target: {fileID: 2604033735749571388, guid: f7b1e6b341fc73047b556b58b2971657, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PauseMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2604033735749571388, guid: f7b1e6b341fc73047b556b58b2971657, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Pause
+      objectReference: {fileID: 0}
+    - target: {fileID: 2604033735749571388, guid: f7b1e6b341fc73047b556b58b2971657, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3499546549182524986, guid: f7b1e6b341fc73047b556b58b2971657, type: 3}
       propertyPath: scene
       value: 
@@ -1285,6 +1301,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 14.587157, y: 9.230341, z: 7.017728}
   m_Center: {x: -0.012161732, y: 0.033124924, z: 0.03635788}
+--- !u!114 &1161379255 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 789108481575413285, guid: f7b1e6b341fc73047b556b58b2971657, type: 3}
+  m_PrefabInstance: {fileID: 386954167}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc840aa76b844044fadbaaf61bea8e55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1190569264
 GameObject:
   m_ObjectHideFlags: 0
@@ -1945,7 +1972,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3305906339256696094, guid: 4108a055a5c1e814086f4a3a77735ff0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3305906339774999567, guid: 4108a055a5c1e814086f4a3a77735ff0, type: 3}
       propertyPath: m_IsActive
