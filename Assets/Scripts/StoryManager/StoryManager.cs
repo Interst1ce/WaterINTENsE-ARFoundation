@@ -5,6 +5,7 @@ using System.Data.Common;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(HighlightManager))]
 [RequireComponent(typeof(AudioListener))]
@@ -25,6 +26,10 @@ public class StoryManager : MonoBehaviour {
     AudioClip missTapAudio;
     public List<AudioSource> loopingSFX = new List<AudioSource>();
 
+    [HideInInspector]
+    public List<NewTarget> newTargets;
+
+    [Space]
     public List<StepExt> steps = new List<StepExt>();
     Dictionary<int,List<GameObject>> objectTargets = new Dictionary<int,List<GameObject>>();
 
@@ -37,6 +42,18 @@ public class StoryManager : MonoBehaviour {
     public struct StepExt {
         public Step step;
         public UnityEvent extensions;
+    }
+
+    [Serializable]
+    public struct NewTarget {
+        public Target.TargetType type;
+        public Target.Interaction interaction;
+        public string objectTarget;
+        public Slider sliderTarget;
+        public int targetStep;
+        public AnimationClip targetAnim;
+        public AudioClip targetAudio;
+        public bool playAudioAfterAnim;
     }
 
     private void Awake() {
