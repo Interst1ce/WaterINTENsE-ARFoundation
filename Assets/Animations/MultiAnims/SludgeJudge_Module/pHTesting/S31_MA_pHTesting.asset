@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51aa71e6078cd7943a06e05b3f403210, type: 3}
-  m_Name: S32_pHTesting
+  m_Script: {fileID: 11500000, guid: bd55bc23b3e646e41a4444fc89f4597d, type: 3}
+  m_Name: S31_MA_pHTesting
   m_EditorClassIdentifier: 
-  targets:
-  - {fileID: 11400000, guid: f7762fa0b1037a342a212a8c41e9a53f, type: 2}
-  questions: []
+  anims:
+  - targetObjPath: Sample_Beaker
+    animTitle: Spin Up
+    delay: 0
