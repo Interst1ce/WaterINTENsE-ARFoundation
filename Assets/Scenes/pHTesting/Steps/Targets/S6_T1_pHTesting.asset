@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7724f3a7be35c474281dd776e9ae3b10, type: 3}
+  m_Name: S6_T1_pHTesting
+  m_EditorClassIdentifier: 
+  type: 0
+  interaction: 0
+  objectTarget: pH_Buffer_7
+  sliderTarget: {fileID: 0}
+  targetStep: 6
+  targetAnim: {fileID: -1900525314305430909, guid: de24bdf5b6ff3354b91ee661331512d2, type: 3}
+  targetAudio: {fileID: 8300000, guid: 25db20a9351adcd49951f52be53c12be, type: 3}
+  playAudioAfterAnim: 0

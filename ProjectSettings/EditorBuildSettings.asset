@@ -18,8 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Titration.unity
     guid: 6df6e1b41dba8624e81898f37081c857
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
+    path: Assets/Scenes/pHTesting.unity
+    guid: a79b57d75505ba645bf0722b9b322f73
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 0aebba2708f4e1248a88d61171098cec, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 8b6b54832a83b224cadcf75cdc03b537, type: 2}

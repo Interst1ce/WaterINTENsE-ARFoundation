@@ -130,10 +130,8 @@ public class StoryManager : MonoBehaviour {
     void EndStory() {
         if (currentStep == steps.Count && !audioSource.isPlaying && !finished && (lastAnim == null || lastAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !lastAnimator.IsInTransition(0))) {
             finished = true;
-            if (steps[currentStep].step) {
-                GameObject.Find("PauseUI").GetComponent<PauseMenu>().Pause();
-                GameObject.Find("PlayButton").SetActive(false);
-            }
+            GameObject.Find("PauseUI").GetComponent<PauseMenu>().Pause();
+            GameObject.Find("PlayButton").SetActive(false);
         }
     }
 

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7724f3a7be35c474281dd776e9ae3b10, type: 3}
+  m_Name: S26_T1_pHTesting
+  m_EditorClassIdentifier: 
+  type: 0
+  interaction: 0
+  objectTarget: 100_mL_Gradutated_Cylinder
+  sliderTarget: {fileID: 0}
+  targetStep: 27
+  targetAnim: {fileID: 5689966627958386420, guid: c98f5fc28b698f7448f5e383990453cc, type: 3}
+  targetAudio: {fileID: 8300000, guid: 93ecf84a8e424ce4ead2f4f4eb97cb70, type: 3}
+  playAudioAfterAnim: 0

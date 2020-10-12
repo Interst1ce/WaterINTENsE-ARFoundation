@@ -40,6 +40,7 @@ public class StoryManagerEditor : Editor {
         EditorGUILayout.Space();
         EditorGUILayout.Space();
 
+
         //Display our list to the inspector window
         for (int i = 0; i < thisList.arraySize; i++) {
             SerializedProperty listRef = thisList.GetArrayElementAtIndex(i);
@@ -51,6 +52,13 @@ public class StoryManagerEditor : Editor {
             SerializedProperty ntTargetAnim = listRef.FindPropertyRelative("targetAnim");
             SerializedProperty ntTargetAudio = listRef.FindPropertyRelative("targetAudio");
             SerializedProperty ntAudioAfterAnim = listRef.FindPropertyRelative("playAudioAfterAnim");
+
+            if (GUILayout.Button("Remove Target")) {
+                thisList.DeleteArrayElementAtIndex(i);
+                break;
+            }
+            EditorGUILayout.Space();
+            EditorGUILayout.Space();
 
             if (DisplayFieldType == 0) {
                 EditorGUILayout.PropertyField(ntType);
@@ -64,11 +72,6 @@ public class StoryManagerEditor : Editor {
                 EditorGUILayout.PropertyField(ntAudioAfterAnim);
             }
 
-            EditorGUILayout.Space();
-
-            if (GUILayout.Button("Remove Target")) {
-                thisList.DeleteArrayElementAtIndex(i);
-            }
             EditorGUILayout.Space();
             EditorGUILayout.Space();
             EditorGUILayout.Space();
@@ -93,8 +96,8 @@ public class StoryManagerEditor : Editor {
             System.IO.Directory.CreateDirectory(stepsDirectoryPath);
             System.IO.Directory.CreateDirectory(targetsDirectoryPath);
 
-            AssetDatabase.CreateAsset(newStep,stepsDirectoryPath + $"{sceneName}_{t.steps.Count}.asset");
-            Step step = (Step)AssetDatabase.LoadAssetAtPath(System.IO.Path.Combine(stepsDirectoryPath + $"{sceneName}_{t.steps.Count}.asset"),typeof(Step));
+            AssetDatabase.CreateAsset(newStep,stepsDirectoryPath + $"S{t.steps.Count}_{sceneName}.asset");
+            Step step = (Step)AssetDatabase.LoadAssetAtPath(System.IO.Path.Combine(stepsDirectoryPath + $"S{t.steps.Count}_{sceneName}.asset"),typeof(Step));
 
             foreach (StoryManager.NewTarget target in t.newTargets) {
                 Target newTarget = CreateInstance<Target>();
@@ -106,11 +109,16 @@ public class StoryManagerEditor : Editor {
                 newTarget.targetAnim = target.targetAnim;
                 newTarget.targetAudio = target.targetAudio;
                 newTarget.playAudioAfterAnim = target.playAudioAfterAnim;
+
                 AssetDatabase.CreateAsset(newTarget,targetsDirectoryPath + $"S{t.steps.Count}_T{i}_{sceneName}.asset");
                 Target addTarget = (Target)AssetDatabase.LoadAssetAtPath(System.IO.Path.Combine(targetsDirectoryPath,$"S{t.steps.Count}_T{i}_{sceneName}.asset"),typeof(Target));
-                step.targets.Add(addTarget);
+                step.AddTarget(addTarget);
+                EditorUtility.SetDirty(step);
+                AssetDatabase.SaveAssets();
+                AssetDatabase.Refresh();
                 i++;
             }
+            
             t.newTargets.Clear();
             getTarget.ApplyModifiedProperties();
         }
