@@ -14,10 +14,13 @@ public class HighlightManager : MonoBehaviour {
     public bool glow = true;
 
     List<MeshRenderer> glowObjects = new List<MeshRenderer>();
+    List<SkinnedMeshRenderer> glowSkinnedObjects = new List<SkinnedMeshRenderer>();
 
     public void StartGlow(GameObject highlightObj) {
         if (highlightObj.GetComponent<MeshRenderer>() != null) {
             MatSwap(highlightObj.GetComponent<MeshRenderer>());
+        } else if (highlightObj.GetComponent<SkinnedMeshRenderer>() != null) {
+            MatSwap(highlightObj.GetComponent<SkinnedMeshRenderer>());
         } else {
             MeshRenderer[] renderers = highlightObj.GetComponentsInChildren<MeshRenderer>();
             foreach (MeshRenderer rend in renderers) {
@@ -90,6 +93,23 @@ public class HighlightManager : MonoBehaviour {
         }
     }
 
+    public void MatSwap(SkinnedMeshRenderer objRenderer) {
+        highlightMat = objRenderer.material;
+        Debug.Log(highlightMat.name);
+        if (highlightMat.shader != glowMat.shader) {
+            ogMats.Add(highlightMat);
+            Material ogMat = ogMats[ogMats.Count - 1];
+            highlightMat = glowMat;
+            highlightMat.SetTexture("Albedo",ogMat.mainTexture);
+            highlightMat.SetColor("Albedo_Tint",ogMat.color);
+            highlightMat.SetTexture("Normal",ogMat.GetTexture("_BumpMap"));
+            highlightMat.SetTexture("Metallic",ogMat.GetTexture("_MetallicGlossMap"));
+            highlightMat.SetTexture("Occlusion",ogMat.GetTexture("_OcclusionMap"));
+            objRenderer.material = highlightMat;
+            glowSkinnedObjects.Add(objRenderer);
+        }
+    }
+
     async void Glow() {
         //float t = 0;
         do {
@@ -103,7 +123,9 @@ public class HighlightManager : MonoBehaviour {
             await Task.Yield();
         }*/
         for (int i = 0; i < glowObjects.Count; i++) glowObjects[i].material = ogMats[i];
+        for (int i = 0; i < glowSkinnedObjects.Count; i++) glowSkinnedObjects[i].material = ogMats[i];
         glowObjects.Clear();
+        glowSkinnedObjects.Clear();
         ogMats.Clear();
     }
 }
