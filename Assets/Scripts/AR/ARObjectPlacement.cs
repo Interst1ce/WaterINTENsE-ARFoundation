@@ -43,6 +43,7 @@ public class ARObjectPlacement : MonoBehaviour {
                     if (Physics.Raycast(ray,out hit)) {
                         Debug.Log("" + hit.transform.name);
                         if (hit.transform.gameObject == ghostScene.transform.GetChild(0).gameObject) {
+                            HideARPlanes();
                             ghostScene.SetActive(false);
                             scene.SetActive(true);
                             scene.transform.position = ghostScene.transform.position;
@@ -56,6 +57,14 @@ public class ARObjectPlacement : MonoBehaviour {
                     }
                 }
             } else ghostScene.SetActive(false);
+        }
+    }
+
+    public void HideARPlanes() {
+        foreach(GameObject plane in GameObject.FindGameObjectsWithTag("ARPlane")) {
+            plane.GetComponent<ARPlaneMeshVisualizer>().enabled = false;
+            plane.GetComponent<MeshRenderer>().enabled = false;
+            plane.GetComponent<LineRenderer>().enabled = false;
         }
     }
 
