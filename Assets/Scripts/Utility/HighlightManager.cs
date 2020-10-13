@@ -35,6 +35,8 @@ public class HighlightManager : MonoBehaviour {
         foreach (GameObject obj in highlightObjs) {
             if (obj.GetComponent<MeshRenderer>() != null) {
                 MatSwap(obj.GetComponent<MeshRenderer>());
+            } else if (obj.GetComponent<SkinnedMeshRenderer>() != null) {
+                MatSwap(obj.GetComponent<SkinnedMeshRenderer>());
             } else {
                 MeshRenderer[] renderers = obj.GetComponentsInChildren<MeshRenderer>();
                 foreach (MeshRenderer rend in renderers) {
@@ -50,6 +52,8 @@ public class HighlightManager : MonoBehaviour {
         await Task.Delay(TimeSpan.FromSeconds(delay));
         if (highlightObj.GetComponent<MeshRenderer>() != null) {
             MatSwap(highlightObj.GetComponent<MeshRenderer>());
+        } else if (highlightObj.GetComponent<SkinnedMeshRenderer>() != null) {
+            MatSwap(highlightObj.GetComponent<SkinnedMeshRenderer>());
         } else {
             MeshRenderer[] renderers = highlightObj.GetComponentsInChildren<MeshRenderer>();
             foreach (MeshRenderer rend in renderers) {
@@ -65,6 +69,8 @@ public class HighlightManager : MonoBehaviour {
         foreach (GameObject obj in highlightObjs) {
             if (obj.GetComponent<MeshRenderer>() != null) {
                 MatSwap(obj.GetComponent<MeshRenderer>());
+            } else if (obj.GetComponent<SkinnedMeshRenderer>() != null) {
+                MatSwap(obj.GetComponent<SkinnedMeshRenderer>());
             } else {
                 MeshRenderer[] renderers = obj.GetComponentsInChildren<MeshRenderer>();
                 foreach (MeshRenderer rend in renderers) {
