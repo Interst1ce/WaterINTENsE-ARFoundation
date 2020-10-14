@@ -59,7 +59,6 @@ public class StoryManager : MonoBehaviour {
     private void Awake() {
         audioSource = GetComponent<AudioSource>();
         highlightManager = GetComponent<HighlightManager>();
-        //StartStory();
     }
 
     private async Task PopulateTargetDictionary() {
@@ -114,7 +113,7 @@ public class StoryManager : MonoBehaviour {
             Animator targetAnimator = GetTargetAnimator(GameObject.Find(target.objectTarget));
             lastAnimator = targetAnimator;
             lastAnim = target.targetAnim;
-            if (targetAnimator != null) targetAnimator.Play(target.targetAnim.name);
+            if (targetAnimator != null && target.targetAnim != null) targetAnimator.Play(target.targetAnim.name);
             steps[currentStep].extensions.Invoke();
             List<GameObject> highlightTargets = new List<GameObject>();
             foreach(Target nextTarget in steps[currentStep + 1].step.targets) {

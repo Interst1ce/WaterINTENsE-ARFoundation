@@ -43,7 +43,6 @@ public class ARObjectPlacement : MonoBehaviour {
                     if (Physics.Raycast(ray,out hit)) {
                         Debug.Log("" + hit.transform.name);
                         if (hit.transform.gameObject == ghostScene.transform.GetChild(0).gameObject) {
-                            HideARPlanes();
                             ghostScene.SetActive(false);
                             scene.SetActive(true);
                             scene.transform.position = ghostScene.transform.position;
@@ -58,6 +57,10 @@ public class ARObjectPlacement : MonoBehaviour {
                 }
             } else ghostScene.SetActive(false);
         }
+    }
+
+    private void FixedUpdate() {
+        if (sceneSpawned) HideARPlanes();
     }
 
     public void HideARPlanes() {

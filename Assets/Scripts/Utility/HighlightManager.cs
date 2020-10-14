@@ -5,17 +5,94 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 public class HighlightManager : MonoBehaviour {
-    public Material glowMat;
-    List<Material> ogMats = new List<Material>();
-    Material highlightMat;
-    //Material alphaHighlightMat;
-    MeshRenderer objRenderer;
-    //[HideInInspector]
-    public bool glow = true;
+    [Range(0.1f,5)]
+    public float outlineThicknessDefault = 1;
+    [HideInInspector]
+    public bool glow = false;
 
-    List<MeshRenderer> glowObjects = new List<MeshRenderer>();
-    List<SkinnedMeshRenderer> glowSkinnedObjects = new List<SkinnedMeshRenderer>();
+    List<Outline> glowObjects = new List<Outline>();
 
+    public void StartGlow(GameObject highlightObj) {
+        Outline outline = highlightObj.GetComponent<Outline>();
+        if (outline != null) {
+            outline.enabled = true;
+            glowObjects.Add(outline);
+        } else {
+            outline = highlightObj.AddComponent<Outline>();
+            outline.OutlineMode = Outline.Mode.OutlineAll;
+            outline.OutlineColor = Color.yellow * 2;
+            outline.OutlineWidth = outlineThicknessDefault;
+            outline.enabled = true;
+            glowObjects.Add(outline);
+        }
+        glow = true;
+        Glow();
+    }
+
+    public void StartGlow(List<GameObject> highlightObjs) {
+        foreach (GameObject obj in highlightObjs) {
+            Outline outline = obj.GetComponent<Outline>();
+            if (outline != null) {
+                outline.enabled = true;
+                glowObjects.Add(outline);
+            } else {
+                outline = obj.AddComponent<Outline>();
+                outline.OutlineMode = Outline.Mode.OutlineAll;
+                outline.OutlineColor = Color.yellow;
+                outline.OutlineWidth = outlineThicknessDefault;
+                outline.enabled = true;
+                glowObjects.Add(outline);
+            }
+        }
+        glow = true;
+        Glow();
+    }
+
+    public async void StartGlow(GameObject highlightObj,float delay) {
+        await Task.Delay(TimeSpan.FromSeconds(delay));
+        Outline outline = highlightObj.GetComponent<Outline>();
+        if (outline != null) {
+            outline.enabled = true;
+            glowObjects.Add(outline);
+        } else {
+            outline = highlightObj.AddComponent<Outline>();
+            outline.OutlineMode = Outline.Mode.OutlineAll;
+            outline.OutlineColor = Color.yellow;
+            outline.OutlineWidth = outlineThicknessDefault;
+            outline.enabled = true;
+            glowObjects.Add(outline);
+        }
+        glow = true;
+        Glow();
+    }
+
+    public async void StartGlow(List<GameObject> highlightObjs,float delay) {
+        await Task.Delay(TimeSpan.FromSeconds(delay));
+        foreach (GameObject obj in highlightObjs) {
+            Outline outline = obj.GetComponent<Outline>();
+            if (outline != null) {
+                outline.enabled = true;
+                glowObjects.Add(outline);
+            } else {
+                outline = obj.AddComponent<Outline>();
+                outline.OutlineMode = Outline.Mode.OutlineAll;
+                outline.OutlineColor = Color.yellow;
+                outline.OutlineWidth = outlineThicknessDefault;
+                outline.enabled = true;
+                glowObjects.Add(outline);
+            }
+        }
+        glow = true;
+        Glow();
+    }
+
+    async void Glow() {
+        do {
+            await Task.Yield();
+        } while (glow);
+        foreach (Outline outline in glowObjects) outline.enabled = false;
+    }
+    /*
     public void StartGlow(GameObject highlightObj) {
         if (highlightObj.GetComponent<MeshRenderer>() != null) {
             MatSwap(highlightObj.GetComponent<MeshRenderer>());
@@ -40,7 +117,7 @@ public class HighlightManager : MonoBehaviour {
             } else {
                 MeshRenderer[] renderers = obj.GetComponentsInChildren<MeshRenderer>();
                 foreach (MeshRenderer rend in renderers) {
-                    if(rend != null) MatSwap(rend);
+                    if (rend != null) MatSwap(rend);
                 }
             }
         }
@@ -117,21 +194,13 @@ public class HighlightManager : MonoBehaviour {
     }
 
     async void Glow() {
-        //float t = 0;
         do {
-            //t = Mathf.PingPong(Time.time,1);
-            //foreach(MeshRenderer objRenderer in glowObjects) objRenderer.material.SetFloat("HighlightIntensity",Mathf.Lerp(1,4,t));
             await Task.Yield();
         } while (glow);
-        /*while(t > 0) {
-            t -= Time.deltaTime;
-            foreach(MeshRenderer objRenderer in glowObjects) objRenderer.material.SetFloat("HighlightIntensity",Mathf.Lerp(4,1,t));
-            await Task.Yield();
-        }*/
         for (int i = 0; i < glowObjects.Count; i++) glowObjects[i].material = ogMats[i];
         for (int i = 0; i < glowSkinnedObjects.Count; i++) glowSkinnedObjects[i].material = ogMats[i];
         glowObjects.Clear();
         glowSkinnedObjects.Clear();
         ogMats.Clear();
-    }
+    }*/
 }
