@@ -133,6 +133,8 @@ MonoBehaviour:
   raycastManager: {fileID: 8903520554791576811}
   ghostScene: {fileID: 0}
   scene: {fileID: 0}
+  startConfirmButton: {fileID: 0}
+  confirmButton: {fileID: 0}
   sceneSpawned: 0
 --- !u!1 &8903520555380034829
 GameObject:
@@ -274,7 +276,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -476,6 +478,7 @@ MonoBehaviour:
   backgroundSFX: {fileID: 0}
   missTapAudio: {fileID: 0}
   loopingSFX: []
+  newTargets: []
   steps: []
 --- !u!114 &8903520555988982163
 MonoBehaviour:
@@ -489,5 +492,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaa3b8c735198ec469600f4fc6cebb3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowMat: {fileID: 2100000, guid: 432b5a9388035d74fbba8c7f027f2d72, type: 2}
+  outlineThicknessDefault: 2.5
+  outlineColorDefault: {r: 2, g: 2, b: 0, a: 1}
   glow: 1

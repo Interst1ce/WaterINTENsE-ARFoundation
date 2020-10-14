@@ -7,6 +7,9 @@ using UnityEngine;
 public class HighlightManager : MonoBehaviour {
     [Range(0.1f,5)]
     public float outlineThicknessDefault = 1;
+    [ColorUsage(true,true)]
+    [SerializeField]
+    public Color outlineColorDefault = Color.white;
     [HideInInspector]
     public bool glow = false;
 
@@ -20,7 +23,7 @@ public class HighlightManager : MonoBehaviour {
         } else {
             outline = highlightObj.AddComponent<Outline>();
             outline.OutlineMode = Outline.Mode.OutlineAll;
-            outline.OutlineColor = Color.yellow * 2;
+            outline.OutlineColor = outlineColorDefault;
             outline.OutlineWidth = outlineThicknessDefault;
             outline.enabled = true;
             glowObjects.Add(outline);
@@ -38,7 +41,7 @@ public class HighlightManager : MonoBehaviour {
             } else {
                 outline = obj.AddComponent<Outline>();
                 outline.OutlineMode = Outline.Mode.OutlineAll;
-                outline.OutlineColor = Color.yellow;
+                outline.OutlineColor = outlineColorDefault;
                 outline.OutlineWidth = outlineThicknessDefault;
                 outline.enabled = true;
                 glowObjects.Add(outline);
@@ -57,7 +60,7 @@ public class HighlightManager : MonoBehaviour {
         } else {
             outline = highlightObj.AddComponent<Outline>();
             outline.OutlineMode = Outline.Mode.OutlineAll;
-            outline.OutlineColor = Color.yellow;
+            outline.OutlineColor = outlineColorDefault;
             outline.OutlineWidth = outlineThicknessDefault;
             outline.enabled = true;
             glowObjects.Add(outline);
@@ -76,7 +79,7 @@ public class HighlightManager : MonoBehaviour {
             } else {
                 outline = obj.AddComponent<Outline>();
                 outline.OutlineMode = Outline.Mode.OutlineAll;
-                outline.OutlineColor = Color.yellow;
+                outline.OutlineColor = outlineColorDefault;
                 outline.OutlineWidth = outlineThicknessDefault;
                 outline.enabled = true;
                 glowObjects.Add(outline);
