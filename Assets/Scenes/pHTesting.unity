@@ -1682,6 +1682,10 @@ PrefabInstance:
       propertyPath: steps.Array.data[25].extensions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 11400000, guid: e6f6e51a3172184499668f408442f176, type: 2}
+    - target: {fileID: 8903520555988982160, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
+      propertyPath: reviewMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8903520555988982163, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
       propertyPath: outlineColorDefault.g
       value: 2

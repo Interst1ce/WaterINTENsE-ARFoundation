@@ -92,7 +92,7 @@ public class StoryManager : MonoBehaviour {
 
     public async void StartStory() {
         await PopulateTargetDictionary();
-        PlayAudio(introAudio);
+        if(!reviewMode) PlayAudio(introAudio);
         await Task.Delay(TimeSpan.FromSeconds(introAudio.length));
         foreach (GameObject target in objectTargets[0]) {
             if (target != null) highlightManager.StartGlow(target);
@@ -119,7 +119,7 @@ public class StoryManager : MonoBehaviour {
             foreach(Target nextTarget in steps[currentStep + 1].step.targets) {
                 highlightTargets.Add(GameObject.Find(nextTarget.objectTarget));
             }
-            if(target.targetAnim != null && target.targetAudio != null) {
+            if(target.targetAnim != null && target.targetAudio != null && !reviewMode) {
                 highlightManager.StartGlow(highlightTargets,Mathf.Max(target.targetAnim.length,target.targetAudio.length));
             } else highlightManager.StartGlow(highlightTargets,1f);
             currentStep = target.targetStep;

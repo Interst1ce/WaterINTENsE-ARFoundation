@@ -53,6 +53,7 @@ public class HighlightManager : MonoBehaviour {
 
     public async void StartGlow(GameObject highlightObj,float delay) {
         await Task.Delay(TimeSpan.FromSeconds(delay));
+        Debug.Log("Glow Single");
         Outline outline = highlightObj.GetComponent<Outline>();
         if (outline != null) {
             outline.enabled = true;
@@ -71,6 +72,7 @@ public class HighlightManager : MonoBehaviour {
 
     public async void StartGlow(List<GameObject> highlightObjs,float delay) {
         await Task.Delay(TimeSpan.FromSeconds(delay));
+        Debug.Log("Glow List");
         foreach (GameObject obj in highlightObjs) {
             Outline outline = obj.GetComponent<Outline>();
             if (outline != null) {
