@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: pH_meter
+  objectTarget: pH_Meter
   sliderTarget: {fileID: 0}
   targetStep: 9
   targetAnim: {fileID: 1827226128182048838, guid: 3cdb0e9a5c4343f4c812adc9323ebac2, type: 3}
