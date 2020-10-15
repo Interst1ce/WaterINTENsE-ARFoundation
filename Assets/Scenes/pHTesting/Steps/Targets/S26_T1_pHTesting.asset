@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: 100_mL_Graduatated_Cylinder
+  objectTarget: 100_mL_Graduated_Cylinder
   sliderTarget: {fileID: 0}
   targetStep: 27
   targetAnim: {fileID: 5689966627958386420, guid: c98f5fc28b698f7448f5e383990453cc, type: 3}

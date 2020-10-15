@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: pH_Buffer_4
+  objectTarget: pH4_Beaker
   sliderTarget: {fileID: 0}
   targetStep: 17
   targetAnim: {fileID: 1827226128182048838, guid: 4140c96505761d44a9b5a3a5aa3e1bfd, type: 3}
