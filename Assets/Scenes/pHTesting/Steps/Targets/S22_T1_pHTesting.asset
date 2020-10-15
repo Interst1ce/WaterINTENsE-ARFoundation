@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: 125_mL_Wider_Mouth_Wash_Bottle
+  objectTarget: 125_mL_Wide_Mouth_Wash_Bottle
   sliderTarget: {fileID: 0}
   targetStep: 23
   targetAnim: {fileID: 1827226128182048838, guid: 57b51c4fc6646474b916b46d0290bb40, type: 3}
