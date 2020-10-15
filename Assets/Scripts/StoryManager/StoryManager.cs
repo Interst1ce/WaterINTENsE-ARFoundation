@@ -92,8 +92,10 @@ public class StoryManager : MonoBehaviour {
 
     public async void StartStory() {
         await PopulateTargetDictionary();
-        if(!reviewMode) PlayAudio(introAudio);
-        await Task.Delay(TimeSpan.FromSeconds(introAudio.length));
+        if (!reviewMode) {
+            PlayAudio(introAudio);
+            await Task.Delay(TimeSpan.FromSeconds(introAudio.length));
+        }
         foreach (GameObject target in objectTargets[0]) {
             if (target != null) highlightManager.StartGlow(target);
         }
