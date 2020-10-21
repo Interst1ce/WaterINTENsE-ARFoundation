@@ -17,6 +17,6 @@ MonoBehaviour:
   objectTarget: pH7_Beaker
   sliderTarget: {fileID: 0}
   targetStep: 7
-  targetAnim: {fileID: 1827226128182048838, guid: 7cb59ee2339e82f4ea94b3406f605e4c, type: 3}
+  targetAnim: {fileID: -1933625706571458644, guid: 93c9c6ec24b87b24e9ee5997eb022382, type: 3}
   targetAudio: {fileID: 8300000, guid: 00a7d905a127cd546998d5e6825bdb44, type: 3}
   playAudioAfterAnim: 0

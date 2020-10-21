@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 7cb59ee2339e82f4ea94b3406f605e4c
+guid: 93c9c6ec24b87b24e9ee5997eb022382
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
+    second: Fill
+  - first:
+      74: -1933625706571458644
     second: Stirrer Place
   - first:
       74: -3772063321396822305
@@ -13,14 +16,11 @@ ModelImporter:
       74: -4207356549542103150
     second: Spin Up
   - first:
-      74: 2174307043750324940
-    second: Spin Down
-  - first:
-      74: 843308235485481476
+      74: -6333163131637793548
     second: Stir
   - first:
-      74: 8208769827818943773
-    second: Fill
+      74: 2174307043750324940
+    second: Spin Down
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -50,11 +50,40 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
+      name: Fill
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 615
+      lastFrame: 675
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
       name: Stirrer Place
       takeName: Take 001
       internalID: 0
-      firstFrame: 2130
-      lastFrame: 2155
+      firstFrame: 530
+      lastFrame: 575
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -82,8 +111,8 @@ ModelImporter:
       name: Stirrer Remove
       takeName: Take 001
       internalID: 0
-      firstFrame: 2365
-      lastFrame: 2390
+      firstFrame: 820
+      lastFrame: 850
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -111,37 +140,8 @@ ModelImporter:
       name: Spin Up
       takeName: Take 001
       internalID: 0
-      firstFrame: 2170
-      lastFrame: 2200
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Spin Down
-      takeName: Take 001
-      internalID: 0
-      firstFrame: 2304
-      lastFrame: 2360
+      firstFrame: 695
+      lastFrame: 725
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -169,8 +169,8 @@ ModelImporter:
       name: Stir
       takeName: Take 001
       internalID: 0
-      firstFrame: 2200
-      lastFrame: 2215
+      firstFrame: 727
+      lastFrame: 740
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -195,11 +195,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Fill
+      name: Spin Down
       takeName: Take 001
       internalID: 0
-      firstFrame: 2025
-      lastFrame: 2100
+      firstFrame: 794
+      lastFrame: 810
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -223,7 +223,7 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -286,7 +286,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

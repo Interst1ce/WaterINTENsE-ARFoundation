@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anims:
   - targetObjPath: 100_mL_Graduated_Cylinder
-    animTitle: Fill
+    animTitle: 100mL_Fill
     delay: 0
