@@ -47,6 +47,8 @@ public class ARObjectPlacement : MonoBehaviour {
                             scene.SetActive(true);
                             scene.transform.position = ghostScene.transform.position;
                             scene.transform.rotation = ghostScene.transform.rotation;
+                            HideARPlanes();
+                            GameObject.Find("AR Session Origin").GetComponent<ARPlaneManager>().enabled = false;
                             sceneSpawned = true;
                             PauseMenu pauseMenu = GameObject.Find("PauseUI").GetComponent<PauseMenu>();
                             pauseMenu.Pause();
@@ -60,7 +62,7 @@ public class ARObjectPlacement : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        if (sceneSpawned) HideARPlanes();
+        //if (sceneSpawned) HideARPlanes();
     }
 
     public void HideARPlanes() {
