@@ -1494,6 +1494,10 @@ PrefabInstance:
       propertyPath: confirmButton
       value: 
       objectReference: {fileID: 1281475306}
+    - target: {fileID: 8903520555380034825, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
+      propertyPath: m_LightEstimationMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903520555380034827, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -1528,6 +1532,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8903520555380034827, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903520555380034830, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
+      propertyPath: m_UseCustomMaterial
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8903520555988982160, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
@@ -2803,6 +2811,10 @@ PrefabInstance:
     - target: {fileID: 3305906339774999567, guid: 4108a055a5c1e814086f4a3a77735ff0, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3305906339918626897, guid: 4108a055a5c1e814086f4a3a77735ff0, type: 3}
+      propertyPath: m_MatchFrameRate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3305906339918626898, guid: 4108a055a5c1e814086f4a3a77735ff0, type: 3}
       propertyPath: m_LocalPosition.x

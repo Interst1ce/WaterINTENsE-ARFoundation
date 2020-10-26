@@ -24,7 +24,6 @@ public class ARObjectPlacement : MonoBehaviour {
 
     private void Start() {
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
-        Application.targetFrameRate = 30;
     }
 
     void Update() {
