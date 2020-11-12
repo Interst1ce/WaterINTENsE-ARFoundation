@@ -23,6 +23,7 @@ public class ARObjectPlacement : MonoBehaviour {
     public bool sceneSpawned = false;
 
     private void Start() {
+        Application.targetFrameRate = 30;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
     }
 
@@ -74,10 +75,10 @@ public class ARObjectPlacement : MonoBehaviour {
 
     public void SwapConfirmButtons(StoryManager storyManager) {
         PauseMenu pauseMenu = GameObject.Find("PauseUI").GetComponent<PauseMenu>();
+        startConfirmButton.SetActive(false);
+        confirmButton.SetActive(true);
         pauseMenu.ToggleSubMenu(0);
         pauseMenu.Pause();
         storyManager.StartStory();
-        startConfirmButton.SetActive(false);
-        confirmButton.SetActive(true);
     }
 }

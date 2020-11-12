@@ -16,7 +16,7 @@ MonoBehaviour:
   interaction: 0
   objectTarget: Plane002
   sliderTarget: {fileID: 0}
-  targetStep: 1
+  targetStep: 3
   targetAnim: {fileID: 2772719746239674187, guid: 725e46814e2f750409eb2d9241a719a4, type: 3}
   targetAudio: {fileID: 8300000, guid: 401f70aa147bf204abebcefb861e899a, type: 3}
   playAudioAfterAnim: 0

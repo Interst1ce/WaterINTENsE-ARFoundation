@@ -70,7 +70,6 @@ public class StoryManager : MonoBehaviour {
     }
 
     void Update() {
-        EndStory();
         for (int i = 0; i < Input.touchCount; i++) {
             Touch tap = Input.GetTouch(i);
             if (tap.phase == TouchPhase.Began) {
@@ -81,7 +80,10 @@ public class StoryManager : MonoBehaviour {
                         StartCoroutine(DetectInput(target.interaction,tap.position));
                         for(int j = 0; j < steps[currentStep].step.targets.Count; j++) {
                             if (hit.transform.gameObject == objectTargets[currentStep][j] && interactionMatch) {
-                                ContinueStory(target);
+                                if(target.targetStep == steps.Count && currentStep == steps.Count) {
+                                    finished = true;
+                                    EndStory(target);
+                                }else ContinueStory(target);
                             } else PlaySFX(missTapAudio);
                         }
                     }
@@ -128,9 +130,13 @@ public class StoryManager : MonoBehaviour {
         }
     }
 
-    void EndStory() {
-        if (currentStep == steps.Count && !audioSource.isPlaying && !finished && (lastAnim == null || lastAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !lastAnimator.IsInTransition(0))) {
-            finished = true;
+    async void EndStory(Target target) {
+        float seconds = Mathf.Max(target.targetAudio.length,target.targetAnim.length);
+        int delay = Mathf.FloorToInt(seconds) + Mathf.FloorToInt(seconds % 1 * 1000);
+
+        await Task.Delay(delay);
+
+        if (finished) {
             GameObject.Find("PauseUI").GetComponent<PauseMenu>().Pause();
             GameObject.Find("PlayButton").SetActive(false);
         }
