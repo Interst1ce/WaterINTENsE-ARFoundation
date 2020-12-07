@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7724f3a7be35c474281dd776e9ae3b10, type: 3}
+  m_Name: S3_T1_BioreactorOverview
+  m_EditorClassIdentifier: 
+  type: 0
+  interaction: 0
+  objectTarget: Outlet
+  sliderTarget: {fileID: 0}
+  targetStep: 3
+  targetAnim: {fileID: -623603649343465320, guid: 36c66a1b80a27884ebe7f3b7d38b62d5, type: 3}
+  targetAudio: {fileID: 8300000, guid: d7890f7c72ca2cd488c8dd92f89d276f, type: 3}
+  playAudioAfterAnim: 0

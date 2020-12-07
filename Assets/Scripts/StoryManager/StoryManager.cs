@@ -21,6 +21,8 @@ public class StoryManager : MonoBehaviour {
     [SerializeField]
     AudioClip introAudio;
     [SerializeField]
+    UnityEvent introAnim;
+    [SerializeField]
     AudioClip backgroundSFX;
     [SerializeField]
     AudioClip missTapAudio;
@@ -96,6 +98,7 @@ public class StoryManager : MonoBehaviour {
         await PopulateTargetDictionary();
         if (!reviewMode) {
             PlayAudio(introAudio);
+            introAnim.Invoke();
             await Task.Delay(TimeSpan.FromSeconds(introAudio.length));
         }
         foreach (GameObject target in objectTargets[0]) {

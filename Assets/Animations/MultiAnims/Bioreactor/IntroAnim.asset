@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd55bc23b3e646e41a4444fc89f4597d, type: 3}
+  m_Name: IntroAnim
+  m_EditorClassIdentifier: 
+  anims:
+  - targetObjPath: bioField
+    animTitle: BioFieldIntro
+    delay: 0
+  - targetObjPath: CornField
+    animTitle: CornFieldIntro
+    delay: 0
+  - targetObjPath: Stream
+    animTitle: StreamIntro
+    delay: 0

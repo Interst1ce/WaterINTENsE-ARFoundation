@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2316316456795569171, guid: 9c7b710ee6763c64eac3ae31f150b9cf, type: 3}
       propertyPath: m_text
-      value: Chloramination
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2316316456841313179, guid: 9c7b710ee6763c64eac3ae31f150b9cf, type: 3}
       propertyPath: m_AnchorMin.y
@@ -212,7 +212,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316316457011210444, guid: 9c7b710ee6763c64eac3ae31f150b9cf, type: 3}
       propertyPath: m_text
-      value: Chloramination
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2316316457011210444, guid: 9c7b710ee6763c64eac3ae31f150b9cf, type: 3}
+      propertyPath: m_fontSize
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 2316316457051178002, guid: 9c7b710ee6763c64eac3ae31f150b9cf, type: 3}
       propertyPath: m_Sprite
@@ -268,11 +272,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316316457491903059, guid: 9c7b710ee6763c64eac3ae31f150b9cf, type: 3}
       propertyPath: m_text
-      value: pH Testing
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2316316457794669724, guid: 9c7b710ee6763c64eac3ae31f150b9cf, type: 3}
       propertyPath: m_text
-      value: pH Testing
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2316316457794669724, guid: 9c7b710ee6763c64eac3ae31f150b9cf, type: 3}
+      propertyPath: m_fontSize
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 2316316457913225516, guid: 9c7b710ee6763c64eac3ae31f150b9cf, type: 3}
       propertyPath: m_AnchorMin.y
@@ -328,7 +336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316316458438171535, guid: 9c7b710ee6763c64eac3ae31f150b9cf, type: 3}
       propertyPath: m_text
-      value: Sludge Judge
+      value: Overview
       objectReference: {fileID: 0}
     - target: {fileID: 2316316458525458142, guid: 9c7b710ee6763c64eac3ae31f150b9cf, type: 3}
       propertyPath: m_AnchorMin.y
@@ -356,7 +364,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316316458763412417, guid: 9c7b710ee6763c64eac3ae31f150b9cf, type: 3}
       propertyPath: m_text
-      value: Sludge Judge
+      value: 'Overview
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 4559996526452908548, guid: 9c7b710ee6763c64eac3ae31f150b9cf, type: 3}
       propertyPath: m_VideoClip
@@ -364,12 +374,12 @@ PrefabInstance:
       objectReference: {fileID: 32900000, guid: 66bd882f4eb67d541b06dfc95b9724fc, type: 3}
     - target: {fileID: 6062171177422719235, guid: 9c7b710ee6763c64eac3ae31f150b9cf, type: 3}
       propertyPath: modules.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6062171177422719235, guid: 9c7b710ee6763c64eac3ae31f150b9cf, type: 3}
       propertyPath: modules.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 4838f0b47835c0142bb0a9e0754b4447, type: 2}
+      objectReference: {fileID: 11400000, guid: 90d3d71b6b1d0604c8226266bcf009a6, type: 2}
     - target: {fileID: 6062171177422719235, guid: 9c7b710ee6763c64eac3ae31f150b9cf, type: 3}
       propertyPath: modules.Array.data[1]
       value: 
