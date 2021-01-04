@@ -1,18 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
-public class AudioExtensions : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public class AudioExtensions : MonoBehaviour {
+    public AudioSource source;
+
+    public void PlaySFX(AudioClip sfx) {
+        source.PlayOneShot(sfx);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public async void PlaySFXDelayed(AudioClip sfx, float delay) {
+        await Task.Delay(TimeSpan.FromSeconds(delay));
+        source.PlayOneShot(sfx);
     }
 }
