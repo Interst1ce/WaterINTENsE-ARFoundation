@@ -17,6 +17,6 @@ MonoBehaviour:
   objectTarget: Scene/TelescopeSampler
   sliderTarget: {fileID: 0}
   targetStep: 11
-  targetAnim: {fileID: 678883953678775076, guid: be4a2de1c84e7ff48818aa95cb647380, type: 3}
+  targetAnim: {fileID: 1827226128182048838, guid: 018ab7041f9d8634fa47cfce7c801a97, type: 3}
   targetAudio: {fileID: 8300000, guid: 39d398852b971054ea15476103d653c4, type: 3}
   playAudioAfterAnim: 1

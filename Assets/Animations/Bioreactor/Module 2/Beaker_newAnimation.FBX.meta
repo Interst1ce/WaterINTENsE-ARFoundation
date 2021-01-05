@@ -1,32 +1,23 @@
 fileFormatVersion: 2
-guid: be4a2de1c84e7ff48818aa95cb647380
+guid: 2af207d060604a34aa89a3206a37ae2b
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: TelescopeSampler_Examine
+    second: Take 001
   - first:
-      74: 678883953678775076
-    second: TelescopeSampler_Ready(Old)
+      74: 1754964700384469919
+    second: Beaker_Fill1
   - first:
-      74: -1679507503967422635
-    second: TelescopeSampler_Fill(Old)
+      74: -2498769838518088688
+    second: Beaker_Fill2
   - first:
-      74: 2437542730687998733
-    second: TelescopeSampler_Pour
+      74: 7106923339171265612
+    second: Beaker_Fill3
   - first:
-      74: -5777776653135227118
-    second: TelescopeSampler_FillReset
-  - first:
-      74: 182598364832341826
-    second: TelescopeSampler_Place(Old)
-  - first:
-      74: 3943490017882655144
-    second: TelescopeSampler_Pour(Old)
-  - first:
-      74: -6323273309679500627
-    second: TelescopeSampler_FillReset(Old)
+      74: -3565954011766420544
+    second: Beaker_Pour
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -56,11 +47,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: TelescopeSampler_Examine
+      name: Beaker_Fill1
       takeName: Take 001
       internalID: 0
-      firstFrame: 750
-      lastFrame: 1000
+      firstFrame: 3112
+      lastFrame: 3350
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -83,13 +74,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 1290
     - serializedVersion: 16
-      name: TelescopeSampler_Ready(Old)
+      name: Beaker_Fill2
       takeName: Take 001
       internalID: 0
-      firstFrame: 2950
-      lastFrame: 2990
+      firstFrame: 3350
+      lastFrame: 3710
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -112,13 +103,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 1290
     - serializedVersion: 16
-      name: TelescopeSampler_Fill(Old)
+      name: Beaker_Fill3
       takeName: Take 001
       internalID: 0
-      firstFrame: 2990
-      lastFrame: 3120
+      firstFrame: 3900
+      lastFrame: 4025.0002
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -141,13 +132,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 1290
     - serializedVersion: 16
-      name: TelescopeSampler_Pour(Old)
+      name: Beaker_Pour
       takeName: Take 001
       internalID: 0
-      firstFrame: 3220
-      lastFrame: 3410
+      firstFrame: 5650
+      lastFrame: 5767
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -170,66 +161,8 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: TelescopeSampler_FillReset(Old)
-      takeName: Take 001
-      internalID: 0
-      firstFrame: 3410
-      lastFrame: 3420
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: TelescopeSampler_Place(Old)
-      takeName: Take 001
-      internalID: 0
-      firstFrame: 3425
-      lastFrame: 3470
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    isReadable: 1
+      additiveReferencePoseFrame: 1290
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1

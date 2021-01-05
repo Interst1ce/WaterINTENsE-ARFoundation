@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7724f3a7be35c474281dd776e9ae3b10, type: 3}
-  m_Name: S12_T1_BioreactorSampling
+  m_Name: S15_T1_BioreactorSampling
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: Scene/TelescopeSampler
+  objectTarget: Scene/Multimeter
   sliderTarget: {fileID: 0}
-  targetStep: 12
-  targetAnim: {fileID: -1679507503967422635, guid: 018ab7041f9d8634fa47cfce7c801a97, type: 3}
-  targetAudio: {fileID: 0}
-  playAudioAfterAnim: 0
+  targetStep: 15
+  targetAnim: {fileID: -6062904020641835786, guid: 447edfc53592f3e42b5af6f4ab4e7b48, type: 3}
+  targetAudio: {fileID: 8300000, guid: d83f42617038c05468411be3c8eb0476, type: 3}
+  playAudioAfterAnim: 1
