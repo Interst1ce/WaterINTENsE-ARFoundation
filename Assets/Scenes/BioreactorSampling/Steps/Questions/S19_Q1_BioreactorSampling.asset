@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f86040cbaa064d641934a4fb7eb1fdcc, type: 3}
+  m_Name: S19_Q1_BioreactorSampling
+  m_EditorClassIdentifier: 
+  question: What was the pH of the water?
+  step: 19
+  qType: 1
+  answer: 9
+  choices: []
+  answerLayout: {fileID: 3456379648784388578, guid: 5c9a0d26631931046acc26923a9ed197, type: 3}
