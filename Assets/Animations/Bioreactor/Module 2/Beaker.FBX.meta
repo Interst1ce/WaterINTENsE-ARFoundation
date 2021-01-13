@@ -1,23 +1,23 @@
 fileFormatVersion: 2
-guid: 018ab7041f9d8634fa47cfce7c801a97
+guid: 2af207d060604a34aa89a3206a37ae2b
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: TelescopeSampler_Ready
+    second: Take 001
   - first:
-      74: -1679507503967422635
-    second: TelescopeSampler_Fill
+      74: 1754964700384469919
+    second: Beaker_Fill1
   - first:
-      74: 2437542730687998733
-    second: TelescopeSampler_Pour
+      74: -2498769838518088688
+    second: Beaker_Fill2
   - first:
-      74: -5777776653135227118
-    second: TelescopeSampler_FillReset
+      74: 7106923339171265612
+    second: Beaker_Fill3
   - first:
-      74: 182598364832341826
-    second: TelescopeSampler_Place
+      74: -3565954011766420544
+    second: Beaker_Pour
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -47,11 +47,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: TelescopeSampler_Ready
+      name: Beaker_Fill1
       takeName: Take 001
       internalID: 0
-      firstFrame: 2943
-      lastFrame: 2990
+      firstFrame: 3112
+      lastFrame: 3350
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -74,13 +74,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 2943
+      additiveReferencePoseFrame: 1290
     - serializedVersion: 16
-      name: TelescopeSampler_Fill
+      name: Beaker_Fill2
       takeName: Take 001
       internalID: 0
-      firstFrame: 2990
-      lastFrame: 3130
+      firstFrame: 3350
+      lastFrame: 3710
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -103,13 +103,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 2943
+      additiveReferencePoseFrame: 1290
     - serializedVersion: 16
-      name: TelescopeSampler_Pour
+      name: Beaker_Fill3
       takeName: Take 001
       internalID: 0
-      firstFrame: 3170
-      lastFrame: 3360
+      firstFrame: 3900
+      lastFrame: 4025.0002
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -132,13 +132,13 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 2943
+      additiveReferencePoseFrame: 1290
     - serializedVersion: 16
-      name: TelescopeSampler_FillReset
+      name: Beaker_Pour
       takeName: Take 001
       internalID: 0
-      firstFrame: 3130
-      lastFrame: 3140
+      firstFrame: 5650
+      lastFrame: 5767
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -161,36 +161,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 2943
-    - serializedVersion: 16
-      name: TelescopeSampler_Place
-      takeName: Take 001
-      internalID: 0
-      firstFrame: 4074.9998
-      lastFrame: 4110
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 2943
+      additiveReferencePoseFrame: 1290
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -250,11 +221,11 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: f78dae69baf8520448e219e2eb79cf23, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 

@@ -39,6 +39,7 @@ public class StoryManager : MonoBehaviour {
 
     Animator lastAnimator;
     AnimationClip lastAnim;
+    QuestionManager qManager;
 
     [Serializable]
     public struct StepExt {
@@ -61,6 +62,7 @@ public class StoryManager : MonoBehaviour {
     private void Awake() {
         audioSource = GetComponent<AudioSource>();
         highlightManager = GetComponent<HighlightManager>();
+        qManager = GetComponentInChildren<QuestionManager>();
     }
 
     private async Task PopulateTargetDictionary() {
@@ -72,21 +74,24 @@ public class StoryManager : MonoBehaviour {
     }
 
     void Update() {
-        for (int i = 0; i < Input.touchCount; i++) {
-            Touch tap = Input.GetTouch(i);
-            if (tap.phase == TouchPhase.Began) {
-                RaycastHit hit;
-                if (Physics.Raycast(Camera.main.ScreenPointToRay(tap.position),out hit)) {
-                    foreach (Target target in steps[currentStep].step.targets) {
-                        interactionMatch = false;
-                        StartCoroutine(DetectInput(target.interaction,tap.position));
-                        for(int j = 0; j < steps[currentStep].step.targets.Count; j++) {
-                            if (hit.transform.gameObject == objectTargets[currentStep][j] && interactionMatch) {
-                                if(target.targetStep == steps.Count && currentStep == steps.Count) {
-                                    finished = true;
-                                    EndStory(target);
-                                }else ContinueStory(target);
-                            } else PlaySFX(missTapAudio);
+        if (!qManager.inQuestion) {
+            for (int i = 0; i < Input.touchCount; i++) {
+                Touch tap = Input.GetTouch(i);
+                if (tap.phase == TouchPhase.Began) {
+                    RaycastHit hit;
+                    if (Physics.Raycast(Camera.main.ScreenPointToRay(tap.position),out hit)) {
+                        Debug.Log(hit.transform.name);
+                        foreach (Target target in steps[currentStep].step.targets) {
+                            interactionMatch = false;
+                            StartCoroutine(DetectInput(target.interaction,tap.position));
+                            for (int j = 0; j < steps[currentStep].step.targets.Count; j++) {
+                                if (hit.transform.gameObject == objectTargets[currentStep][j] && interactionMatch) {
+                                    if (target.targetStep == steps.Count && currentStep == steps.Count) {
+                                        finished = true;
+                                        EndStory(target);
+                                    } else ContinueStory(target);
+                                } else PlaySFX(missTapAudio);
+                            }
                         }
                     }
                 }
@@ -108,10 +113,11 @@ public class StoryManager : MonoBehaviour {
     }
 
     void ContinueStory(Target target) {
-        if (!audioSource.isPlaying && (lastAnim == null || lastAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !lastAnimator.IsInTransition(0))) {
+        if (!audioSource.isPlaying && (lastAnim == null || (lastAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !lastAnimator.IsInTransition(0)))) {
             highlightManager.glow = false;
+            //if (qManager.inQuestion) await WaitForQuestionEnd(); //Might work?
             if (!reviewMode) {
-                if (!target.playAudioAfterAnim) {
+                if (!target.playAudioAfterAnim || target.targetAnim == null) {
                     PlayAudio(target.targetAudio);
                 } else {
                     PlayAudio(target.targetAudio,target.targetAnim.length);
@@ -126,10 +132,18 @@ public class StoryManager : MonoBehaviour {
             foreach(Target nextTarget in steps[currentStep + 1].step.targets) {
                 highlightTargets.Add(GameObject.Find(nextTarget.objectTarget));
             }
-            if(target.targetAnim != null && target.targetAudio != null && !reviewMode) {
-                highlightManager.StartGlow(highlightTargets,Mathf.Max(target.targetAnim.length,target.targetAudio.length));
+            if(target.targetAnim != null && !reviewMode) {
+                if (target.targetAudio != null) {
+                    highlightManager.StartGlow(highlightTargets,Mathf.Max(target.targetAnim.length,target.targetAudio.length));
+                } else highlightManager.StartGlow(highlightTargets,target.targetAnim.length);
             } else highlightManager.StartGlow(highlightTargets,1f);
             currentStep = target.targetStep;
+        }
+    }
+
+    async Task WaitForQuestionEnd() {
+        while (qManager.inQuestion) {
+            await Task.Yield();
         }
     }
 

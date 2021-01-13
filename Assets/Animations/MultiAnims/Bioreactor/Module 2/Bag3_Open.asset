@@ -16,3 +16,9 @@ MonoBehaviour:
   - targetObjPath: Scene/Bag3
     animTitle: Bag3_ToCooler
     delay: 0
+  - targetObjPath: Scene/Cooler
+    animTitle: Cooler_Open
+    delay: 0
+  - targetObjPath: Scene/Cooler
+    animTitle: Cooler_Close
+    delay: 5

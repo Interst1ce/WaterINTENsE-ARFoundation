@@ -1,19 +1,11 @@
 fileFormatVersion: 2
-guid: 5685e56ffd86be845944e6ca9b126720
+guid: 2662b50f300f28347ac80da01ddece1a
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable:
-  - first:
-      74: 1827226128182048838
-    second: Datasheet_Flip
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: 723a6246eebb6de45b28efd32c4d2e4d, type: 2}
+  internalIDToNameTable: []
+  externalObjects: {}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -38,37 +30,8 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Datasheet_Flip
-      takeName: Take 001
-      internalID: 0
-      firstFrame: 7684.9995
-      lastFrame: 7750.0005
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    isReadable: 0
+    clipAnimations: []
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -109,7 +72,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
+  referencedClips:
+  - 595fa5f86a6943040add69100108cda1
+  - bfbdeedcce54fb24b9f3a6fe85eb3c10
+  - b89dbcbc81bafb4409f461eb6ebb3efc
+  - c38300c9dba458542b6174b267bd1141
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
@@ -131,8 +98,8 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
-  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

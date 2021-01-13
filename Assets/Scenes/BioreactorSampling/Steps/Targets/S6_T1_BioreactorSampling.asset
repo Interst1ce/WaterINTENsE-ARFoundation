@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: Scene/Labels
+  objectTarget: Scene/Clipboard
   sliderTarget: {fileID: 0}
   targetStep: 6
-  targetAnim: {fileID: 1827226128182048838, guid: 853c7e2a5affdbb4a8c55047ec9cb51b, type: 3}
+  targetAnim: {fileID: -891678620154375109, guid: c38300c9dba458542b6174b267bd1141, type: 3}
   targetAudio: {fileID: 8300000, guid: a5c2300a422dec1468a8dc01de86519d, type: 3}
   playAudioAfterAnim: 0

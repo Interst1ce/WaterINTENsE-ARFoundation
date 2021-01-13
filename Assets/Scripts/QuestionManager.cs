@@ -28,8 +28,8 @@ public class QuestionManager : MonoBehaviour {
 
     int numInput;
 
-    public static float audioDelay;
-    public static bool inQuestion = false;
+    public float audioDelay;
+    public bool inQuestion = false;
 
     private void Awake() {
         int indexOffset = 0;
@@ -46,6 +46,7 @@ public class QuestionManager : MonoBehaviour {
             }
         }
         qAPanel.SetActive(false);
+        //StartQuest(19);
     }
 
     int[] numGrid = new int[] { 7,8,9,4,5,6,1,2,3 };
@@ -54,15 +55,15 @@ public class QuestionManager : MonoBehaviour {
         inQuestion = true;
         qAPanel.SetActive(true);
         currentQuest = questionDict[new Vector2Int(step,currentQuestIndexOffset)];
-        answerLayout = Instantiate(currentQuest.answerLayout,qAPanel.transform);
-        if(currentQuestIndexOffset == 0) {
+        if (answerLayout == null) answerLayout = Instantiate(currentQuest.answerLayout,qAPanel.transform);
+        if (currentQuestIndexOffset == 0) {
             if (currentQuest.qType == QuestionType.Numpad) {
                 Transform panel = answerLayout.transform.Find("Panel");
                 panel.Find("Enter").GetComponent<Button>().onClick.AddListener(delegate { CheckNumpad(numInput); });
                 int i = 0;
                 foreach (Transform button in panel.Find("NumGrid")) {
-                    Debug.Log("Index: " + i + " Value: " + numGrid[i]);
                     int v = numGrid[i];
+                    Debug.Log("Index: " + i + " Value: " + v);
                     button.GetComponent<Button>().onClick.AddListener(delegate { UpdateNumInput(v); });
                     i++;
                 }
@@ -78,8 +79,8 @@ public class QuestionManager : MonoBehaviour {
             }
         }
         Debug.Log("Updating UI");
-        //StartCoroutine(UpdateUI(1,currentQuest,audioDelay));
-        qAPanel.SetActive(true);
+        StartCoroutine(UpdateUI(1,currentQuest,audioDelay));
+        //qAPanel.SetActive(true);
         Debug.Log("UI Finished Updating");
     }
 
@@ -125,9 +126,9 @@ public class QuestionManager : MonoBehaviour {
             if (incorrectSound != null) {
                 audioSource.clip = incorrectSound;
                 audioSource.Play();
-            }
-            UpdateNumInput(-1);
+            }  
         }
+        UpdateNumInput(-1);
     }
 
     public void UpdateNumInput(int i) {

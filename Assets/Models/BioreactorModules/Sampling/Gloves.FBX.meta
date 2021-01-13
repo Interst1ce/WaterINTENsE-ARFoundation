@@ -8,7 +8,7 @@ ModelImporter:
     second: Gloves_Examine
   - first:
       74: -998496362607748373
-    second: Take 001
+    second: Gloves_PutOn
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -67,11 +67,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Take 001
+      name: Gloves_PutOn
       takeName: Take 001
       internalID: 0
       firstFrame: 1035
-      lastFrame: 1281
+      lastFrame: 1060
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

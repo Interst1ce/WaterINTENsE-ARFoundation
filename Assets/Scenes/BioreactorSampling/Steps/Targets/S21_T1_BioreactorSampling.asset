@@ -17,6 +17,6 @@ MonoBehaviour:
   objectTarget: Scene/Beaker
   sliderTarget: {fileID: 0}
   targetStep: 21
-  targetAnim: {fileID: -3565954011766420544, guid: 2af207d060604a34aa89a3206a37ae2b, type: 3}
+  targetAnim: {fileID: 1827226128182048838, guid: 306afd038e27760469c87a0052959ee1, type: 3}
   targetAudio: {fileID: 8300000, guid: 8632fd31764bf9740aaba8afed502fc8, type: 3}
   playAudioAfterAnim: 1

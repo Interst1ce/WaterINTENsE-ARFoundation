@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Datasheet_Flip
   m_EditorClassIdentifier: 
   anims:
-  - targetObjPath: Scene/Clipboard_COC/DataSheet2
-    animTitle: Datasheet_Flip
-    delay: 0
+  - targetObjPath: Scene/Clipboard
+    animTitle: DataSheetUnflip
+    delay: 8
