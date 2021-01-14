@@ -112,10 +112,10 @@ public class StoryManager : MonoBehaviour {
         currentStep = 0;
     }
 
-    void ContinueStory(Target target) {
+    async void ContinueStory(Target target) {
         if (!audioSource.isPlaying && (lastAnim == null || (lastAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !lastAnimator.IsInTransition(0)))) {
             highlightManager.glow = false;
-            //if (qManager.inQuestion) await WaitForQuestionEnd(); //Might work?
+            if (qManager.inQuestion) await WaitForQuestionEnd(); //Might work?
             if (!reviewMode) {
                 if (!target.playAudioAfterAnim || target.targetAnim == null) {
                     PlayAudio(target.targetAudio);

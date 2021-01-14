@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Bag2_ToCooler
   m_EditorClassIdentifier: 
   anims:
+  - targetObjPath: Scene/SampleJarTesting
+    animTitle: SampleJar_ToCooler
+    delay: 0
   - targetObjPath: Scene/Cooler
     animTitle: Cooler_Open
     delay: 0

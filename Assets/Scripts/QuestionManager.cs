@@ -46,7 +46,6 @@ public class QuestionManager : MonoBehaviour {
             }
         }
         qAPanel.SetActive(false);
-        //StartQuest(19);
     }
 
     int[] numGrid = new int[] { 7,8,9,4,5,6,1,2,3 };

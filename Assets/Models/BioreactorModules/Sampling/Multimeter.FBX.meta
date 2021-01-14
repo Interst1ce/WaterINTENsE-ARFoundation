@@ -11,7 +11,10 @@ ModelImporter:
     second: Multimeter_ToBeaker
   - first:
       74: -5042596513123495406
-    second: Multimeter_RemoveBeaker
+    second: Multimeter_RemoveBeaker_Old
+  - first:
+      74: 3057701067693872220
+    second: Multimeter_ToBeaker_Old
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -70,7 +73,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Multimeter_ToBeaker
+      name: Multimeter_ToBeaker_Old
       takeName: Take 001
       internalID: 0
       firstFrame: 3750
@@ -99,7 +102,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Multimeter_RemoveBeaker
+      name: Multimeter_RemoveBeaker_Old
       takeName: Take 001
       internalID: 0
       firstFrame: 4340

@@ -17,6 +17,6 @@ MonoBehaviour:
   objectTarget: Scene/Multimeter
   sliderTarget: {fileID: 0}
   targetStep: 15
-  targetAnim: {fileID: -6062904020641835786, guid: 447edfc53592f3e42b5af6f4ab4e7b48, type: 3}
+  targetAnim: {fileID: 1827226128182048838, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
   targetAudio: {fileID: 8300000, guid: d83f42617038c05468411be3c8eb0476, type: 3}
   playAudioAfterAnim: 1
