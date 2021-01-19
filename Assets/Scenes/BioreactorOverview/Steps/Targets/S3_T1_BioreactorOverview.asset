@@ -17,6 +17,6 @@ MonoBehaviour:
   objectTarget: Scene/Outlet
   sliderTarget: {fileID: 0}
   targetStep: 3
-  targetAnim: {fileID: -623603649343465320, guid: 36c66a1b80a27884ebe7f3b7d38b62d5, type: 3}
+  targetAnim: {fileID: -623603649343465320, guid: db64b56a4b0e4ba4ebad5ffc9554328d, type: 3}
   targetAudio: {fileID: 8300000, guid: d7890f7c72ca2cd488c8dd92f89d276f, type: 3}
   playAudioAfterAnim: 0

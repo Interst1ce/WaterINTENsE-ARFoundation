@@ -115,7 +115,7 @@ public class StoryManager : MonoBehaviour {
     async void ContinueStory(Target target) {
         if (!audioSource.isPlaying && (lastAnim == null || (lastAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !lastAnimator.IsInTransition(0)))) {
             highlightManager.glow = false;
-            if (qManager.inQuestion) await WaitForQuestionEnd(); //Might work?
+            while (qManager.inQuestion) await Task.Yield(); //Might work?
             if (!reviewMode) {
                 if (!target.playAudioAfterAnim || target.targetAnim == null) {
                     PlayAudio(target.targetAudio);
@@ -138,12 +138,6 @@ public class StoryManager : MonoBehaviour {
                 } else highlightManager.StartGlow(highlightTargets,target.targetAnim.length);
             } else highlightManager.StartGlow(highlightTargets,1f);
             currentStep = target.targetStep;
-        }
-    }
-
-    async Task WaitForQuestionEnd() {
-        while (qManager.inQuestion) {
-            await Task.Yield();
         }
     }
 

@@ -46,6 +46,7 @@ public class PauseMenu : MonoBehaviour {
             gameObject.GetComponent<RectTransform>().anchorMin = new Vector2(0,0.83f);
             gameObject.GetComponent<RectTransform>().anchorMax = new Vector2(0.008f,1);
         }
+        small = !small;
     }
 
     public void ToggleSubMenu(int index) {
