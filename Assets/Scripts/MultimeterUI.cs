@@ -22,7 +22,6 @@ public class MultimeterUI : MonoBehaviour {
                 tempIndicator.color = Color.black;
                 phIndicator.color = screenColor;
                 doIndicator.color = Color.black;
-                await Task.Delay(TimeSpan.FromSeconds(4));
                 multimeterCamera.SetActive(true);
                 break;
             case 2:
@@ -36,6 +35,7 @@ public class MultimeterUI : MonoBehaviour {
                 tempIndicator.color = Color.black;
                 phIndicator.color = Color.black;
                 doIndicator.color = screenColor;
+                await Task.Delay(TimeSpan.FromSeconds(4));
                 break;
             default:
                 break;
