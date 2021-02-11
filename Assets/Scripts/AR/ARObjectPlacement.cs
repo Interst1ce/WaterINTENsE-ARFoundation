@@ -41,7 +41,7 @@ public class ARObjectPlacement : MonoBehaviour {
                     Ray ray = Camera.main.ScreenPointToRay(touch.position);
                     RaycastHit hit;
                     if (Physics.Raycast(ray,out hit)) {
-                        Debug.Log("" + hit.transform.name);
+                        //Debug.Log("" + hit.transform.name);
                         if (hit.transform.gameObject == ghostScene.transform.GetChild(0).gameObject) {
                             ghostScene.SetActive(false);
                             scene.SetActive(true);

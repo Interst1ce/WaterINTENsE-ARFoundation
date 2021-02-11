@@ -80,7 +80,6 @@ public class StoryManager : MonoBehaviour {
                 if (tap.phase == TouchPhase.Began) {
                     RaycastHit hit;
                     if (Physics.Raycast(Camera.main.ScreenPointToRay(tap.position),out hit)) {
-                        Debug.Log(hit.transform.name);
                         foreach (Target target in steps[currentStep].step.targets) {
                             interactionMatch = false;
                             StartCoroutine(DetectInput(target.interaction,tap.position));

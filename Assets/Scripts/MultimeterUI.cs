@@ -19,23 +19,24 @@ public class MultimeterUI : MonoBehaviour {
         switch (reading) {
             case 1:
                 multimeterReading.text = "9";
-                tempIndicator.color = Color.black;
-                phIndicator.color = screenColor;
-                doIndicator.color = Color.black;
+                tempIndicator.color = (Color32)Color.black;
+                phIndicator.color = (Color32)screenColor;
+                doIndicator.color = (Color32)Color.black;
                 multimeterCamera.SetActive(true);
                 break;
             case 2:
                 multimeterReading.text = "52";
-                tempIndicator.color = screenColor;
-                phIndicator.color = Color.black;
-                doIndicator.color = Color.black;
+                tempIndicator.color = (Color32)screenColor;
+                phIndicator.color = (Color32)Color.black;
+                doIndicator.color = (Color32)Color.black;
                 break;
             case 3:
                 multimeterReading.text = "0";
-                tempIndicator.color = Color.black;
-                phIndicator.color = Color.black;
-                doIndicator.color = screenColor;
+                tempIndicator.color = (Color32)Color.black;
+                phIndicator.color = (Color32)Color.black;
+                doIndicator.color = (Color32)screenColor;
                 await Task.Delay(TimeSpan.FromSeconds(4));
+                multimeterCamera.SetActive(false);
                 break;
             default:
                 break;
