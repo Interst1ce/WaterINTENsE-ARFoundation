@@ -74,7 +74,7 @@ public class StoryManager : MonoBehaviour {
     }
 
     void Update() {
-        if (!qManager.inQuestion) {
+        if (!qManager.inQuestion || qManager == null) {
             for (int i = 0; i < Input.touchCount; i++) {
                 Touch tap = Input.GetTouch(i);
                 if (tap.phase == TouchPhase.Began) {

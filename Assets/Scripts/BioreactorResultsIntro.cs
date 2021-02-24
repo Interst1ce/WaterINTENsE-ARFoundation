@@ -13,8 +13,11 @@ public class BioreactorResultsIntro : MonoBehaviour {
     public List<Sprite> monitorScreens;
     public Material glowMat;
     AudioSource audioSource;
+    bool step1, step2, audio1;
 
     void Start() {
+        step1 = false;
+        step2 = false;
         audioSource = GetComponent<AudioSource>();
         audioSource.PlayOneShot(audioSrc[0]);
         Glow(paper,audioSrc[0].length);
@@ -30,22 +33,30 @@ public class BioreactorResultsIntro : MonoBehaviour {
         image.material = Image.defaultGraphicMaterial;
     }
 
-    public void StepOne() {
-        resultsPopup.SetActive(true);
-        UnGlow(paper);
-        audioSource.PlayOneShot(audioSrc[1]);
-        Glow(monitor,audioSrc[1].length);
+    public async void StepOne() {
+        if (!step1) {
+            step1 = true;
+            resultsPopup.SetActive(true);
+            UnGlow(paper);
+            audioSource.PlayOneShot(audioSrc[1]);
+            Glow(monitor,audioSrc[1].length);
+            await Task.Delay(TimeSpan.FromSeconds(audioSrc[1].length));
+            audio1 = true;
+        }
     }
 
     public async void StepTwo() {
-        resultsPopup.SetActive(false);
-        UnGlow(monitor);
-        monitor.sprite = monitorScreens[1];
-        audioSource.PlayOneShot(audioSrc[2]);
-        await Task.Delay(TimeSpan.FromSeconds(audioSrc[2].length));
-        audioSource.PlayOneShot(audioSrc[3]);
-        await Task.Delay(TimeSpan.FromSeconds(audioSrc[3].length));
-        SceneTransition();
+        if (!step2 && step1 && audio1) {
+            step2 = true;
+            resultsPopup.SetActive(false);
+            UnGlow(monitor);
+            monitor.sprite = monitorScreens[1];
+            audioSource.PlayOneShot(audioSrc[2]);
+            await Task.Delay(TimeSpan.FromSeconds(audioSrc[2].length));
+            audioSource.PlayOneShot(audioSrc[3]);
+            await Task.Delay(TimeSpan.FromSeconds(audioSrc[3].length));
+            SceneTransition();
+        }
     }
 
     public void SceneTransition() {

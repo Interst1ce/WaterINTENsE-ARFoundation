@@ -6569,6 +6569,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 418270218515339308, guid: 8aa36ccb55cc78145aa14e40dd0b9a19, type: 3}
+      propertyPath: m_Name
+      value: Inlet_Body
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8aa36ccb55cc78145aa14e40dd0b9a19, type: 3}
       propertyPath: m_Name
       value: Inlet
@@ -6587,7 +6591,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862755126}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
