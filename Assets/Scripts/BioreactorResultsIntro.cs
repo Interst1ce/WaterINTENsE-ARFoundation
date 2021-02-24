@@ -13,7 +13,7 @@ public class BioreactorResultsIntro : MonoBehaviour {
     public List<Sprite> monitorScreens;
     public Material glowMat;
     AudioSource audioSource;
-    bool step1, step2, audio1;
+    bool step1, step2, audio1, audio2;
 
     void Start() {
         step1 = false;
@@ -21,6 +21,12 @@ public class BioreactorResultsIntro : MonoBehaviour {
         audioSource = GetComponent<AudioSource>();
         audioSource.PlayOneShot(audioSrc[0]);
         Glow(paper,audioSrc[0].length);
+        BoolFlip(audio1,audioSrc[0].length);
+    }
+
+    public async void BoolFlip(bool toFlip, float delay) {
+        await Task.Delay(TimeSpan.FromSeconds(delay));
+        toFlip = !toFlip;
     }
 
     public async void Glow(Image image, float delay) {
@@ -33,15 +39,14 @@ public class BioreactorResultsIntro : MonoBehaviour {
         image.material = Image.defaultGraphicMaterial;
     }
 
-    public async void StepOne() {
-        if (!step1) {
+    public void StepOne() {
+        if (!step1 && audio1) {
             step1 = true;
             resultsPopup.SetActive(true);
             UnGlow(paper);
             audioSource.PlayOneShot(audioSrc[1]);
             Glow(monitor,audioSrc[1].length);
-            await Task.Delay(TimeSpan.FromSeconds(audioSrc[1].length));
-            audio1 = true;
+            BoolFlip(audio2, audioSrc[1].length);
         }
     }
 
