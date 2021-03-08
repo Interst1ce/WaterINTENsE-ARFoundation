@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: Scene/Clipboard
+  objectTarget: Scene/Clipboard/Clipboard
   sliderTarget: {fileID: 0}
   targetStep: 28
   targetAnim: {fileID: 1827226128182048838, guid: 595fa5f86a6943040add69100108cda1, type: 3}

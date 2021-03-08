@@ -21,12 +21,12 @@ public class BioreactorResultsIntro : MonoBehaviour {
         audioSource = GetComponent<AudioSource>();
         audioSource.PlayOneShot(audioSrc[0]);
         Glow(paper,audioSrc[0].length);
-        BoolFlip(audio1,audioSrc[0].length);
+        FlipAudio(audioSrc[0].length);
     }
 
-    public async void BoolFlip(bool toFlip, float delay) {
+    public async void FlipAudio(float delay) {
         await Task.Delay(TimeSpan.FromSeconds(delay));
-        toFlip = !toFlip;
+        audio1 = !audio1;
     }
 
     public async void Glow(Image image, float delay) {
@@ -39,19 +39,20 @@ public class BioreactorResultsIntro : MonoBehaviour {
         image.material = Image.defaultGraphicMaterial;
     }
 
-    public void StepOne() {
+    public async void StepOne() {
         if (!step1 && audio1) {
             step1 = true;
             resultsPopup.SetActive(true);
             UnGlow(paper);
             audioSource.PlayOneShot(audioSrc[1]);
             Glow(monitor,audioSrc[1].length);
-            BoolFlip(audio2, audioSrc[1].length);
+            await Task.Delay(TimeSpan.FromSeconds(audioSrc[1].length));
+            audio2 = !audio2;
         }
     }
 
     public async void StepTwo() {
-        if (!step2 && step1 && audio1) {
+        if (!step2 && step1 && audio2) {
             step2 = true;
             resultsPopup.SetActive(false);
             UnGlow(monitor);
@@ -66,7 +67,7 @@ public class BioreactorResultsIntro : MonoBehaviour {
 
     public void SceneTransition() {
         //fade to black?
-        GetComponent<SceneLoader>().LoadScene(5);
+        GetComponent<SceneLoader>().LoadScene(4);
     }
 }
  
