@@ -9,6 +9,8 @@ public class BioreactorResultsIntro : MonoBehaviour {
     public List<AudioClip> audioSrc;
     public Image paper;
     public Image monitor;
+    public Image results;
+    public Image graph;
     public GameObject resultsPopup;
     public List<Sprite> monitorScreens;
     public Material glowMat;
@@ -45,7 +47,8 @@ public class BioreactorResultsIntro : MonoBehaviour {
             resultsPopup.SetActive(true);
             UnGlow(paper);
             audioSource.PlayOneShot(audioSrc[1]);
-            Glow(monitor,audioSrc[1].length);
+            Glow(results,audioSrc[1].length);
+            Glow(graph,audioSrc[1].length);
             await Task.Delay(TimeSpan.FromSeconds(audioSrc[1].length));
             audio2 = !audio2;
         }
@@ -55,7 +58,8 @@ public class BioreactorResultsIntro : MonoBehaviour {
         if (!step2 && step1 && audio2) {
             step2 = true;
             resultsPopup.SetActive(false);
-            UnGlow(monitor);
+            UnGlow(results);
+            UnGlow(graph);
             monitor.sprite = monitorScreens[1];
             audioSource.PlayOneShot(audioSrc[2]);
             await Task.Delay(TimeSpan.FromSeconds(audioSrc[2].length));
