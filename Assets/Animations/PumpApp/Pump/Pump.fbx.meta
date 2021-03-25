@@ -3,77 +3,7 @@ guid: 5f4ae50bc1d42284795aac19afbf0bd6
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 13 - Brushed Metal
-    second: {fileID: 2100000, guid: 600f9db69c5d54f47a6ebd139c0a5dae, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bearing
-    second: {fileID: 2100000, guid: e899addf638bddb41953c8998fc413dd, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MechanicalSeal
-    second: {fileID: 2100000, guid: e2f1ad25a71cb6343a46047da9469676, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Motor
-    second: {fileID: 2100000, guid: 891fdb9890185c94792f826a5f46ced9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PressureGauge
-    second: {fileID: 2100000, guid: 36f4c828a19d79d458b008107ec285d7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Valves
-    second: {fileID: 2100000, guid: 1445519ea803cd14184eebd4fccf31b7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: backSuction
-    second: {fileID: 2100000, guid: 2431944f4c2d1c94d99c6d8d2b518898, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: coupler
-    second: {fileID: 2100000, guid: eed3e28c88a7aa54688a4dedfa9e2b44, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: floorMount
-    second: {fileID: 2100000, guid: af0f0de4813a4c04a82bdc7cc464e111, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: frontSuction
-    second: {fileID: 2100000, guid: 2c96baf9101b0cb42b7d8d503b985cd6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: housing
-    second: {fileID: 2100000, guid: b2e5dd2f7b3fd334aa75bd82f5ffa25a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: impeller
-    second: {fileID: 2100000, guid: f3bd68d58536e974782a4c1ca347a001, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: impellerHousing
-    second: {fileID: 2100000, guid: f58918ed3393da140b8a95a63fa1cc85, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: vanes
-    second: {fileID: 2100000, guid: f3e81f5c98f25894fb9d7dbeeed4f4a7, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -143,21 +73,14 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips:
-  - 02e7f94105c8f874a8887bd40a661747
   - 0ebc5b5232b9ebb4caedf751a0714e82
   - 66ac5c203be4db8448fa56246f39b412
-  - d0818815cb664d1459937ba76336a376
-  - b642803078bf007478df6c1744051d62
-  - 0b020d67186f5354cbfb9cc60f9c06bb
-  - 4196a7c52a3219a45a9a32fd0f3cf710
+  - 78434bca406e9a84d9cd2c246da7d5de
+  - 51787bb061f9b884cae43a21f3919a01
   - ec50ab01fa7370e4fa1f81a92b73842a
   - 2c19a495a9f38f749a1b28e037950101
-  - 23db27a7ae2b5f746b9e48b2a107bb1f
-  - 68635477f1306b54c862c3ab432e77de
   - 96fabae564e418c42a2843e3519cb8b5
   - ae080ca1a6f25644fa37df97ec0e05eb
-  - 6ae95b4fa6a526d499ce2f635c3a424f
-  - 31c63b4f9d1a44645ac222dae197c1d3
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
