@@ -36,7 +36,6 @@ EditorBuildSettings:
     path: Assets/Scenes/BioreactorResults.unity
     guid: 7cfcea3a6a3b2424f924bef3473eaed8
   m_configObjects:
-    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 0aebba2708f4e1248a88d61171098cec, type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 4a0c461fb00ba204caf824d8be077acf, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 8b6b54832a83b224cadcf75cdc03b537, type: 2}
-    com.unity.xr.arkit.PlayerSettings: {fileID: 11400000, guid: 8b6b54832a83b224cadcf75cdc03b537, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c18b0c4c190adfa458234b4c5f67279d, type: 2}
