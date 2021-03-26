@@ -15,4 +15,4 @@ MonoBehaviour:
   anims:
   - targetObjPath: Bearing
     animTitle: Bearing_Idle
-    delay: 0
+    delay: 1

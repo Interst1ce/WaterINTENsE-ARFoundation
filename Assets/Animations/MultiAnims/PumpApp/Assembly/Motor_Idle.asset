@@ -15,4 +15,4 @@ MonoBehaviour:
   anims:
   - targetObjPath: ElectricMotor
     animTitle: Motor_Idle
-    delay: 0
+    delay: 1

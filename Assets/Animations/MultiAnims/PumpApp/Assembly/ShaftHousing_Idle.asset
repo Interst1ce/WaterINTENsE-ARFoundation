@@ -15,4 +15,4 @@ MonoBehaviour:
   anims:
   - targetObjPath: ShaftHousing
     animTitle: ShaftHousing_Idle
-    delay: 0
+    delay: 1
