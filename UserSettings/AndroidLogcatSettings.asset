@@ -1,13 +1,38 @@
 {
-    "m_SelectedDeviceId": "",
+    "m_SelectedDeviceId": "R52N71A7NXF",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "R52N71A7NXF",
+        "name": "com.EICCAVR.WaterINTENsEARFoundation_Bioreactor",
+        "processId": 27711,
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownPackagesForSerialization": [],
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "R52N71A7NXF",
+            "name": "com.EICCAVR.WaterINTENsEARFoundation_Bioreactor",
+            "processId": 13743,
+            "exited": false
+        },
+        {
+            "deviceId": "R52N71A7NXF",
+            "name": "com.EICCAVR.WaterINTENsEARFoundation_Bioreactor",
+            "processId": 18389,
+            "exited": false
+        },
+        {
+            "deviceId": "R52N71A7NXF",
+            "name": "com.EICCAVR.WaterINTENsEARFoundation_Bioreactor",
+            "processId": 19290,
+            "exited": false
+        },
+        {
+            "deviceId": "R52N71A7NXF",
+            "name": "com.EICCAVR.WaterINTENsEARFoundation_Bioreactor",
+            "processId": 27711,
+            "exited": false
+        }
+    ],
     "m_Tags": {
         "m_Entries": [
             {
@@ -16,7 +41,7 @@
             },
             {
                 "m_Name": "No Filter",
-                "m_Selected": true
+                "m_Selected": false
             },
             {
                 "m_Name": "",
@@ -32,7 +57,7 @@
             },
             {
                 "m_Name": "Unity",
-                "m_Selected": false
+                "m_Selected": true
             },
             {
                 "m_Name": "CRASH",
