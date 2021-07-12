@@ -29,24 +29,37 @@ public class MainMenu : MonoBehaviour {
 
     //Init global variables from objects in scene
     public void Awake() {
-        chapterTitles[0] = GameObject.Find("Chapter1/ChapterTitle").GetComponent<TextMeshProUGUI>();
-        chapterTitles[1] = GameObject.Find("Chapter2/ChapterTitle").GetComponent<TextMeshProUGUI>();
-        chapterTitles[2] = GameObject.Find("Chapter3/ChapterTitle").GetComponent<TextMeshProUGUI>();
-        //chapterSummaries[0] = GameObject.Find("Chapter1/ChapterSummary").GetComponent<TextMeshProUGUI>();
-        //chapterSummaries[1] = GameObject.Find("Chapter2/ChapterSummary").GetComponent<TextMeshProUGUI>();
-        //chapterSummaries[2] = GameObject.Find("Chapter3/ChapterSummary").GetComponent<TextMeshProUGUI>();
-        moreChapters = GameObject.Find("MoreChapters");
-        prevChapters = GameObject.Find("BackChapters");
-        eventManager = GameObject.Find("EventSystem");
-        //chapterIcons[0] = GameObject.Find("Chapter1/ChapterIcon").GetComponent<Image>();
-        //chapterIcons[1] = GameObject.Find("Chapter2/ChapterIcon").GetComponent<Image>();
-        //chapterIcons[2] = GameObject.Find("Chapter3/ChapterIcon").GetComponent<Image>();
-        moduleIcons[0] = GameObject.Find("TopModule/ModuleIcon").GetComponent<Image>();
-        moduleIcons[1] = GameObject.Find("MiddleModule/ModuleIcon").GetComponent<Image>();
-        moduleIcons[2] = GameObject.Find("BottomModule/ModuleIcon").GetComponent<Image>();
-        buttons[0] = GameObject.Find("Chapter1").GetComponent<Button>();
-        buttons[1] = GameObject.Find("Chapter2").GetComponent<Button>();
-        buttons[2] = GameObject.Find("Chapter3").GetComponent<Button>();
+
+        try 
+        {
+
+            chapterTitles[0] = GameObject.Find("Chapter1/ChapterTitle").GetComponent<TextMeshProUGUI>();
+            chapterTitles[1] = GameObject.Find("Chapter2/ChapterTitle").GetComponent<TextMeshProUGUI>();
+            chapterTitles[2] = GameObject.Find("Chapter3/ChapterTitle").GetComponent<TextMeshProUGUI>();
+            //chapterSummaries[0] = GameObject.Find("Chapter1/ChapterSummary").GetComponent<TextMeshProUGUI>();
+            //chapterSummaries[1] = GameObject.Find("Chapter2/ChapterSummary").GetComponent<TextMeshProUGUI>();
+            //chapterSummaries[2] = GameObject.Find("Chapter3/ChapterSummary").GetComponent<TextMeshProUGUI>();
+            moreChapters = GameObject.Find("MoreChapters");
+            prevChapters = GameObject.Find("BackChapters");
+            eventManager = GameObject.Find("EventSystem");
+            //chapterIcons[0] = GameObject.Find("Chapter1/ChapterIcon").GetComponent<Image>();
+            //chapterIcons[1] = GameObject.Find("Chapter2/ChapterIcon").GetComponent<Image>();
+            //chapterIcons[2] = GameObject.Find("Chapter3/ChapterIcon").GetComponent<Image>();
+            moduleIcons[0] = GameObject.Find("TopModule/ModuleIcon").GetComponent<Image>();
+            moduleIcons[1] = GameObject.Find("MiddleModule/ModuleIcon").GetComponent<Image>();
+            moduleIcons[2] = GameObject.Find("BottomModule/ModuleIcon").GetComponent<Image>();
+            buttons[0] = GameObject.Find("Chapter1").GetComponent<Button>();
+            buttons[1] = GameObject.Find("Chapter2").GetComponent<Button>();
+            buttons[2] = GameObject.Find("Chapter3").GetComponent<Button>();
+
+        }
+        catch 
+        {
+
+            Debug.Log("setup not working");
+        
+        }
+        
     }
 
     public void HighlightModuleButton(int buttonPressed) {
@@ -204,5 +217,13 @@ public class MainMenu : MonoBehaviour {
             elem.color = new Color(0.3176471f,0.3176471f,0.3176471f,1);
         }*/
         #endregion
+    }
+
+    public void LoadSceneSplashScreen(int sceneNumber) 
+    {
+
+        SceneManager.LoadScene(sceneNumber);
+        
+    
     }
 }

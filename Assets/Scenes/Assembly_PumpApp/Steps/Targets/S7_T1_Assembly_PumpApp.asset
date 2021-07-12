@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: ElectricMotor
+  objectTarget: 
   sliderTarget: {fileID: 0}
-  targetStep: 7
-  targetAnim: {fileID: 3618694205489373423, guid: 2c19a495a9f38f749a1b28e037950101, type: 3}
-  targetAudio: {fileID: 8300000, guid: f1e5c09b853403d49a470daf153c52b7, type: 3}
+  targetStep: 0
+  targetAnim: {fileID: 0}
+  targetAudio: {fileID: 0}
   playAudioAfterAnim: 0

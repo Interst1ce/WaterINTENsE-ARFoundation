@@ -18,6 +18,23 @@ public class ARObjectPlacement : MonoBehaviour {
     [SerializeField]
     GameObject confirmButton;
 
+    [SerializeField]
+    bool maintScenario = false; //Maintenance scenario  mode toggle
+    [SerializeField]
+    bool operationsExplore = false;
+    [SerializeField]
+    bool operationsScenarios = false;
+    [SerializeField]
+    Text debugText;
+
+    //manages scenarios 
+    [SerializeField]
+    MaintenanceScenario maintManager;
+    [SerializeField]
+    OperationsManager operationsManager;
+    [SerializeField]
+    OperationsScenarios operationsScenariosRef;
+
     static List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     public bool sceneSpawned = false;
@@ -79,6 +96,34 @@ public class ARObjectPlacement : MonoBehaviour {
         confirmButton.SetActive(true);
         pauseMenu.ToggleSubMenu(0);
         pauseMenu.Pause();
-        storyManager.StartStory();
+        
+        //maintScenarios entry point
+        if (!maintScenario && operationsExplore)
+        {
+            
+            operationsManager.OperationsExploreManager();
+            //start normal application logic using story manager
+        }
+        else if (maintScenario && !operationsExplore && !operationsScenarios)
+        {
+            //beings maintenance scenario logic
+            maintManager.StartScenarioModule();
+        }
+        else if (!maintScenario && !operationsExplore && operationsScenarios) 
+        {
+
+            operationsScenariosRef.OperationsScenariosManager();
+        
+        }
+        else 
+        {
+
+            storyManager.StartStory();
+
+        }
+
     }
+
+
+
 }
