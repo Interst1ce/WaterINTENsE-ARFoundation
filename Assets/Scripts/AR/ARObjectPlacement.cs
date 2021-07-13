@@ -98,7 +98,7 @@ public class ARObjectPlacement : MonoBehaviour {
         pauseMenu.Pause();
         
         //maintScenarios entry point
-        if (!maintScenario && operationsExplore)
+        if (!maintScenario && operationsExplore && !operationsScenarios)
         {
             
             operationsManager.OperationsExploreManager();

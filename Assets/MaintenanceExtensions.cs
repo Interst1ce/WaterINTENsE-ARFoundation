@@ -157,12 +157,12 @@ public class MaintenanceExtensions : MonoBehaviour
 
             }
             yield return null;
-
-        }*/
         
+        }*/
+       
         while (true)
         {
-            if (!audioSource.isPlaying)
+            if (!audioSource.isPlaying && !PauseMenu.paused)
             {
                 pauseMenu.Pause();
                 break;
