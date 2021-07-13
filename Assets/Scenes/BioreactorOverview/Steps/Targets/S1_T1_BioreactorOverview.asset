@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: Scene/Inlet
+  objectTarget: Inlet
   sliderTarget: {fileID: 0}
   targetStep: 1
   targetAnim: {fileID: -623603649343465320, guid: 8aa36ccb55cc78145aa14e40dd0b9a19, type: 3}
