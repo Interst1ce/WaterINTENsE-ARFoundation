@@ -218,12 +218,4 @@ public class MainMenu : MonoBehaviour {
         }*/
         #endregion
     }
-
-    public void LoadSceneSplashScreen(int sceneNumber) 
-    {
-
-        SceneManager.LoadScene(sceneNumber);
-        
-    
-    }
 }
