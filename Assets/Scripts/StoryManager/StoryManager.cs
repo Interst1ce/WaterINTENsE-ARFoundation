@@ -82,6 +82,7 @@ public class StoryManager : MonoBehaviour {
     }
 
     void Update() {
+        if (PauseMenu.paused) return;
         if (qManager != null) {
             if (!qManager.inQuestion) {
                 for (int i = 0; i < Input.touchCount; i++) {
