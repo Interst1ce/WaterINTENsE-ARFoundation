@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - ARPlane
+  - Slider
+  - DebugText
+  - botValve
+  - topValve
   layers:
   - Default
   - TransparentFX

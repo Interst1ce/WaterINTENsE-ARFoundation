@@ -10,6 +10,7 @@ public class ResizeScene : MonoBehaviour {
     float oldHeight;
     Vector3 oldScale;
 
+
     public void Init() {
         oldHeight = scene.transform.localPosition.y;
         oldScale = scene.transform.localScale;
@@ -18,6 +19,7 @@ public class ResizeScene : MonoBehaviour {
     public void UpdateScale(float scaleMult) {
         Vector3 newScale = oldScale * scaleMult;
         scene.transform.localScale = newScale;
+        
     }
 
     public void RevertScale(Slider slider) {

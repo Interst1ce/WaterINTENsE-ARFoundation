@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7724f3a7be35c474281dd776e9ae3b10, type: 3}
+  m_Name: S1_T1_Maintenance_PumpApp
+  m_EditorClassIdentifier: 
+  type: 0
+  interaction: 0
+  objectTarget: ElectricMotor.001
+  sliderTarget: {fileID: 0}
+  targetStep: 1
+  targetAnim: {fileID: 3618694205489373423, guid: 2c19a495a9f38f749a1b28e037950101, type: 3}
+  targetAudio: {fileID: 8300000, guid: 0d86a982e7d33da4c834d20125e33e80, type: 3}
+  playAudioAfterAnim: 1

@@ -11,10 +11,13 @@ using UnityEngine.UI;
 [RequireComponent(typeof(AudioListener))]
 public class StoryManager : MonoBehaviour {
     public int currentStep;
-    bool introPlayed = false;
+    //bool introPlayed = false;
     bool finished = false;
-    AudioSource audioSource;
+    public AudioSource audioSource;
     HighlightManager highlightManager;
+
+    
+    
 
     [SerializeField]
     bool reviewMode = false;
@@ -59,10 +62,15 @@ public class StoryManager : MonoBehaviour {
         public bool playAudioAfterAnim;
     }
 
+    [SerializeField]
+    Text debugText; 
+
     private void Awake() {
         audioSource = GetComponent<AudioSource>();
         highlightManager = GetComponent<HighlightManager>();
         qManager = GetComponentInChildren<QuestionManager>();
+        
+        
     }
 
     private async Task PopulateTargetDictionary() {
@@ -85,12 +93,26 @@ public class StoryManager : MonoBehaviour {
                                 interactionMatch = false;
                                 StartCoroutine(DetectInput(target.interaction,tap.position));
                                 for (int j = 0; j < steps[currentStep].step.targets.Count; j++) {
-                                    if (hit.transform.gameObject == objectTargets[currentStep][j] && interactionMatch) {
-                                        if (target.targetStep == steps.Count && currentStep == steps.Count) {
+                                    if (hit.transform.gameObject == objectTargets[currentStep][j] && interactionMatch)
+                                    {
+                                        if (target.targetStep == steps.Count && currentStep == steps.Count)
+                                        {
+
                                             finished = true;
                                             EndStory(target);
-                                        } else ContinueStory(target);
-                                    } else PlaySFX(missTapAudio);
+                                        }
+                                        else ContinueStory(target);
+                                    }
+                                    else 
+                                    {
+                                        if (!audioSource.isPlaying) 
+                                        { 
+                                            
+                                            PlaySFX(missTapAudio); 
+                                        
+                                        }
+                                    
+                                    }
                                 }
                             }
                         }
@@ -114,6 +136,7 @@ public class StoryManager : MonoBehaviour {
     }
 
     async void ContinueStory(Target target) {
+        //Basically, when 'ContinueStory' gets called, this event gets invoked--functions with custom functionality can be attached to this event, so that they get run here
         steps[currentStep].extensions.Invoke();
         if (qManager.inQuestion) {
             await Task.Yield(); //Might actually work and not cause infinite loops
@@ -126,6 +149,7 @@ public class StoryManager : MonoBehaviour {
                     PlayAudio(target.targetAudio,target.targetAnim.length);
                 }
             }
+            //Animation code
             Animator targetAnimator = GetTargetAnimator(GameObject.Find(target.objectTarget));
             lastAnimator = targetAnimator;
             lastAnim = target.targetAnim;
@@ -144,7 +168,7 @@ public class StoryManager : MonoBehaviour {
         }
     }
 
-    async void EndStory(Target target) {
+    async public void EndStory(Target target) {
         float seconds = Mathf.Max(target.targetAudio.length,target.targetAnim.length);
         int delay = Mathf.FloorToInt(seconds) + Mathf.FloorToInt(seconds % 1 * 1000);
 
@@ -186,6 +210,9 @@ public class StoryManager : MonoBehaviour {
     }
 
     IEnumerator DetectInput(Target.Interaction toCheck,Vector2 startPos) {
+
+        
+        
         float startTime = Time.time;
         float timeDelta = 0;
 
@@ -216,4 +243,5 @@ public class StoryManager : MonoBehaviour {
             }
         } while (timeDelta < 0.5f);
     }
-}
+
+ }
