@@ -16,8 +16,8 @@ MonoBehaviour:
   - chapterTitle: Assembly
     chapterSummary: 
     chapterIcon: {fileID: 21300000, guid: 53553cf5326fdd547b115f11da8c40cc, type: 3}
-    chapterScene: 4
+    chapterScene: 0
   - chapterTitle: Operations
     chapterSummary: 
     chapterIcon: {fileID: 21300000, guid: 53553cf5326fdd547b115f11da8c40cc, type: 3}
-    chapterScene: 5
+    chapterScene: 1

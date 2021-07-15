@@ -19,6 +19,8 @@ public class OperationsScenarios : MonoBehaviour
     [SerializeField]
     AudioSource audioSource;
     [SerializeField]
+    AudioSource audioSource2;
+    [SerializeField]
     AudioClip introClip;
     [SerializeField]
     AudioClip success;
@@ -53,6 +55,11 @@ public class OperationsScenarios : MonoBehaviour
    [SerializeField]
     int scenarioSelect;
 
+    [SerializeField]
+    AudioClip cavitationClip;
+    [SerializeField]
+    AudioClip recirculationClip;
+
     bool topCorrect = false;
     bool botCorrect = false;
 
@@ -75,7 +82,7 @@ public class OperationsScenarios : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        debugText.text = "volume: " + audioSource2.volume;
         sliderValue.text = sliderValveTop.value.ToString();
         sliderValue.text = sliderValveBot.value.ToString();
 
@@ -127,20 +134,20 @@ public class OperationsScenarios : MonoBehaviour
         {
 
             case 0:
-
+                audioSource2.clip = cavitationClip;
                 StartCoroutine(LowSuctionScenario());
                 
                 break;
 
             case 1:
-
+                audioSource2.clip = cavitationClip;
                 StartCoroutine(HighDischargeScenario());
               
 
                 break;
 
             case 2:
-
+                audioSource2.clip = recirculationClip;
                 StartCoroutine(RecirculationScenario());
                 break;
 
@@ -169,6 +176,12 @@ public class OperationsScenarios : MonoBehaviour
         }
         yield return new WaitForSeconds(23f);
         valveBot.GetComponent<MeshRenderer>().material = glowMat;
+
+        
+        audioSource2.Play();
+        audioSource2.volume = 1f;
+
+        StartCoroutine(LowSuctionVolumeCoroutine());
 
         while (true)
             {
@@ -230,6 +243,14 @@ public class OperationsScenarios : MonoBehaviour
         yield return new WaitForSeconds(8f);
         valveTop.GetComponent<MeshRenderer>().material = glowMat;
 
+        audioSource2.Play();
+        audioSource2.volume = 1f;
+
+        StartCoroutine(RecirculationVolumeCoroutine());
+
+        
+
+
         while (true)
         {
             if (sliderValveTop.value > .39f && sliderValveTop.value < .49f)
@@ -282,6 +303,13 @@ public class OperationsScenarios : MonoBehaviour
 
         yield return new WaitForSeconds(14f);
         valveTop.GetComponent<MeshRenderer>().material = glowMat;
+        
+
+        
+        audioSource2.Play();
+        audioSource2.volume = 1f;
+
+        StartCoroutine(HighDischargeVolume());
 
         while (true)
         {
@@ -333,10 +361,30 @@ public class OperationsScenarios : MonoBehaviour
             }
             else if (!audioSource.isPlaying)
             {
+                if(scenarioSelect == 0) 
+                {
+                    //low suction
+                    valveTop.GetComponent<Collider>().enabled = false;
+                    valveBot.GetComponent<Collider>().enabled = true;
+                    break;
+                }
+                else if (scenarioSelect == 1) 
+                {
+                    //high discharge
+                    valveTop.GetComponent<Collider>().enabled = true;
+                    valveBot.GetComponent<Collider>().enabled = false;
+                    break;
+                }
+                else if (scenarioSelect == 2) 
+                {
+                    //recirculation
+                    valveTop.GetComponent<Collider>().enabled = true;
+                    valveBot.GetComponent<Collider>().enabled = false;
+                    break;
+                }
                 yield return new WaitForSeconds(1f);
                 debugText.text = "inside isplaying check";
-                valveBot.GetComponent<Collider>().enabled = true;
-                valveTop.GetComponent<Collider>().enabled = true;
+                
                 break;
             }
             yield return null;
@@ -403,6 +451,104 @@ public class OperationsScenarios : MonoBehaviour
         pauseMenu.Pause();
         OperationsScenariosManager();
 
+        
+
+    }
+
+    public IEnumerator LowSuctionVolumeCoroutine() 
+    {
+
+        while (true) 
+        {
+            if (audioSource2.isActiveAndEnabled) 
+            {
+
+                if (audioSource2.clip == cavitationClip && sliderValveBot.value >= .7f && audioSource2.isPlaying)
+                {
+                    debugText.text += "Volume off";
+                    audioSource2.volume = 0f;
+
+                }
+                else if (sliderValveBot.value < .7f && sliderValveBot.value >= .3f && audioSource2.isPlaying)
+                {
+                    debugText.text += "Volume on, volume: " + audioSource2.volume;
+                    audioSource2.volume = .5f;
+
+                }
+                else
+                {
+                    debugText.text += "in else, volume:" + audioSource2.volume;
+                    audioSource2.volume = .25f;
+
+                }
+            }
+            
+            
+            yield return null;
+        }
+        
+
+    }
+
+    public IEnumerator RecirculationVolumeCoroutine() 
+    {
+        while (true) 
+        {
+            if (audioSource2.isActiveAndEnabled) 
+            {
+
+                if (audioSource2.clip == recirculationClip && sliderValveTop.value >= .5f && audioSource2.isPlaying)
+                {
+                    debugText.text += "Volume off";
+                    audioSource2.volume = 0f;
+
+                }
+                else if (sliderValveTop.value < .5f && sliderValveBot.value >= .2f && audioSource2.isPlaying)
+                {
+                    debugText.text += "Volume on, volume: " + audioSource2.volume;
+                    audioSource2.volume = .5f;
+
+                }
+                else
+                {
+                    debugText.text += "in else, volume:" + audioSource2.volume;
+                    audioSource2.volume = .25f;
+
+                }
+            }
+            yield return null;
+        }        
+    }
+
+    public IEnumerator HighDischargeVolume()
+    {
+
+        while (true) 
+        {
+            if (audioSource2.isActiveAndEnabled) 
+            {
+
+                if (audioSource2.clip == cavitationClip && sliderValveBot.value >= .4f && audioSource2.isPlaying)
+                {
+                    debugText.text += "Volume off";
+                    audioSource2.volume = 0f;
+
+                }
+                else if (sliderValveBot.value <= .4f && sliderValveBot.value >= .2f && audioSource2.isPlaying)
+                {
+                    debugText.text += "Volume on, volume: " + audioSource2.volume;
+                    audioSource2.volume = .5f;
+
+                }
+                else
+                {
+                    debugText.text += "in else, volume:" + audioSource2.volume;
+                    audioSource2.volume = .25f;
+
+                }
+            }
+            yield return null;
+        }
         
 
     }

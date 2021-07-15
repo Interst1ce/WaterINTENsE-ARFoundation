@@ -16,4 +16,4 @@ MonoBehaviour:
   - chapterTitle: Explore
     chapterSummary: 
     chapterIcon: {fileID: 21300000, guid: 746e5fb4b2024cf45897e83403f30eb1, type: 3}
-    chapterScene: 9
+    chapterScene: 4
