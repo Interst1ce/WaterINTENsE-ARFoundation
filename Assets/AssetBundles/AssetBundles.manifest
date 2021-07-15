@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 2694498400
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: tutorialvideo
+      Dependencies: {}

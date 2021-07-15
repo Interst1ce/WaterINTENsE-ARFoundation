@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 1538878239
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d4db28ee836cf9b64cfe55901a77af70
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c12678a98877549a3fe7bb52917258ad
+HashAppended: 0
+ClassTypes:
+- Class: 329
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Textures/Video/TutorialVideoSound.mp4
+Dependencies: []
