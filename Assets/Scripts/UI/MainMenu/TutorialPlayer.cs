@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
@@ -9,30 +10,41 @@ public class TutorialPlayer : MonoBehaviour {
     [SerializeField]
     GameObject tutorialBackground;
 
+    PlayAssetBundleRequest bundleRequest;
     AssetBundle asset;
 
     VideoPlayer video;
     RawImage vidTex;
     GraphicRaycaster graphicRaycaster;
 
-    private void Awake() {
+    private async void Awake() {
         video = tutorialBackground.GetComponentInChildren<VideoPlayer>();
         vidTex = tutorialBackground.GetComponentInChildren<RawImage>();
         graphicRaycaster = tutorialBackground.GetComponentInParent<GraphicRaycaster>();
-        asset = PlayAssetDelivery.RetrieveAssetBundleAsync("tutorialvideo").AssetBundle;
         tutorialBackground.SetActive(false);
+        bundleRequest = PlayAssetDelivery.RetrieveAssetBundleAsync("tutorialvideo");
+        while (!bundleRequest.IsDone) {
+            await Task.Yield();
+        }
+        asset = bundleRequest.AssetBundle;
     }
 
     public void StartTutorial() {
-        video.clip = asset.LoadAssetAsync<VideoClip>("TutorialVideoSound.mp4").asset as VideoClip;
-        tutorialBackground.SetActive(true);
-        video.Play();
+        if (bundleRequest.IsDone) {
+            VideoClip clip = asset.LoadAsset<VideoClip>("tutorialvideosound.mp4");
+            tutorialBackground.SetActive(true);
+            video.clip = clip;
+            video.Play();
+        }
     }
 
     public void ExitTutorial() {
         video.Stop();
-        asset.Unload(true);
         tutorialBackground.SetActive(false);
+    }
+
+    public void AssetBundleCleanup() {
+        asset.Unload(true);
     }
 
     public void PlayPause() {

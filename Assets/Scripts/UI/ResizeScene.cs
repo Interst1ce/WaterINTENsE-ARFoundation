@@ -18,7 +18,10 @@ public class ResizeScene : MonoBehaviour {
 
     public void UpdateScale(float scaleMult) {
         Vector3 newScale = oldScale * scaleMult;
-        if(newScale.x !< 0.1f && newScale.x !> 2f) scene.transform.localScale = newScale;
+        newScale.x = Mathf.Clamp(newScale.x,0.25f,2f);
+        newScale.y = Mathf.Clamp(newScale.y,0.25f,2f);
+        newScale.z = Mathf.Clamp(newScale.z,0.25f,2f);
+        scene.transform.localScale = newScale;
     }
 
     public void RevertScale(Slider slider) {

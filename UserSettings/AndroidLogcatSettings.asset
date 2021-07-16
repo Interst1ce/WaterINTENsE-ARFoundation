@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "R52N71A7NXF",
+    "m_SelectedDeviceId": "988bdc4143534d4d34",
     "m_SelectedPackage": {
-        "deviceId": "R52N71A7NXF",
-        "name": "com.EICCAVR.WaterINTENsEARFoundation_Bioreactor",
-        "processId": 27711,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -30,6 +30,18 @@
             "deviceId": "R52N71A7NXF",
             "name": "com.EICCAVR.WaterINTENsEARFoundation_Bioreactor",
             "processId": 27711,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.WaterINTENsEARFoundation_Bioreactor",
+            "processId": 1730,
+            "exited": true
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.WaterINTENsEARFoundation_Bioreactor",
+            "processId": 4533,
             "exited": false
         }
     ],
