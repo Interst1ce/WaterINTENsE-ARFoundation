@@ -734,6 +734,7 @@ public class MaintenanceScenario : MonoBehaviour {
 
                     answerYes.SetActive(false);
                     answerNo.SetActive(false);
+                    AmpReader.SetActive(false);
                     dripReader.SetActive(false);
                     thermoReader.SetActive(false);
                     ampSelect.SetActive(true);
@@ -792,6 +793,7 @@ public class MaintenanceScenario : MonoBehaviour {
                     audioSource.Play();
                     answerYes.SetActive(false);
                     answerNo.SetActive(false);
+                    AmpReader.SetActive(false);
                     dripReader.SetActive(false);
                     thermoReader.SetActive(false);
                     ampSelect.SetActive(true);
@@ -849,6 +851,7 @@ public class MaintenanceScenario : MonoBehaviour {
 
                     answerYes.SetActive(false);
                     answerNo.SetActive(false);
+                    AmpReader.SetActive(false);
                     dripReader.SetActive(false);
                     thermoReader.SetActive(false);
                     ampSelect.SetActive(true);
