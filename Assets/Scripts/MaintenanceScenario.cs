@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MaintenanceScenario : MonoBehaviour
-{
+public class MaintenanceScenario : MonoBehaviour {
 
     [SerializeField]
     Text debugText;
@@ -50,7 +49,7 @@ public class MaintenanceScenario : MonoBehaviour
     GameObject bearing;
     [SerializeField]
     GameObject seal;
-    
+
     [SerializeField]
     Material glowMat;
     [SerializeField]
@@ -98,18 +97,16 @@ public class MaintenanceScenario : MonoBehaviour
 
 
 
-    
-    public enum Scenario 
-    { 
-    
+
+    public enum Scenario {
+
         amp,
         drip,
         therm
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         audioSource.clip = introClip;
         //StartScenarioModule();
         StartCoroutine(MeterCompleteCheck());
@@ -129,88 +126,74 @@ public class MaintenanceScenario : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (audioSource.isPlaying == true)
-        {
+    void Update() {
+        if (audioSource.isPlaying == true) {
 
             ampSelect.GetComponent<Button>().interactable = false;
             thermoSelect.GetComponent<Button>().interactable = false;
             dripSelect.GetComponent<Button>().interactable = false;
-            
+
         }
-        if (!audioSource.isPlaying)
-        {
+        if (!audioSource.isPlaying) {
 
             ampSelect.GetComponent<Button>().interactable = true;
             thermoSelect.GetComponent<Button>().interactable = true;
             dripSelect.GetComponent<Button>().interactable = true;
-            
+
 
         }
     }
-    public void StartScenarioModule() 
-    {
+    public void StartScenarioModule() {
         StartCoroutine(PlayIntroAudio());
-       //StartCoroutine(DisableButtonDuringAudio());
-        
+        //StartCoroutine(DisableButtonDuringAudio());
+
     }
 
-    public IEnumerator PlayIntroAudio() 
-    {
+    public IEnumerator PlayIntroAudio() {
         debugText.text = "PlayIntroAudio()";
 
-        while (true) 
-        {
-            if(aRObjectPlacement.sceneSpawned == true) 
-            {
+        while (true) {
+            if (aRObjectPlacement.sceneSpawned == true) {
                 ampSelect.SetActive(true);
                 dripSelect.SetActive(true);
                 thermoSelect.SetActive(true);
                 audioSource.clip = introClip;
                 audioSource.Play();
-                break;            
-            
+                break;
+
             }
             yield return null;
         }
 
         //not playing intro audio 
         //debugText.text = "PlayIntroAudio()"     
-        
+
     }
 
 
     //win condition logic (all meters complete)
-    public IEnumerator MeterCompleteCheck() 
-    {
-        while (true) 
-        {
-            if (ampButtonDisable)
-            {
+    public IEnumerator MeterCompleteCheck() {
+        while (true) {
+            if (ampButtonDisable) {
 
                 ampSelect.SetActive(false);
 
             }
-            if (dripButtonDisable)
-            {
+            if (dripButtonDisable) {
 
                 dripSelect.SetActive(false);
 
             }
-            if (thermoButtonDisable)
-            {
+            if (thermoButtonDisable) {
 
                 thermoSelect.SetActive(false);
 
             }
-            if(thermoButtonDisable && dripButtonDisable && ampButtonDisable) 
-            {
-                if (!audioSource.isPlaying && !PauseMenu.paused)
-                {
+            if (thermoButtonDisable && dripButtonDisable && ampButtonDisable) {
+                if (!audioSource.isPlaying && !PauseMenu.paused) {
 
                     debugText.text = "All buttons disabled";
-                    
+
                     answerYes.SetActive(false);
                     answerNo.SetActive(false);
                     dripReader.SetActive(false);
@@ -218,17 +201,17 @@ public class MaintenanceScenario : MonoBehaviour
                     ampSelect.SetActive(false);
                     dripSelect.SetActive(false);
                     thermoSelect.SetActive(false);
-                    
-                    
+
+
                     pauseMenu.Pause();
-                    
+
                     playButton.GetComponent<Button>().interactable = false;
                     resizeSceneButton.GetComponent<Button>().interactable = false;
                     endButton.SetActive(true);
                     break;
 
                 }
-            
+
             }
 
             yield return null;
@@ -237,19 +220,18 @@ public class MaintenanceScenario : MonoBehaviour
         yield return null;
     }
 
-    public void PauseDisableButtons() 
-    {
+    public void PauseDisableButtons() {
 
         answerYes.GetComponent<Button>().interactable = false;
         answerNo.GetComponent<Button>().interactable = false;
 
-        
+
 
         ampSelect.SetActive(false);
         dripSelect.SetActive(false);
         thermoSelect.SetActive(false);
 
-        
+
 
 
 
@@ -259,25 +241,22 @@ public class MaintenanceScenario : MonoBehaviour
 
     }
 
-    public void PauseMenuReenable() 
-    {
-        if(!answerYes.activeInHierarchy && !answerNo.activeInHierarchy) 
-        {
+    public void PauseMenuReenable() {
+        if (!answerYes.activeInHierarchy && !answerNo.activeInHierarchy) {
 
             ampSelect.SetActive(true);
             dripSelect.SetActive(true);
             thermoSelect.SetActive(true);
 
         }
- 
+
 
         answerYes.GetComponent<Button>().interactable = true;
         answerNo.GetComponent<Button>().interactable = true;
 
 
     }
-    public void ReloadScene()
-    {
+    public void ReloadScene() {
 
 
         answerYes.SetActive(false);
@@ -297,21 +276,21 @@ public class MaintenanceScenario : MonoBehaviour
         dripCompleted = false;
         thermCompleted = false;
 
-        pumpAnimator.SetBool("ReplaceMotor", false);
-        pumpAnimator.SetBool("MotorIsReplaced", false);
+        pumpAnimator.SetBool("ReplaceMotor",false);
+        pumpAnimator.SetBool("MotorIsReplaced",false);
 
-        pumpAnimator.SetBool("ReplaceBearing", false);
-        pumpAnimator.SetBool("BearingIsReplaced", false);
+        pumpAnimator.SetBool("ReplaceBearing",false);
+        pumpAnimator.SetBool("BearingIsReplaced",false);
 
-        pumpAnimator.SetBool("ReplaceSeal", false);
-        pumpAnimator.SetBool("SealIsReplaced", false);
+        pumpAnimator.SetBool("ReplaceSeal",false);
+        pumpAnimator.SetBool("SealIsReplaced",false);
 
 
         //finished = false;
         endButton.SetActive(false);
 
         audioSource.clip = introClip;
-        
+
 
         pauseMenu.Pause();
         audioSource.Play();
@@ -323,25 +302,21 @@ public class MaintenanceScenario : MonoBehaviour
     }
 
 
-    public void StartAmpScenario()
-    {
+    public void StartAmpScenario() {
         StartCoroutine(AmpScenario());
     }
 
-    public void StartThermScenario()
-    {
+    public void StartThermScenario() {
         StartCoroutine(ThermScenario());
     }
 
-    public void StartDripScenario()
-    {
+    public void StartDripScenario() {
         StartCoroutine(DripScenario());
     }
 
 
 
-    public IEnumerator AmpScenario()
-    {
+    public IEnumerator AmpScenario() {
 
 
         //holds meter selected and passses to answer check functions
@@ -350,7 +325,7 @@ public class MaintenanceScenario : MonoBehaviour
         motor.GetComponent<MeshRenderer>().material = glowMat;
         bearing.GetComponent<MeshRenderer>().material = bearingMat;
         seal.GetComponent<MeshRenderer>().material = sealMat;
-        
+
 
         AmpReader.SetActive(true);
         ampSelect.SetActive(false);
@@ -361,38 +336,34 @@ public class MaintenanceScenario : MonoBehaviour
         answerNo.SetActive(true);
 
         valueWithinRangeQ.SetActive(true);
-        while (true)
-        {
+        while (true) {
             //coroutine entry check
             debugText.text = "we're in my coroutine!";
 
-           float scenarioCorrectIncorrect = Random.value;
-            
+            float scenarioCorrectIncorrect = Random.value;
+
             //scenarioCorrectIncorrect = 1f;
             //scenarioCorrectIncorrect == 1f
 
             //delete this, replace it with scenarioCorrectIncorrect<0.5f
-            if (scenarioCorrectIncorrect < .05f) 
-            {
+            if (scenarioCorrectIncorrect < .05f) {
 
                 debugText.text = "AmpNotWithinRange";
 
                 //scenario will produce a value NOT WITHIN the acceptable range of values on AMP meter
-                string ampWrongValue = Random.Range(11.5f, 20f).ToString();
+                string ampWrongValue = Random.Range(11.5f,20f).ToString();
 
                 //storing value in meter text display 
                 ampValue.text = ampWrongValue;
 
                 break;
                 //CheckForCorrectAnswerYes(meterSelection, ampValue.text);
-            }
-            else 
-            {
+            } else {
 
                 debugText.text = "AmpWithinRange";
 
                 //scenario will produce a value WITHIN the acceptable ranges on AMP meter
-                string ampCorrectValue = Random.Range(0f, 11.5f).ToString();
+                string ampCorrectValue = Random.Range(0f,11.5f).ToString();
 
                 //storing value in meter text display 
                 ampValue.text = ampCorrectValue;
@@ -409,8 +380,7 @@ public class MaintenanceScenario : MonoBehaviour
     }
 
     //****TODO: create coroutines for similar to AmpScenario****
-    public IEnumerator ThermScenario()
-    {
+    public IEnumerator ThermScenario() {
         meterSelection = Scenario.therm;
 
         bearing.GetComponent<MeshRenderer>().material = glowMat;
@@ -427,37 +397,33 @@ public class MaintenanceScenario : MonoBehaviour
         answerNo.SetActive(true);
 
         valueWithinRangeQ.SetActive(true);
-        while (true)
-        {
+        while (true) {
             //coroutine entry check
             debugText.text = "we're in my coroutine!";
 
             float scenarioCorrectIncorrect = Random.value;
-            
+
             //scenarioCorrectIncorrect = 1f;
             //scenarioCorrectIncorrect == 1f;
 
             //delete this, replace it with scenarioCorrectIncorrect<0.5f
-            if (scenarioCorrectIncorrect < 0.5f)
-            {
+            if (scenarioCorrectIncorrect < 0.5f) {
 
                 debugText.text = "ThermNotWithinRange";
 
                 //scenario will produce a value NOT WITHIN the acceptable range of values on AMP meter
-                string thermWrongValue = Random.Range(239f, 350f).ToString();
+                string thermWrongValue = Random.Range(239f,350f).ToString();
 
                 //storing value in meter text display 
                 thermoValue.text = thermWrongValue;
                 break;
                 //CheckForCorrectAnswerYes(meterSelection, ampValue.text);
-            }
-            else
-            {
+            } else {
 
                 debugText.text = "ThermWithinRange";
 
                 //scenario will produce a value WITHIN the acceptable ranges on AMP meter
-                string thermCorrectValue = Random.Range(0f, 238f).ToString();
+                string thermCorrectValue = Random.Range(0f,238f).ToString();
 
                 //storing value in meter text display 
                 thermoValue.text = thermCorrectValue;
@@ -471,12 +437,11 @@ public class MaintenanceScenario : MonoBehaviour
         yield return null;
     }
 
-    public IEnumerator DripScenario()
-    {
+    public IEnumerator DripScenario() {
         meterSelection = Scenario.drip;
 
         seal.GetComponent<MeshRenderer>().material = glowMat;
-        bearing.GetComponent<MeshRenderer>().material = bearingMat;        
+        bearing.GetComponent<MeshRenderer>().material = bearingMat;
         motor.GetComponent<MeshRenderer>().material = motorMat;
 
         dripReader.SetActive(true);
@@ -488,8 +453,7 @@ public class MaintenanceScenario : MonoBehaviour
         answerNo.SetActive(true);
 
         valueWithinRangeQ.SetActive(true);
-        while (true)
-        {
+        while (true) {
             //coroutine entry check
             debugText.text = "we're in my coroutine!";
 
@@ -499,26 +463,23 @@ public class MaintenanceScenario : MonoBehaviour
             //scenarioCorrectIncorrect == 1f;
 
             //delete this, replace it with scenarioCorrectIncorrect<0.5f
-            if (scenarioCorrectIncorrect < 0.5f)
-            {
+            if (scenarioCorrectIncorrect < 0.5f) {
 
                 debugText.text = "DripNotWithinRange";
 
                 //scenario will produce a value NOT WITHIN the acceptable range of values on AMP meter
-                string dripWrongValue = Random.Range(0, 2).ToString();
+                string dripWrongValue = Random.Range(0,2).ToString();
 
                 //storing value in meter text display 
                 dripValue.text = dripWrongValue;
                 break;
                 //CheckForCorrectAnswerYes(meterSelection, ampValue.text);
-            }
-            else
-            {
+            } else {
 
                 debugText.text = "DripWithinRange";
 
                 //scenario will produce a value WITHIN the acceptable ranges on AMP meter
-                string dripCorrectValue = Random.Range(30, 50).ToString();
+                string dripCorrectValue = Random.Range(30,50).ToString();
 
                 //storing value in meter text display 
                 dripValue.text = dripCorrectValue;
@@ -533,19 +494,16 @@ public class MaintenanceScenario : MonoBehaviour
         yield return null;
     }
     //checking to see if the meter values are within acceptable ranges. The user answered YES in this situation, all possible cases below.
-    public void CheckForCorrectAnswerYes() 
-    {
+    public void CheckForCorrectAnswerYes() {
         float ampMeterValue = float.Parse(ampValue.text);
         float thermMeterValue = float.Parse(thermoValue.text);
         float dripMeterValue = float.Parse(dripValue.text);
 
-        
-        switch (meterSelection) 
-        {
+
+        switch (meterSelection) {
             case Scenario.amp:
-                if (ampMeterValue >11.5f) 
-                {
-                    
+                if (ampMeterValue > 11.5f) {
+
                     debugText.text = "incorrect";
                     audioSource.clip = incorrectAudio;
                     audioSource.Play();
@@ -562,29 +520,24 @@ public class MaintenanceScenario : MonoBehaviour
 
                     valueWithinRangeQ.SetActive(false);
 
-                    if (ampButtonDisable)
-                    {
+                    if (ampButtonDisable) {
 
                         ampSelect.SetActive(false);
 
                     }
-                    if (dripButtonDisable)
-                    {
+                    if (dripButtonDisable) {
 
                         dripSelect.SetActive(false);
 
                     }
-                    if (thermoButtonDisable)
-                    {
+                    if (thermoButtonDisable) {
 
                         thermoSelect.SetActive(false);
 
                     }
 
 
-                }
-                else 
-                {
+                } else {
 
                     debugText.text = "correct";
 
@@ -607,15 +560,14 @@ public class MaintenanceScenario : MonoBehaviour
 
                     ampCompleted = true;
                     ampButtonDisable = true;
-      
-                    
+
+
                 }
                 break;
 
             case Scenario.therm:
 
-                if (thermMeterValue > 238f)
-                {
+                if (thermMeterValue > 238f) {
                     //
                     debugText.text = "incorrect";
                     audioSource.clip = incorrectAudio;
@@ -633,28 +585,23 @@ public class MaintenanceScenario : MonoBehaviour
 
                     valueWithinRangeQ.SetActive(false);
 
-                    if (ampButtonDisable)
-                    {
+                    if (ampButtonDisable) {
 
                         ampSelect.SetActive(false);
 
                     }
-                    if (dripButtonDisable)
-                    {
+                    if (dripButtonDisable) {
 
                         dripSelect.SetActive(false);
 
                     }
-                    if (thermoButtonDisable)
-                    {
+                    if (thermoButtonDisable) {
 
                         thermoSelect.SetActive(false);
 
                     }
 
-                }
-                else
-                {
+                } else {
 
                     debugText.text = "correct";
                     audioSource.clip = partWorking;
@@ -677,15 +624,14 @@ public class MaintenanceScenario : MonoBehaviour
 
                     thermCompleted = true;
                     thermoButtonDisable = true;
-                    
+
 
                 }
                 break;
 
             case Scenario.drip:
 
-                if (dripMeterValue > 30)
-                {
+                if (dripMeterValue > 30) {
                     //
                     debugText.text = "incorrect";
                     audioSource.clip = incorrectAudio;
@@ -703,28 +649,23 @@ public class MaintenanceScenario : MonoBehaviour
 
                     valueWithinRangeQ.SetActive(false);
 
-                    if (ampButtonDisable)
-                    {
+                    if (ampButtonDisable) {
 
                         ampSelect.SetActive(false);
 
                     }
-                    if (dripButtonDisable)
-                    {
+                    if (dripButtonDisable) {
 
                         dripSelect.SetActive(false);
 
                     }
-                    if (thermoButtonDisable)
-                    {
+                    if (thermoButtonDisable) {
 
                         thermoSelect.SetActive(false);
 
                     }
 
-                }
-                else
-                {
+                } else {
 
                     debugText.text = "correct";
                     audioSource.clip = partWorking;
@@ -750,28 +691,25 @@ public class MaintenanceScenario : MonoBehaviour
                 }
                 break;
         }
- 
-    
+
+
     }
 
-    public void CheckForCorrectAnswerNo() 
-    {
+    public void CheckForCorrectAnswerNo() {
 
         ampMeterValue = float.Parse(ampValue.text);
         thermMeterValue = float.Parse(thermoValue.text);
         dripMeterValue = float.Parse(dripValue.text);
 
         //checking to see if the meter values are within acceptable ranges. The user answered NO in this situation, all possible cases below.
-        switch (meterSelection)
-        {
+        switch (meterSelection) {
             case Scenario.amp:
-                
-                if (ampMeterValue > 11.5f)
-                {
+
+                if (ampMeterValue > 11.5f) {
                     audioSource.clip = replacePart;
                     audioSource.Play();
-                    PlayCorrectSelectionSequence(pumpAnimator, audioSource);
-                    
+                    PlayCorrectSelectionSequence(pumpAnimator,audioSource);
+
                     debugText.text = "correct";
                     motor.GetComponent<MeshRenderer>().material = motorMat;
 
@@ -788,9 +726,7 @@ public class MaintenanceScenario : MonoBehaviour
                     valueWithinRangeQ.SetActive(false);
 
                     break;
-                }
-                else
-                {
+                } else {
                     audioSource.clip = incorrectAudio;
                     audioSource.Play();
 
@@ -807,20 +743,17 @@ public class MaintenanceScenario : MonoBehaviour
                     valueWithinRangeQ.SetActive(false);
 
                     //disables selection buttons if they have already been completed
-                    if (ampButtonDisable)
-                    {
+                    if (ampButtonDisable) {
 
                         ampSelect.SetActive(false);
 
                     }
-                    if (dripButtonDisable)
-                    {
+                    if (dripButtonDisable) {
 
                         dripSelect.SetActive(false);
 
                     }
-                    if (thermoButtonDisable)
-                    {
+                    if (thermoButtonDisable) {
 
                         thermoSelect.SetActive(false);
 
@@ -831,11 +764,10 @@ public class MaintenanceScenario : MonoBehaviour
                 }
             case Scenario.therm:
 
-                if (thermMeterValue > 238f)
-                {
+                if (thermMeterValue > 238f) {
                     audioSource.clip = replacePart;
                     audioSource.Play();
-                    PlayCorrectSelectionSequence(pumpAnimator, audioSource);
+                    PlayCorrectSelectionSequence(pumpAnimator,audioSource);
                     debugText.text = "correct";
 
                     seal.GetComponent<MeshRenderer>().material = sealMat;
@@ -852,9 +784,7 @@ public class MaintenanceScenario : MonoBehaviour
 
                     valueWithinRangeQ.SetActive(false);
 
-                }
-                else
-                {
+                } else {
 
                     seal.GetComponent<MeshRenderer>().material = sealMat;
                     debugText.text = "incorrect";
@@ -871,20 +801,17 @@ public class MaintenanceScenario : MonoBehaviour
                     valueWithinRangeQ.SetActive(false);
 
                     //disables selection buttons if they have already been completed
-                    if (ampButtonDisable)
-                    {
+                    if (ampButtonDisable) {
 
                         ampSelect.SetActive(false);
 
                     }
-                    if (dripButtonDisable)
-                    {
+                    if (dripButtonDisable) {
 
                         dripSelect.SetActive(false);
 
                     }
-                    if (thermoButtonDisable)
-                    {
+                    if (thermoButtonDisable) {
 
                         thermoSelect.SetActive(false);
 
@@ -894,11 +821,10 @@ public class MaintenanceScenario : MonoBehaviour
 
             case Scenario.drip:
 
-                if (dripMeterValue > 30)
-                {
+                if (dripMeterValue > 30) {
                     audioSource.clip = replacePart;
                     audioSource.Play();
-                    PlayCorrectSelectionSequence(pumpAnimator, audioSource);
+                    PlayCorrectSelectionSequence(pumpAnimator,audioSource);
                     debugText.text = "correct";
 
                     bearing.GetComponent<MeshRenderer>().material = bearingMat;
@@ -915,9 +841,7 @@ public class MaintenanceScenario : MonoBehaviour
 
                     valueWithinRangeQ.SetActive(false);
 
-                }
-                else
-                {
+                } else {
                     bearing.GetComponent<MeshRenderer>().material = bearingMat;
                     debugText.text = "incorrect";
                     audioSource.clip = incorrectAudio;
@@ -934,20 +858,17 @@ public class MaintenanceScenario : MonoBehaviour
                     valueWithinRangeQ.SetActive(false);
 
                     //disables selection buttons if they have already been completed
-                    if (ampButtonDisable)
-                    {
+                    if (ampButtonDisable) {
 
                         ampSelect.SetActive(false);
 
                     }
-                    if (dripButtonDisable)
-                    {
+                    if (dripButtonDisable) {
 
                         dripSelect.SetActive(false);
 
                     }
-                    if (thermoButtonDisable)
-                    {
+                    if (thermoButtonDisable) {
 
                         thermoSelect.SetActive(false);
 
@@ -962,28 +883,23 @@ public class MaintenanceScenario : MonoBehaviour
 
     }
 
-    public void PlayCorrectSelectionSequence(Animator scenarioAnim, AudioSource audioSource) 
-    {
+    public void PlayCorrectSelectionSequence(Animator scenarioAnim,AudioSource audioSource) {
 
         //AudioClip correct
 
-        switch (meterSelection) 
-        {
+        switch (meterSelection) {
             case Scenario.amp:
                 debugText.text = "inside playcorrectsequence";
-                
-                scenarioAnim.SetBool("ReplaceMotor", true);
-                try 
-                {
 
-                    StartCoroutine(AnimationResetDelay(scenarioAnim, "MotorIsReplaced", "ReplaceMotor"));
-                }
-                catch 
-                {
+                scenarioAnim.SetBool("ReplaceMotor",true);
+                try {
+
+                    StartCoroutine(AnimationResetDelay(scenarioAnim,"MotorIsReplaced","ReplaceMotor"));
+                } catch {
 
                     debugText2.text = "AnimationResetDelay() not working ";
                 }
-                
+
 
                 ampCompleted = true;
                 ampButtonDisable = true;
@@ -993,15 +909,12 @@ public class MaintenanceScenario : MonoBehaviour
                 debugText.text = "inside playcorrectsequence";
 
 
-                scenarioAnim.SetBool("ReplaceSeal", true);
-                try
-                {
+                scenarioAnim.SetBool("ReplaceSeal",true);
+                try {
 
-                    StartCoroutine(AnimationResetDelay(scenarioAnim, "SealIsReplaced", "ReplaceSeal"));
+                    StartCoroutine(AnimationResetDelay(scenarioAnim,"SealIsReplaced","ReplaceSeal"));
 
-                }
-                catch
-                {
+                } catch {
 
                     debugText2.text = "AnimationResetDelay() not working ";
                 }
@@ -1013,31 +926,27 @@ public class MaintenanceScenario : MonoBehaviour
 
             case Scenario.therm:
                 debugText.text = "inside playcorrectsequence";
-                
-                scenarioAnim.SetBool("ReplaceBearing", true);
 
-                try
-                {
+                scenarioAnim.SetBool("ReplaceBearing",true);
 
-                    StartCoroutine(AnimationResetDelay(scenarioAnim, "BearingIsReplaced", "ReplaceBearing"));
+                try {
 
-                }
-                catch
-                {
+                    StartCoroutine(AnimationResetDelay(scenarioAnim,"BearingIsReplaced","ReplaceBearing"));
+
+                } catch {
 
                     debugText2.text = "AnimationResetDelay() not working ";
                 }
-                
+
 
                 thermCompleted = true;
                 thermoButtonDisable = true;
                 break;
 
         }
-        
+
         //reset scenarios, if successfully completed removes scenario button. 
-        if (ampCompleted) 
-        {
+        if (ampCompleted) {
             //StartCoroutine(AnimationResetDelay(scenarioAnim, "MotorIsReplaced", "ReplaceMotor"));
 
             motor.GetComponent<MeshRenderer>().material = motorMat;
@@ -1056,32 +965,27 @@ public class MaintenanceScenario : MonoBehaviour
 
             ampCompleted = false;
 
-            
 
-            if (ampButtonDisable)
-            {
+
+            if (ampButtonDisable) {
 
                 ampSelect.SetActive(false);
 
             }
-            if (dripButtonDisable)
-            {
+            if (dripButtonDisable) {
 
                 dripSelect.SetActive(false);
 
             }
-            if (thermoButtonDisable)
-            {
+            if (thermoButtonDisable) {
 
                 thermoSelect.SetActive(false);
 
             }
-        }
-        else if (dripCompleted) 
-        {
+        } else if (dripCompleted) {
 
             //StartCoroutine(AnimationResetDelay(scenarioAnim, "SealIsReplaced", "ReplaceSeal"));
-    
+
 
             seal.GetComponent<MeshRenderer>().material = sealMat;
 
@@ -1099,32 +1003,27 @@ public class MaintenanceScenario : MonoBehaviour
 
             dripCompleted = false;
 
-            if (ampButtonDisable)
-            {
+            if (ampButtonDisable) {
 
                 ampSelect.SetActive(false);
 
             }
-            if (dripButtonDisable)
-            {
+            if (dripButtonDisable) {
 
                 dripSelect.SetActive(false);
 
             }
-            if (thermoButtonDisable)
-            {
+            if (thermoButtonDisable) {
 
                 thermoSelect.SetActive(false);
 
             }
 
-        }
-        else if (thermCompleted) 
-        {
+        } else if (thermCompleted) {
 
 
             //StartCoroutine(AnimationResetDelay(scenarioAnim, "BearingIsReplaced", "ReplaceBearing"));
-            
+
 
 
 
@@ -1144,20 +1043,17 @@ public class MaintenanceScenario : MonoBehaviour
 
             thermCompleted = false;
 
-            if (ampButtonDisable)
-            {
+            if (ampButtonDisable) {
 
                 ampSelect.SetActive(false);
 
             }
-            if (dripButtonDisable)
-            {
+            if (dripButtonDisable) {
 
                 dripSelect.SetActive(false);
 
             }
-            if (thermoButtonDisable)
-            {
+            if (thermoButtonDisable) {
 
                 thermoSelect.SetActive(false);
 
@@ -1192,17 +1088,16 @@ public class MaintenanceScenario : MonoBehaviour
         //ampReplace.Play();
 
 
-    
+
     }
 
-    public IEnumerator AnimationResetDelay(Animator scenarioAnim, string trueParam, string falseParam) 
-    {
+    public IEnumerator AnimationResetDelay(Animator scenarioAnim,string trueParam,string falseParam) {
         debugText2.text += "AnimationResetDelay()";
         yield return new WaitForSeconds(17f);
 
-        scenarioAnim.SetBool(falseParam, false);
-        scenarioAnim.SetBool(trueParam, true);
-        
+        scenarioAnim.SetBool(falseParam,false);
+        scenarioAnim.SetBool(trueParam,true);
+
     }
 
 

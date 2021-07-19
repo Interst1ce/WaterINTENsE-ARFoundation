@@ -22,11 +22,13 @@ public class TutorialPlayer : MonoBehaviour {
         vidTex = tutorialBackground.GetComponentInChildren<RawImage>();
         graphicRaycaster = tutorialBackground.GetComponentInParent<GraphicRaycaster>();
         tutorialBackground.SetActive(false);
-        bundleRequest = PlayAssetDelivery.RetrieveAssetBundleAsync("tutorialvideo");
-        while (!bundleRequest.IsDone) {
-            await Task.Yield();
+        if (!Application.isEditor) {
+            bundleRequest = PlayAssetDelivery.RetrieveAssetBundleAsync("tutorialvideo");
+            while (!bundleRequest.IsDone) {
+                await Task.Yield();
+            }
+            asset = bundleRequest.AssetBundle;
         }
-        asset = bundleRequest.AssetBundle;
     }
 
     public void StartTutorial() {

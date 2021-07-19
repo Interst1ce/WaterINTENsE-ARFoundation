@@ -16,11 +16,11 @@ MonoBehaviour:
   - chapterTitle: Low Suction
     chapterSummary: 
     chapterIcon: {fileID: 21300000, guid: 551c743ea514fc649b2bef9328463849, type: 3}
-    chapterScene: 2
+    chapterScene: 6
   - chapterTitle: High Discharge
     chapterSummary: 
     chapterIcon: {fileID: 21300000, guid: 53553cf5326fdd547b115f11da8c40cc, type: 3}
-    chapterScene: 3
+    chapterScene: 7
   - chapterTitle: 'Recirculation '
     chapterSummary: 
     chapterIcon: {fileID: 21300000, guid: 467b8cfc8b25f454aad1ccffb9c143be, type: 3}

@@ -221,6 +221,7 @@ MonoBehaviour:
   debugText: {fileID: 646146014}
   completeAudio: {fileID: 8300000, guid: 1c5a1dc263e330a44b9bd3ae51fe749a, type: 3}
   currentTarget: {fileID: 0}
+  pauseMenu: {fileID: 0}
 --- !u!114 &190088764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,6 +237,11 @@ MonoBehaviour:
   ampMeter: {fileID: 0}
   thermoMeter: {fileID: 0}
   dripCounter: {fileID: 0}
+  pump: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  debugText: {fileID: 0}
+  audioSource: {fileID: 0}
+  finalAudio: {fileID: 0}
 --- !u!1 &261101005 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8656912489950381655, guid: f7b1e6b341fc73047b556b58b2971657, type: 3}
@@ -1789,7 +1795,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8032927486684760337, guid: 765237336348c5c4ea7aba65a4d0f4cd, type: 3}
+  - {fileID: 2100000, guid: b755047757f4485469d24a70e3b46c7f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2100,7 +2106,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4102936015396813197, guid: 765237336348c5c4ea7aba65a4d0f4cd, type: 3}
+  - {fileID: 2100000, guid: 4f3017288e5e32d4ab12f6faeda27f54, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

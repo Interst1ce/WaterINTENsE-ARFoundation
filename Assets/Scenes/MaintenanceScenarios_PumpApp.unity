@@ -601,6 +601,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3145199014930760410, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b92c02015c5a8747a602d172f5800bf, type: 2}
     - target: {fileID: 3443490337020190397, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
       propertyPath: m_Name
       value: IsoValve_top_lp
@@ -2582,11 +2586,14 @@ MonoBehaviour:
   sliderPanel: {fileID: 0}
   sliderValue: {fileID: 0}
   audioSource: {fileID: 0}
+  audioSource2: {fileID: 0}
   introClip: {fileID: 0}
   success: {fileID: 0}
   lowsucExploreAudio: {fileID: 0}
   highDisExploreAudio: {fileID: 0}
   recircExploreAudio: {fileID: 0}
+  cavitationClip: {fileID: 0}
+  recirculationClip: {fileID: 0}
   sliderValveTop: {fileID: 0}
   sliderValveBot: {fileID: 0}
   glowMat: {fileID: 0}
@@ -2627,6 +2634,7 @@ MonoBehaviour:
   arPlacer: {fileID: 0}
   scenarioSelect: 0
   cavitationClip: {fileID: 0}
+  recirculationClip: {fileID: 0}
 --- !u!1 &1265614148
 GameObject:
   m_ObjectHideFlags: 0
@@ -2738,8 +2746,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1284338487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.447, y: 0.187, z: -0.04}
-  m_LocalScale: {x: 0.788011, y: 0.31171873, z: 0.22303127}
+  m_LocalPosition: {x: -0.262, y: 1.088, z: -0.321}
+  m_LocalScale: {x: 5.5129313, y: 1.7358837, z: 1.2886852}
   m_Children: []
   m_Father: {fileID: 1979425373}
   m_RootOrder: 0
@@ -2776,7 +2784,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 2b693169fc5aa2f44aa58cc91d71e3f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
