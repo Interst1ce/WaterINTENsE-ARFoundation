@@ -44,7 +44,7 @@ public class TutorialPlayer : MonoBehaviour {
     }
 
     public void AssetBundleCleanup() {
-        asset.Unload(true);
+        if(asset != null) asset.Unload(true);
     }
 
     public void PlayPause() {
