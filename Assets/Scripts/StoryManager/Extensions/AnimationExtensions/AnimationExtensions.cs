@@ -43,7 +43,17 @@ public class AnimationExtensions : MonoBehaviour
         {
             GameObject target = GameObject.Find(anim.targetObjPath);
             Animator anmat = target.GetComponent<Animator>();
-            if (anmat != null) DelayAnim(anmat, anim);
+            if (anmat != null) {
+                DelayAnim(anmat,anim);
+            } else {
+                anmat = target.GetComponentInParent<Animator>();
+                if (anmat != null) {
+                    DelayAnim(anmat,anim);
+                } else {
+                    anmat = target.transform.parent.GetComponentInParent<Animator>();
+                    DelayAnim(anmat,anim);
+                }
+            }
         }
     }
     public void PlayMultiAnim(MultiAnimTrigger multAnim)
@@ -52,7 +62,17 @@ public class AnimationExtensions : MonoBehaviour
         {
             GameObject target = GameObject.Find(anim.targetObjPath);
             Animator anmat = target.GetComponent<Animator>();
-            if (anmat != null) DelayAnim(anmat, anim);
+            if (anmat != null) {
+                DelayAnim(anmat,anim);
+            } else {
+                anmat = target.GetComponentInParent<Animator>();
+                if (anmat != null) {
+                    DelayAnim(anmat,anim);
+                } else {
+                    anmat = target.transform.parent.GetComponentInParent<Animator>();
+                    DelayAnim(anmat,anim);
+                }
+            }
         }
     }
 
