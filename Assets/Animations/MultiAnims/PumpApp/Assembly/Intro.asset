@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anims:
   - targetObjPath: Impeller
-    animTitle: Impeler_Vanes_Idle
+    animTitle: Impeller_Vanes_Idle
     delay: 0
