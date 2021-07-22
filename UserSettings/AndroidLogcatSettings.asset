@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "988bdc4143534d4d34",
+    "m_SelectedDeviceId": "R52M807JGMK",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "R52M807JGMK",
+        "name": "com.EICCAVR.CentrifugalPump",
+        "processId": 31668,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -42,6 +42,12 @@
             "deviceId": "988bdc4143534d4d34",
             "name": "com.EICCAVR.WaterINTENsEARFoundation_Bioreactor",
             "processId": 4533,
+            "exited": false
+        },
+        {
+            "deviceId": "R52M807JGMK",
+            "name": "com.EICCAVR.CentrifugalPump",
+            "processId": 31668,
             "exited": false
         }
     ],

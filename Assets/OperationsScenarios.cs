@@ -83,7 +83,7 @@ public class OperationsScenarios : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        debugText.text = "volume: " + audioSource2.volume;
+        //debugText.text = "volume: " + audioSource2.volume;
         sliderValue.text = sliderValveTop.value.ToString();
         sliderValue.text = sliderValveBot.value.ToString();
 
@@ -123,7 +123,7 @@ public class OperationsScenarios : MonoBehaviour {
         audioSource.clip = introClip;
         audioSource.Play();
 
-        debugText.text = "scenario select is" + scenarioSelect;
+        //debugText.text = "scenario select is" + scenarioSelect;
 
 
         switch (scenarioSelect) {
@@ -271,7 +271,7 @@ public class OperationsScenarios : MonoBehaviour {
     }
 
     public IEnumerator RecirculationScenario() {
-        debugText.text = "Recirculation";
+        //debugText.text = "Recirculation";
         if (restartSelected == true) {
             valveTop.GetComponent<Collider>().enabled = true;
             restartSelected = false;
@@ -333,7 +333,7 @@ public class OperationsScenarios : MonoBehaviour {
 
         while (true) {
             if (audioSource.isPlaying) {
-                debugText.text = "should be turning off";
+                //debugText.text = "should be turning off";
                 valveBot.GetComponent<Collider>().enabled = false;
                 valveTop.GetComponent<Collider>().enabled = false;
 
@@ -356,7 +356,7 @@ public class OperationsScenarios : MonoBehaviour {
                     break;
                 }
                 yield return new WaitForSeconds(1f);
-                debugText.text = "inside isplaying check";
+                //debugText.text = "inside isplaying check";
 
                 break;
             }
@@ -431,15 +431,15 @@ public class OperationsScenarios : MonoBehaviour {
             } else if (audioSource2.isActiveAndEnabled) {
 
                 if (audioSource2.clip == cavitationClip && sliderValveBot.value >= .7f && audioSource2.isPlaying) {
-                    debugText.text += "Volume off";
+                    //debugText.text += "Volume off";
                     audioSource2.volume = 0f;
                     break;
                 } else if (sliderValveBot.value < .7f && sliderValveBot.value >= .3f && audioSource2.isPlaying) {
-                    debugText.text += "Volume on, volume: " + audioSource2.volume;
+                    //debugText.text += "Volume on, volume: " + audioSource2.volume;
                     audioSource2.volume = .5f;
 
                 } else {
-                    debugText.text += "in else, volume:" + audioSource2.volume;
+                    //debugText.text += "in else, volume:" + audioSource2.volume;
                     audioSource2.volume = .25f;
 
                 }
@@ -459,15 +459,15 @@ public class OperationsScenarios : MonoBehaviour {
             } else if (audioSource2.isActiveAndEnabled) {
 
                 if (audioSource2.clip == recirculationClip && sliderValveTop.value >= .5f && audioSource2.isPlaying) {
-                    debugText.text += "Volume off";
+                    //debugText.text += "Volume off";
                     audioSource2.volume = 0f;
                     break;
                 } else if (sliderValveTop.value < .5f && sliderValveBot.value >= .2f && audioSource2.isPlaying) {
-                    debugText.text += "Volume on, volume: " + audioSource2.volume;
+                    //debugText.text += "Volume on, volume: " + audioSource2.volume;
                     audioSource2.volume = .5f;
 
                 } else {
-                    debugText.text += "in else, volume:" + audioSource2.volume;
+                    //debugText.text += "in else, volume:" + audioSource2.volume;
                     audioSource2.volume = .25f;
 
                 }
@@ -485,15 +485,15 @@ public class OperationsScenarios : MonoBehaviour {
             } else if (audioSource2.isActiveAndEnabled) {
 
                 if (audioSource2.clip == cavitationClip && sliderValveBot.value >= .4f && audioSource2.isPlaying) {
-                    debugText.text += "Volume off";
+                    //debugText.text += "Volume off";
                     audioSource2.volume = 0f;
                     break;
                 } else if (sliderValveBot.value < .4f && sliderValveBot.value >= .2f && audioSource2.isPlaying) {
-                    debugText.text += "Volume on, volume: " + audioSource2.volume;
+                    //debugText.text += "Volume on, volume: " + audioSource2.volume;
                     audioSource2.volume = .5f;
 
                 } else {
-                    debugText.text += "in else, volume:" + audioSource2.volume;
+                    //debugText.text += "in else, volume:" + audioSource2.volume;
                     audioSource2.volume = .25f;
 
                 }
