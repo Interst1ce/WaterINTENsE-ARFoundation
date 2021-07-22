@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OperationsManager : MonoBehaviour
-{
+public class OperationsManager : MonoBehaviour {
     [SerializeField]
     Text debugText;
     [SerializeField]
@@ -64,20 +63,22 @@ public class OperationsManager : MonoBehaviour
 
     bool restartSelected = false;
 
+    bool recircVolFinished = false;
+    bool highDisVolFinished = false;
+    bool lowsucVolFinished = false;
+
     RaycastHit operationsHit;
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         valveTopOriginalMat = valveTop.gameObject.GetComponent<MeshRenderer>().material;
         valveBotOriginalMat = valveBot.gameObject.GetComponent<MeshRenderer>().material;
 
         StartCoroutine(TouchInput());
-        
+
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
 
         sliderValue.text = sliderValveTop.value.ToString();
         sliderValue.text = sliderValveBot.value.ToString();
@@ -85,38 +86,33 @@ public class OperationsManager : MonoBehaviour
 
     }
 
-    public IEnumerator TouchInput() 
-    {
+    public IEnumerator TouchInput() {
 
-        while (true) 
-        {
+        while (true) {
 
-            if(Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began) 
-            {
+            if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began) {
 
                 Ray ray;
                 ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
 
-                if (Physics.Raycast(ray, out operationsHit)) 
-                {
-                    
-                        StartCoroutine(ShowValveSliders());
+                if (Physics.Raycast(ray,out operationsHit)) {
+
+                    StartCoroutine(ShowValveSliders());
                     //debugText.text = "collider:" + operationsHit.collider.tag;
-                    
+
                 }
-            
+
             }
 
             yield return null;
         }
-        
+
         yield return null;
-    
+
     }
 
     //call coroutines in cases
-    public void OperationsExploreManager() 
-    {
+    public void OperationsExploreManager() {
         restartButton.SetActive(false);
         valveBot.GetComponent<MeshRenderer>().material = valveBotOriginalMat;
         valveTop.GetComponent<MeshRenderer>().material = valveBotOriginalMat;
@@ -144,49 +140,47 @@ public class OperationsManager : MonoBehaviour
             }*/
 
 
-    
 
 
-            System.Random random = new System.Random();
-            currentScenario = random.Next(0, 2);
 
-            switch (currentScenario) 
-            {
-                case 0:
+        System.Random random = new System.Random();
+        currentScenario = random.Next(0,2);
+
+        switch (currentScenario) {
+            case 0:
 
                 StartCoroutine(LowSuctionScenario());
-                    
+
                 break;
 
-                case 1:
+            case 1:
 
                 StartCoroutine(HighDischargeScenario());
 
 
                 break;
 
-                case 2:
+            case 2:
 
                 StartCoroutine(RecirculationScenario());
 
 
                 break;
-                
-                default:
+
+            default:
                 debugText.text = "Not In Case";
                 break;
 
-            }          
+        }
     }
 
-    public IEnumerator LowSuctionScenario()
-    {
+    public IEnumerator LowSuctionScenario() {
 
         audioSource.clip = introClip;
         audioSource.Play();
 
-        if (restartSelected == true)
-        {
+        if (restartSelected == true) {
+            valveBot.GetComponent<Collider>().enabled = true;
             restartSelected = false;
             sliderValveTop.value = 0f;
             sliderValveBot.value = 0f;
@@ -201,10 +195,8 @@ public class OperationsManager : MonoBehaviour
 
         }
 
-        while (true)
-        {
-            if (!audioSource.isPlaying)
-            {
+        while (true) {
+            if (!audioSource.isPlaying) {
 
                 break;
 
@@ -213,31 +205,33 @@ public class OperationsManager : MonoBehaviour
             yield return null;
         }
 
-        
-        
+
+
 
 
         audioSource.clip = lowsucExploreAudio;
         audioSource.Play();
 
-        yield return new WaitForSeconds(3f);        
+        yield return new WaitForSeconds(3f);
         valveBot.GetComponent<MeshRenderer>().material = glowMat;
-        
 
-        audioSource2.clip = cavitationClip;
+
+        
         audioSource2.Play();
         audioSource2.volume = 1f;
 
-        while (true)
-        {
+        StartCoroutine(LowSuctionVolumeCoroutine());
 
-            if (sliderValveBot.value > .69f && sliderValveBot.value < .8f)
-            {
+        while (true) {
+
+            if (sliderValveBot.value > .69f && sliderValveBot.value < .8f) {
                 botCorrect = true;
+                lowsucVolFinished = true;
                 audioSource.clip = success;
                 audioSource.Play();
                 topCorrect = false;
                 botCorrect = false;
+                audioSource2.volume = 0f;
                 break;
             }
 
@@ -248,10 +242,8 @@ public class OperationsManager : MonoBehaviour
         sliderValveTop.GetComponent<Slider>().interactable = false;
         sliderValveBot.GetComponent<Slider>().interactable = false;
 
-        while (true)
-        {
-            if (!audioSource.isPlaying)
-            {
+        while (true) {
+            if (!audioSource.isPlaying) {
 
                 pauseMenu.Pause();
                 restartButton.SetActive(true);
@@ -266,13 +258,12 @@ public class OperationsManager : MonoBehaviour
         yield return null;
     }
 
-    public IEnumerator HighDischargeScenario()
-    {
+    public IEnumerator HighDischargeScenario() {
         audioSource.clip = introClip;
         audioSource.Play();
         //debugText.text = "HighDischarge";
-        if (restartSelected == true)
-        {
+        if (restartSelected == true) {
+            valveTop.GetComponent<Collider>().enabled = true;
             restartSelected = false;
             sliderValveTop.value = 1f;
             sliderValveBot.value = 0f;
@@ -287,10 +278,8 @@ public class OperationsManager : MonoBehaviour
 
         }
 
-        while (true)
-        {
-            if (!audioSource.isPlaying)
-            {
+        while (true) {
+            if (!audioSource.isPlaying) {
 
                 break;
             }
@@ -302,19 +291,20 @@ public class OperationsManager : MonoBehaviour
         sliderValveTop.value = 1f;
         yield return new WaitForSeconds(3f);
         valveTop.GetComponent<MeshRenderer>().material = glowMat;
-        
 
-        audioSource2.clip = cavitationClip;
+
+        
         audioSource2.Play();
         audioSource2.volume = 1f;
 
-        while (true)
-        {
-            if (sliderValveTop.value > .39f && sliderValveTop.value < .49f)
-            {
+        StartCoroutine(HighDischargeVolume());
+
+        while (true) {
+            if (sliderValveTop.value > .39f && sliderValveTop.value < .49f) {
+                highDisVolFinished = true;
                 audioSource.clip = success;
                 audioSource.Play();
-
+                audioSource2.volume = 0f;
                 break;
 
             }
@@ -324,10 +314,8 @@ public class OperationsManager : MonoBehaviour
         sliderValveTop.GetComponent<Slider>().interactable = false;
         sliderValveBot.GetComponent<Slider>().interactable = false;
 
-        while (true)
-        {
-            if (!audioSource.isPlaying)
-            {
+        while (true) {
+            if (!audioSource.isPlaying) {
 
                 pauseMenu.Pause();
                 restartButton.SetActive(true);
@@ -339,14 +327,13 @@ public class OperationsManager : MonoBehaviour
         }
     }
 
-    public IEnumerator RecirculationScenario()
-    {
+    public IEnumerator RecirculationScenario() {
         audioSource.clip = introClip;
         audioSource.Play();
 
         debugText.text = "Recirculation";
-        if (restartSelected == true)
-        {
+        if (restartSelected == true) {
+            valveTop.GetComponent<Collider>().enabled = true;
             restartSelected = false;
             sliderValveTop.value = 0f;
             sliderValveBot.value = 0f;
@@ -361,10 +348,8 @@ public class OperationsManager : MonoBehaviour
 
         }
 
-        while (true)
-        {
-            if (!audioSource.isPlaying)
-            {
+        while (true) {
+            if (!audioSource.isPlaying) {
 
                 break;
             }
@@ -376,20 +361,19 @@ public class OperationsManager : MonoBehaviour
         audioSource.Play();
         yield return new WaitForSeconds(3f);
         valveTop.GetComponent<MeshRenderer>().material = glowMat;
-        
 
-        audioSource2.clip = recirculationClip;
+
         audioSource2.Play();
         audioSource2.volume = 1f;
 
-        while (true)
-        {
-            if (sliderValveTop.value > .49f && sliderValveTop.value < .6f)
-            {
+        StartCoroutine(RecirculationVolumeCoroutine());
 
+        while (true) {
+            if (sliderValveTop.value > .49f && sliderValveTop.value < .6f) {
+                recircVolFinished = true;
                 audioSource.clip = success;
                 audioSource.Play();
-
+                audioSource2.volume = 0f;
                 break;
             }
 
@@ -400,10 +384,8 @@ public class OperationsManager : MonoBehaviour
         sliderValveTop.GetComponent<Slider>().interactable = false;
         sliderValveBot.GetComponent<Slider>().interactable = false;
 
-        while (true)
-        {
-            if (!audioSource.isPlaying)
-            {
+        while (true) {
+            if (!audioSource.isPlaying) {
 
                 pauseMenu.Pause();
                 restartButton.SetActive(true);
@@ -417,37 +399,27 @@ public class OperationsManager : MonoBehaviour
         yield return null;
     }
 
-    public IEnumerator ShowValveSliders()
-    {
+    public IEnumerator ShowValveSliders() {
 
-        while (true)
-        {
-            if (audioSource.isPlaying)
-            {
+        while (true) {
+            if (audioSource.isPlaying) {
                 debugText.text = "should be turning off";
                 valveBot.GetComponent<Collider>().enabled = false;
                 valveTop.GetComponent<Collider>().enabled = false;
 
                 //break;
-            }
-            else if (!audioSource.isPlaying)
-            {
-                if (currentScenario == 0)
-                {
+            } else if (!audioSource.isPlaying) {
+                if (currentScenario == 0) {
                     //low suction
                     valveTop.GetComponent<Collider>().enabled = false;
                     valveBot.GetComponent<Collider>().enabled = true;
                     break;
-                }
-                else if (currentScenario == 1)
-                {
+                } else if (currentScenario == 1) {
                     //high discharge
                     valveTop.GetComponent<Collider>().enabled = true;
                     valveBot.GetComponent<Collider>().enabled = false;
                     break;
-                }
-                else if (currentScenario == 2)
-                {
+                } else if (currentScenario == 2) {
                     //recirculation
                     valveTop.GetComponent<Collider>().enabled = true;
                     valveBot.GetComponent<Collider>().enabled = false;
@@ -457,11 +429,9 @@ public class OperationsManager : MonoBehaviour
             yield return null;
         }
 
-        while (true)
-        {
+        while (true) {
 
-            if (operationsHit.collider.tag == "topValve")
-            {
+            if (operationsHit.collider.tag == "topValve") {
                 valveBot.GetComponent<MeshRenderer>().material = valveBotOriginalMat;
                 valveTop.GetComponent<MeshRenderer>().material = glowMat;
 
@@ -474,11 +444,10 @@ public class OperationsManager : MonoBehaviour
 
 
                 sliderName.text = "Top Intake Valve";
+                operationsHit.collider.tag = "null";
                 break;
 
-            }
-            else if (operationsHit.collider.tag == "botValve")
-            {
+            } else if (operationsHit.collider.tag == "botValve") {
                 valveTop.GetComponent<MeshRenderer>().material = valveTopOriginalMat;
                 valveBot.GetComponent<MeshRenderer>().material = glowMat;
 
@@ -490,10 +459,9 @@ public class OperationsManager : MonoBehaviour
                 //sliderValue.text = sliderValveBot.value.ToString();
 
                 sliderName.text = "Side Intake Valve";
+                operationsHit.collider.tag = "null";
                 break;
-            }
-            else
-            {
+            } else {
                 /*sliderPanel.gameObject.SetActive(false);
                 sliderValveTop.gameObject.SetActive(false);
                 sliderValveBot.gameObject.SetActive(false);*/
@@ -506,8 +474,7 @@ public class OperationsManager : MonoBehaviour
 
         yield return null;
     }
-    public void RestartScene()
-    {
+    public void RestartScene() {
         //yield return new WaitForSeconds(2f);
         /*audioSource.clip = introClip;
         audioSource.Play();*/
@@ -521,78 +488,84 @@ public class OperationsManager : MonoBehaviour
 
     }
 
-    public void CavitationVolume()
-    {
+    public IEnumerator LowSuctionVolumeCoroutine() {
+
+        while (true) {
+            if (lowsucVolFinished) {
+                break;
+            } else if (audioSource2.isActiveAndEnabled) {
+
+                if (audioSource2.clip == cavitationClip && sliderValveBot.value >= .7f && audioSource2.isPlaying) {
+                    debugText.text += "Volume off";
+                    audioSource2.volume = 0f;
+                    break;
+                } else if (sliderValveBot.value < .7f && sliderValveBot.value >= .3f && audioSource2.isPlaying) {
+                    debugText.text += "Volume on, volume: " + audioSource2.volume;
+                    audioSource2.volume = .5f;
+
+                } else {
+                    debugText.text += "in else, volume:" + audioSource2.volume;
+                    audioSource2.volume = .25f;
+
+                }
+            }
 
 
-        if (audioSource2.clip == cavitationClip && sliderValveBot.value >= .7f)
-        {
-
-            audioSource2.volume = 0f;
-
-        }
-        else if (sliderValveBot.value <= .7f)
-        {
-
-            audioSource2.volume = .5f;
-
-        }
-        else
-        {
-
-            audioSource2.volume = .25f;
-
-        }
-
-    }
-
-    public void RecirculationVolume()
-    {
-
-        if (audioSource2.clip == recirculationClip && sliderValveTop.value >= .5f)
-        {
-
-            audioSource2.volume = 0f;
-
-        }
-        else if (sliderValveTop.value <= .5f)
-        {
-
-            audioSource2.volume = .5f;
-
-        }
-        else
-        {
-
-            audioSource2.volume = .25f;
-
+            yield return null;
         }
 
 
     }
 
-    public void HighDischargeVolume()
-    {
+    public IEnumerator RecirculationVolumeCoroutine() {
+        while (true) {
+            if (recircVolFinished) {
+                break;
+            } else if (audioSource2.isActiveAndEnabled) {
 
+                if (audioSource2.clip == recirculationClip && sliderValveTop.value >= .5f && audioSource2.isPlaying) {
+                    debugText.text += "Volume off";
+                    audioSource2.volume = 0f;
+                    break;
+                } else if (sliderValveTop.value < .5f && sliderValveBot.value >= .2f && audioSource2.isPlaying) {
+                    debugText.text += "Volume on, volume: " + audioSource2.volume;
+                    audioSource2.volume = .5f;
 
-        if (audioSource2.clip == cavitationClip && sliderValveBot.value >= .4f)
-        {
+                } else {
+                    debugText.text += "in else, volume:" + audioSource2.volume;
+                    audioSource2.volume = .25f;
 
-            audioSource2.volume = 0f;
-
+                }
+            }
+            yield return null;
         }
-        else if (sliderValveBot.value <= .39f)
-        {
+    }
 
-            audioSource2.volume = .5f;
+    public IEnumerator HighDischargeVolume() {
 
+        while (true) {
+            if (highDisVolFinished) {
+
+                break;
+            } else if (audioSource2.isActiveAndEnabled) {
+
+                if (audioSource2.clip == cavitationClip && sliderValveBot.value >= .4f && audioSource2.isPlaying) {
+                    debugText.text += "Volume off";
+                    audioSource2.volume = 0f;
+                    break;
+                } else if (sliderValveBot.value < .4f && sliderValveBot.value >= .2f && audioSource2.isPlaying) {
+                    debugText.text += "Volume on, volume: " + audioSource2.volume;
+                    audioSource2.volume = .5f;
+
+                } else {
+                    debugText.text += "in else, volume:" + audioSource2.volume;
+                    audioSource2.volume = .25f;
+
+                }
+            }
+            yield return null;
         }
-        else
-        {
 
-            audioSource2.volume = .25f;
-
-        }
 
     }
 }

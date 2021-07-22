@@ -89,6 +89,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LotoValve_PumpApp.unity
     guid: eb8d7f046523b14428d56d885e7c575f
+  - enabled: 1
+    path: Assets/Scenes/EULA.unity
+    guid: 2a5ac96038d80924d8df5e41eb69ddc5
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 4a0c461fb00ba204caf824d8be077acf, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 8b6b54832a83b224cadcf75cdc03b537, type: 2}

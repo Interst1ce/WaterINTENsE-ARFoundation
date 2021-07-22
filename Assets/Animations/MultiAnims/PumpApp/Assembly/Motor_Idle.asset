@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Motor_Idle
   m_EditorClassIdentifier: 
   anims:
-  - targetObjPath: ElectricMotor
+  - targetObjPath: Pump
     animTitle: Motor_Idle
     delay: 1

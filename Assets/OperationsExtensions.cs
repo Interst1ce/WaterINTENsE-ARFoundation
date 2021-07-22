@@ -5,8 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using System.Threading.Tasks;
 
-public class OperationsExtensions : MonoBehaviour
-{
+public class OperationsExtensions : MonoBehaviour {
     //you need a reference to the storymanager script to get this to work--this is just a variable with no reference, hence why it won't work
     [SerializeField]
     StoryManager sm;
@@ -22,6 +21,9 @@ public class OperationsExtensions : MonoBehaviour
 
     [SerializeField]
     PauseMenu pauseMenu;
+
+    [SerializeField]
+    AudioSource cavitationSrc;
     //private float sliderValue = GameObject.Find("Slider").GetComponent<Slider>().value;
 
 
@@ -48,14 +50,15 @@ public class OperationsExtensions : MonoBehaviour
         //rest of function
         yield return null;
     }*/
-    public void Awake()
-    {
+    public void Awake() {
         slider.SetActive(false);
     }
 
+    public void PlayCavitation() {
+        cavitationSrc.Play();
+    }
 
-    public void DisplaySlider()
-    {
+    public void DisplaySlider() {
 
 
         //await Task.Delay(System.TimeSpan.FromSeconds(2));
@@ -94,8 +97,7 @@ public class OperationsExtensions : MonoBehaviour
     }
 
     //doing exact same as async above, just with a coroutine
-    public IEnumerator DisplaySliderCoroutine()
-    {
+    public IEnumerator DisplaySliderCoroutine() {
 
         RaycastHit topValveHit;
         //Ray ray = Camera.main.ScreenPointToRay(Input.to);
@@ -103,14 +105,12 @@ public class OperationsExtensions : MonoBehaviour
         //not getting to this first part /////////////////////////
         slider.GetComponent<Slider>().interactable = false;
 
-        debugText.text = "starting displayslider coroutine";
-        debugText.text = "audiosource: " + sm.audioSource.isPlaying;
+        //debugText.text = "starting displayslider coroutine";
+        //debugText.text = "audiosource: " + sm.audioSource.isPlaying;
 
-        while (true)
-        {
+        while (true) {
 
-            if (sm.audioSource.isPlaying)
-            {
+            if (sm.audioSource.isPlaying) {
 
                 break;
 
@@ -119,20 +119,16 @@ public class OperationsExtensions : MonoBehaviour
             yield return null;
 
         }
-        while (true)
-        {
-            if (sm.audioSource.isPlaying)
-            {
-                debugText.text = "should be turning off";
+        while (true) {
+            if (sm.audioSource.isPlaying) {
+                //debugText.text = "should be turning off";
                 slider.SetActive(false);
                 slider.GetComponent<Slider>().interactable = false;
 
                 //break;
-            }
-            else if (!sm.audioSource.isPlaying)
-            {
+            } else if (!sm.audioSource.isPlaying) {
                 yield return new WaitForSeconds(1f);
-                debugText.text = "inside isplaying check";
+                //debugText.text = "inside isplaying check";
                 slider.SetActive(true);
                 slider.GetComponent<Slider>().interactable = true;
                 break;
@@ -151,37 +147,36 @@ public class OperationsExtensions : MonoBehaviour
                     }
 
                 }*/
-                
+
             }
             yield return null;
-            
+
         }
-        debugText.text = "done with routine";
+        //debugText.text = "done with routine";
         //not getting to above first part //////////////////////
 
-        while (true)
-        {
-                //debugText.text = "slider value: " + slider.GetComponent<Slider>().value;
-                if (slider.GetComponent<Slider>().value == 1f)
-                {
-                    debugText.text = "inside sliderValue check";
-                    slider.SetActive(false);
-                    sm.audioSource.clip = completeAudio;
-                    sm.audioSource.Play();
+        while (true) {
+            //debugText.text = "slider value: " + slider.GetComponent<Slider>().value;
+            if (slider.GetComponent<Slider>().value == 1f) {
+                //debugText.text = "inside sliderValue check";
+                slider.SetActive(false);
+                cavitationSrc.Stop();
+                sm.audioSource.clip = completeAudio;
+                sm.audioSource.Play();
 
-                    break;
+                break;
 
-                }
+            }
 
-                
-                yield return null;
+
+            yield return null;
 
         }
         //sm.EndStory(currentTarget);
         yield return new WaitForSeconds(3f);
         pauseMenu.Pause();
         yield return null;
-        
+
     }
 
     /*public IEnumerator SliderValueCheckStepTwo() 
@@ -206,8 +201,7 @@ public class OperationsExtensions : MonoBehaviour
 
    }*/
 
-    public void StartSliderCoroutine()
-    {
+    public void StartSliderCoroutine() {
         StartCoroutine(DisplaySliderCoroutine());
     }
 

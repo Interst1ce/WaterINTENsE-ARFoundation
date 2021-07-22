@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Shaft_Idle
   m_EditorClassIdentifier: 
   anims:
-  - targetObjPath: Pump_Shaft
+  - targetObjPath: Pump
     animTitle: Shaft_Idle
     delay: 1

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Bearing_Idle
   m_EditorClassIdentifier: 
   anims:
-  - targetObjPath: Bearing
+  - targetObjPath: Pump
     animTitle: Bearing_Idle
     delay: 1
