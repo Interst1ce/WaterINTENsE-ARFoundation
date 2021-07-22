@@ -16,8 +16,8 @@ public class StoryManager : MonoBehaviour {
     public AudioSource audioSource;
     HighlightManager highlightManager;
 
-    
-    
+
+
 
     [SerializeField]
     bool reviewMode = false;
@@ -62,15 +62,10 @@ public class StoryManager : MonoBehaviour {
         public bool playAudioAfterAnim;
     }
 
-    [SerializeField]
-    Text debugText; 
-
     private void Awake() {
         audioSource = GetComponent<AudioSource>();
         highlightManager = GetComponent<HighlightManager>();
         qManager = GetComponentInChildren<QuestionManager>();
-        
-        
     }
 
     private async Task PopulateTargetDictionary() {
@@ -94,25 +89,16 @@ public class StoryManager : MonoBehaviour {
                                 interactionMatch = false;
                                 StartCoroutine(DetectInput(target.interaction,tap.position));
                                 for (int j = 0; j < steps[currentStep].step.targets.Count; j++) {
-                                    if (hit.transform.gameObject == objectTargets[currentStep][j] && interactionMatch)
-                                    {
-                                        if (target.targetStep == steps.Count && currentStep == steps.Count)
-                                        {
-
+                                    if (hit.transform.gameObject == objectTargets[currentStep][j] && interactionMatch) {
+                                        if (target.targetStep == steps.Count && currentStep == steps.Count) {
                                             finished = true;
                                             EndStory(target);
+                                        } else ContinueStory(target);
+                                    } else {
+                                        if (!audioSource.isPlaying) {
+                                            PlaySFX(missTapAudio);
                                         }
-                                        else ContinueStory(target);
-                                    }
-                                    else 
-                                    {
-                                        if (!audioSource.isPlaying) 
-                                        { 
-                                            
-                                            PlaySFX(missTapAudio); 
-                                        
-                                        }
-                                    
+
                                     }
                                 }
                             }
@@ -211,9 +197,6 @@ public class StoryManager : MonoBehaviour {
     }
 
     IEnumerator DetectInput(Target.Interaction toCheck,Vector2 startPos) {
-
-        
-        
         float startTime = Time.time;
         float timeDelta = 0;
 
@@ -245,4 +228,4 @@ public class StoryManager : MonoBehaviour {
         } while (timeDelta < 0.5f);
     }
 
- }
+}
