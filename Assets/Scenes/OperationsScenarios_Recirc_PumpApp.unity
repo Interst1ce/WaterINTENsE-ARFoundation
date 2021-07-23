@@ -357,6 +357,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &232912990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8951197324490792476, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
+  m_PrefabInstance: {fileID: 232912987}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &232912991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3418892675170624607, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
+  m_PrefabInstance: {fileID: 232912987}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &246587400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,8 +1061,8 @@ MonoBehaviour:
   glowMat: {fileID: 2100000, guid: a8066238852c6c7478dd3521c57cc828, type: 2}
   valveTopOriginalMat: {fileID: 2100000, guid: 1445519ea803cd14184eebd4fccf31b7, type: 2}
   valveBotOriginalMat: {fileID: 2100000, guid: 1445519ea803cd14184eebd4fccf31b7, type: 2}
-  valveTop: {fileID: 0}
-  valveBot: {fileID: 0}
+  valveTop: {fileID: 232912991}
+  valveBot: {fileID: 232912990}
   restartButton: {fileID: 621406303}
   pauseMenu: {fileID: 386954168}
   arPlacer: {fileID: 1386177010}

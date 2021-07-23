@@ -357,6 +357,42 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &232912990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8951197324490792476, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
+  m_PrefabInstance: {fileID: 232912987}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &232912991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3418892675170624607, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
+  m_PrefabInstance: {fileID: 232912987}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &232912992
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232912990}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0042394656, y: 0.0013896513, z: 0.004457644}
+  m_Center: {x: 0.045027707, y: 0.0004783009, z: 0.01690209}
+--- !u!65 &232912993
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232912991}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0031023787, y: 0.000967155, z: 0.0029505424}
+  m_Center: {x: 0.02893112, y: -0.005628099, z: 0.036440477}
 --- !u!1 &246587400
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,8 +1005,8 @@ MonoBehaviour:
   sliderValveTop: {fileID: 683212769}
   sliderValveBot: {fileID: 246587403}
   glowMat: {fileID: 2100000, guid: a8066238852c6c7478dd3521c57cc828, type: 2}
-  valveTop: {fileID: 0}
-  valveBot: {fileID: 0}
+  valveTop: {fileID: 232912991}
+  valveBot: {fileID: 232912990}
   restartButton: {fileID: 621406303}
   pauseMenu: {fileID: 386954168}
   arPlacer: {fileID: 1386177010}
@@ -1109,8 +1145,8 @@ MonoBehaviour:
   glowMat: {fileID: 2100000, guid: a8066238852c6c7478dd3521c57cc828, type: 2}
   valveTopOriginalMat: {fileID: 2100000, guid: 1445519ea803cd14184eebd4fccf31b7, type: 2}
   valveBotOriginalMat: {fileID: 2100000, guid: 1445519ea803cd14184eebd4fccf31b7, type: 2}
-  valveTop: {fileID: 0}
-  valveBot: {fileID: 0}
+  valveTop: {fileID: 232912991}
+  valveBot: {fileID: 232912990}
   restartButton: {fileID: 621406303}
   pauseMenu: {fileID: 386954168}
   arPlacer: {fileID: 1386177010}
@@ -2673,7 +2709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3305906339256696094, guid: 4108a055a5c1e814086f4a3a77735ff0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3305906339774999567, guid: 4108a055a5c1e814086f4a3a77735ff0, type: 3}
       propertyPath: m_IsActive
