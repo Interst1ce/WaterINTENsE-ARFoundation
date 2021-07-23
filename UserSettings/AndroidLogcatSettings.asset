@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R52M807JGMK",
         "name": "com.EICCAVR.CentrifugalPump",
-        "processId": 11510,
+        "processId": 13481,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -84,6 +84,12 @@
             "deviceId": "R52M807JGMK",
             "name": "com.EICCAVR.CentrifugalPump",
             "processId": 11510,
+            "exited": false
+        },
+        {
+            "deviceId": "R52M807JGMK",
+            "name": "com.EICCAVR.CentrifugalPump",
+            "processId": 13481,
             "exited": false
         }
     ],

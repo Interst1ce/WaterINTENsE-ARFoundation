@@ -83,7 +83,7 @@ public class ARObjectPlacement : MonoBehaviour {
     }
 
     public void HideARPlanes() {
-        foreach(GameObject plane in GameObject.FindGameObjectsWithTag("ARPlane")) {
+        foreach (GameObject plane in GameObject.FindGameObjectsWithTag("ARPlane")) {
             plane.GetComponent<ARPlaneMeshVisualizer>().enabled = false;
             plane.GetComponent<MeshRenderer>().enabled = false;
             plane.GetComponent<LineRenderer>().enabled = false;
@@ -96,27 +96,20 @@ public class ARObjectPlacement : MonoBehaviour {
         confirmButton.SetActive(true);
         pauseMenu.ToggleSubMenu(0);
         pauseMenu.Pause();
-        
+
         //maintScenarios entry point
-        if (!maintScenario && operationsExplore && !operationsScenarios)
-        {
-            
+        if (!maintScenario && operationsExplore && !operationsScenarios) {
+
             operationsManager.OperationsExploreManager();
             //start normal application logic using story manager
-        }
-        else if (maintScenario && !operationsExplore && !operationsScenarios)
-        {
+        } else if (maintScenario && !operationsExplore && !operationsScenarios) {
             //beings maintenance scenario logic
             maintManager.StartScenarioModule();
-        }
-        else if (!maintScenario && !operationsExplore && operationsScenarios) 
-        {
+        } else if (!maintScenario && !operationsExplore && operationsScenarios) {
 
             operationsScenariosRef.OperationsScenariosManager();
-        
-        }
-        else 
-        {
+
+        } else {
 
             storyManager.StartStory();
 

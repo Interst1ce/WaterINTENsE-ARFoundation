@@ -17,6 +17,6 @@ MonoBehaviour:
   objectTarget: Scene/Gloves
   sliderTarget: {fileID: 0}
   targetStep: 10
-  targetAnim: {fileID: 0}
+  targetAnim: {fileID: -998496362607748373, guid: 29aa59a4728af89488a116225d050eef, type: 3}
   targetAudio: {fileID: 8300000, guid: 976dc8381160c024bbc6e551c2238490, type: 3}
   playAudioAfterAnim: 1
