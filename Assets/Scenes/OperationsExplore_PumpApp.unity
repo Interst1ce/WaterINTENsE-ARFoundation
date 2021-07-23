@@ -230,6 +230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pump
       objectReference: {fileID: 0}
+    - target: {fileID: 3418892675170624607, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
+      propertyPath: m_TagString
+      value: topValve
+      objectReference: {fileID: 0}
     - target: {fileID: 3443490337020190397, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
       propertyPath: m_Name
       value: IsoValve_top_lp
@@ -253,6 +257,10 @@ PrefabInstance:
     - target: {fileID: 8002908370672228486, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
       propertyPath: m_TagString
       value: topValve
+      objectReference: {fileID: 0}
+    - target: {fileID: 8951197324490792476, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
+      propertyPath: m_TagString
+      value: botValve
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
@@ -2709,7 +2717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3305906339256696094, guid: 4108a055a5c1e814086f4a3a77735ff0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3305906339774999567, guid: 4108a055a5c1e814086f4a3a77735ff0, type: 3}
       propertyPath: m_IsActive
