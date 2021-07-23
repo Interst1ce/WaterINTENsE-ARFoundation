@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: ImpellerHousing
+  objectTarget: Pump_Shaft
   sliderTarget: {fileID: 0}
   targetStep: 2
-  targetAnim: {fileID: 5038734347728806227, guid: 78434bca406e9a84d9cd2c246da7d5de, type: 3}
+  targetAnim: {fileID: -5561692272041633610, guid: 96fabae564e418c42a2843e3519cb8b5, type: 3}
   targetAudio: {fileID: 8300000, guid: 261eadae2ee51634888f952dc25f3708, type: 3}
   playAudioAfterAnim: 0

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: Pump_Shaft
+  objectTarget: Bearing
   sliderTarget: {fileID: 0}
   targetStep: 4
-  targetAnim: {fileID: -5561692272041633610, guid: 96fabae564e418c42a2843e3519cb8b5, type: 3}
+  targetAnim: {fileID: -5243596556577288010, guid: 0ebc5b5232b9ebb4caedf751a0714e82, type: 3}
   targetAudio: {fileID: 8300000, guid: 1cf1afeb3f76e864487d90dda037692c, type: 3}
   playAudioAfterAnim: 0

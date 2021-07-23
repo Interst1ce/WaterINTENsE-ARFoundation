@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R52M807JGMK",
         "name": "com.EICCAVR.CentrifugalPump",
-        "processId": 32023,
+        "processId": 11510,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -47,13 +47,43 @@
         {
             "deviceId": "R52M807JGMK",
             "name": "com.EICCAVR.CentrifugalPump",
-            "processId": 31668,
+            "processId": 7987,
+            "exited": true
+        },
+        {
+            "deviceId": "R52M807JGMK",
+            "name": "com.EICCAVR.CentrifugalPump",
+            "processId": 9253,
+            "exited": true
+        },
+        {
+            "deviceId": "R52M807JGMK",
+            "name": "com.EICCAVR.CentrifugalPump",
+            "processId": 9641,
+            "exited": true
+        },
+        {
+            "deviceId": "R52M807JGMK",
+            "name": "com.EICCAVR.CentrifugalPump",
+            "processId": 9910,
+            "exited": true
+        },
+        {
+            "deviceId": "R52M807JGMK",
+            "name": "com.EICCAVR.CentrifugalPump",
+            "processId": 10614,
+            "exited": true
+        },
+        {
+            "deviceId": "R52M807JGMK",
+            "name": "com.android.settings",
+            "processId": 6446,
             "exited": false
         },
         {
             "deviceId": "R52M807JGMK",
             "name": "com.EICCAVR.CentrifugalPump",
-            "processId": 32023,
+            "processId": 11510,
             "exited": false
         }
     ],

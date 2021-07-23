@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7724f3a7be35c474281dd776e9ae3b10, type: 3}
-  m_Name: S5_T1_Assembly_PumpApp
+  m_Name: S7_T1_Assembly_PumpApp 1
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: MechanicalSeal
+  objectTarget: CouplingBack
   sliderTarget: {fileID: 0}
-  targetStep: 5
-  targetAnim: {fileID: 8641900493767691712, guid: ec50ab01fa7370e4fa1f81a92b73842a, type: 3}
-  targetAudio: {fileID: 8300000, guid: 3755524999e7d4347b20036d33eafaa3, type: 3}
+  targetStep: 7
+  targetAnim: {fileID: -777443078410608180, guid: 66ac5c203be4db8448fa56246f39b412, type: 3}
+  targetAudio: {fileID: 8300000, guid: 14984e517a4a61041a98b0023cf24b6c, type: 3}
   playAudioAfterAnim: 0

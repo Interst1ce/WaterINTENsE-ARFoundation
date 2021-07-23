@@ -17,6 +17,6 @@ MonoBehaviour:
   objectTarget: Impeller
   sliderTarget: {fileID: 0}
   targetStep: 1
-  targetAnim: {fileID: 2173416416144924186, guid: 51787bb061f9b884cae43a21f3919a01, type: 3}
+  targetAnim: {fileID: -1901251493012260805, guid: 51787bb061f9b884cae43a21f3919a01, type: 3}
   targetAudio: {fileID: 8300000, guid: a1f46e95b382dc34e8e7060e0c7edd45, type: 3}
   playAudioAfterAnim: 0

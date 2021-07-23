@@ -222,6 +222,7 @@ MonoBehaviour:
   completeAudio: {fileID: 8300000, guid: 1c5a1dc263e330a44b9bd3ae51fe749a, type: 3}
   currentTarget: {fileID: 0}
   pauseMenu: {fileID: 0}
+  cavitationSrc: {fileID: 0}
 --- !u!114 &190088764
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -107,6 +107,9 @@ public class StoryManager : MonoBehaviour {
                 }
             }
         }
+        //if(steps[currentStep - 1].step.targets[0].targetStep == steps.Count && currentStep == steps.Count) {
+        //    EndStory(steps[currentStep].step.targets[0]);
+        //}
     }
 
     public async void StartStory() {
@@ -143,8 +146,10 @@ public class StoryManager : MonoBehaviour {
             if (targetAnimator != null && target.targetAnim != null) targetAnimator.Play(target.targetAnim.name);
             //steps[currentStep].extensions.Invoke();
             List<GameObject> highlightTargets = new List<GameObject>();
-            foreach (Target nextTarget in steps[currentStep + 1].step.targets) {
-                highlightTargets.Add(GameObject.Find(nextTarget.objectTarget));
+            if (currentStep < steps.Count - 1) {
+                foreach (Target nextTarget in steps[currentStep + 1].step.targets) {
+                    highlightTargets.Add(GameObject.Find(nextTarget.objectTarget));
+                }
             }
             if (target.targetAnim != null && !reviewMode) {
                 if (target.targetAudio != null) {
@@ -157,14 +162,12 @@ public class StoryManager : MonoBehaviour {
 
     async public void EndStory(Target target) {
         float seconds = Mathf.Max(target.targetAudio.length,target.targetAnim.length);
-        int delay = Mathf.FloorToInt(seconds) + Mathf.FloorToInt(seconds % 1 * 1000);
+        int delay = Mathf.FloorToInt(seconds * 1000) + Mathf.FloorToInt(seconds % 1 * 1000);
 
+        Debug.Log("Waiting: " + delay);
         await Task.Delay(delay);
 
-        if (finished) {
-            GameObject.Find("PauseUI").GetComponent<PauseMenu>().Pause();
-            GameObject.Find("PlayButton").SetActive(false);
-        }
+        GameObject.Find("PauseUI").GetComponent<PauseMenu>().Pause();
     }
 
     public void PlayAudio(AudioClip audio,float delay = 0) {

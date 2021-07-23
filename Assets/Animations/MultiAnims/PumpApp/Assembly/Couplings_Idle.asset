@@ -9,14 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7724f3a7be35c474281dd776e9ae3b10, type: 3}
-  m_Name: S7_T1_Assembly_PumpApp
+  m_Script: {fileID: 11500000, guid: bd55bc23b3e646e41a4444fc89f4597d, type: 3}
+  m_Name: Couplings_Idle
   m_EditorClassIdentifier: 
-  type: 0
-  interaction: 0
-  objectTarget: 
-  sliderTarget: {fileID: 0}
-  targetStep: 0
-  targetAnim: {fileID: 0}
-  targetAudio: {fileID: 0}
-  playAudioAfterAnim: 0
+  anims:
+  - targetObjPath: Pump
+    animTitle: Couplings_Idle
+    delay: 1
