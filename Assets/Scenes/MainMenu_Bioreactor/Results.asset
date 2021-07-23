@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Results
   m_EditorClassIdentifier: 
   chapters:
-  - chapterTitle: Derp
+  - chapterTitle: Results
     chapterSummary: 
     chapterIcon: {fileID: 0}
     chapterScene: 3
