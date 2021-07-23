@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "R52M807JGMK",
+    "m_SelectedDeviceId": "988bdc4143534d4d34",
     "m_SelectedPackage": {
-        "deviceId": "R52M807JGMK",
-        "name": "com.EICCAVR.CentrifugalPump",
-        "processId": 13481,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -42,6 +42,24 @@
             "deviceId": "988bdc4143534d4d34",
             "name": "com.EICCAVR.WaterINTENsEARFoundation_Bioreactor",
             "processId": 4533,
+            "exited": true
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.sec.android.app.launcher",
+            "processId": 5682,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.CentrifugalPump",
+            "processId": 6681,
+            "exited": true
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.sec.android.app.myfiles",
+            "processId": 8479,
             "exited": false
         },
         {

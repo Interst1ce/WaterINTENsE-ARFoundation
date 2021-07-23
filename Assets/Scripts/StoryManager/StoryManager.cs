@@ -164,7 +164,7 @@ public class StoryManager : MonoBehaviour {
         float seconds = Mathf.Max(target.targetAudio.length,target.targetAnim.length);
         int delay = Mathf.FloorToInt(seconds * 1000) + Mathf.FloorToInt(seconds % 1 * 1000);
 
-        Debug.Log("Waiting: " + delay);
+        //Debug.Log("Waiting: " + delay);
         await Task.Delay(delay);
 
         GameObject.Find("PauseUI").GetComponent<PauseMenu>().Pause();
