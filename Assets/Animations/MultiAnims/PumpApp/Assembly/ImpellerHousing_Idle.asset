@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ImpellerHousing_Idle
   m_EditorClassIdentifier: 
   anims:
-  - targetObjPath: Pump
+  - targetObjPath: Pump@FrontRearSuction&Housing_Idle
     animTitle: FrontRearSuction&Housing_Idle
     delay: 1

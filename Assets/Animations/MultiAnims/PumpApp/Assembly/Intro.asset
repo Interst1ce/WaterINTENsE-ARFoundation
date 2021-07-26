@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Intro
   m_EditorClassIdentifier: 
   anims:
-  - targetObjPath: Pump
+  - targetObjPath: Pump@Impeller_Vanes
     animTitle: Impeller_Vanes_Idle
     delay: 0

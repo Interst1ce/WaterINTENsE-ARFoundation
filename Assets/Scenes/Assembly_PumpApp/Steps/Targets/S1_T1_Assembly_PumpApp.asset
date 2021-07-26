@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: Impeller
+  objectTarget: Pump@Impeller_Vanes
   sliderTarget: {fileID: 0}
   targetStep: 1
   targetAnim: {fileID: -1901251493012260805, guid: 51787bb061f9b884cae43a21f3919a01, type: 3}
