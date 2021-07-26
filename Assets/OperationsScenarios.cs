@@ -237,7 +237,7 @@ public class OperationsScenarios : MonoBehaviour {
         audioSource2.Play();
         audioSource2.volume = 1f;
 
-        StartCoroutine(RecirculationVolumeCoroutine());
+        StartCoroutine(HighDischargeVolume());
 
 
 
@@ -296,7 +296,7 @@ public class OperationsScenarios : MonoBehaviour {
         audioSource2.Play();
         audioSource2.volume = 1f;
 
-        StartCoroutine(HighDischargeVolume());
+        StartCoroutine(RecirculationVolumeCoroutine());
 
         while (true) {
             if (sliderValveTop.value > .49f && sliderValveTop.value < .6f) {
