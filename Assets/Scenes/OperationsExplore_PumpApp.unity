@@ -600,6 +600,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: StoryManager, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 2674985667352493662, guid: f7b1e6b341fc73047b556b58b2971657, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3499546549182524986, guid: f7b1e6b341fc73047b556b58b2971657, type: 3}
       propertyPath: scene
       value: 
@@ -997,7 +1001,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0ffb9914600e240910bf7a89a8fd98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugText: {fileID: 646146014}
   sliderName: {fileID: 1994377988}
   sliderPanel: {fileID: 2145422605}
   sliderValue: {fileID: 1958211088}
