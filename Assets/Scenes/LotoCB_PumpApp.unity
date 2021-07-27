@@ -1955,6 +1955,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1528102892033464133, guid: a2a492652a2157e4bb7b6d62bb2f5dca, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b755047757f4485469d24a70e3b46c7f, type: 2}
     - target: {fileID: 5370382733238313017, guid: a2a492652a2157e4bb7b6d62bb2f5dca, type: 3}
       propertyPath: m_Name
       value: TagLockPrefabPlace
