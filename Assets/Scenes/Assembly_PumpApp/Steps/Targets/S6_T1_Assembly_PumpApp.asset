@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: ShaftHousing
+  objectTarget: Pump@ShaftHousing
   sliderTarget: {fileID: 0}
   targetStep: 6
   targetAnim: {fileID: 9102254121354370185, guid: ae080ca1a6f25644fa37df97ec0e05eb, type: 3}

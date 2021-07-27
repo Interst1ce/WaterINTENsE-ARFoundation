@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: ImpellerHousing
+  objectTarget: Pump@FrontRearSuction&Housing
   sliderTarget: {fileID: 0}
   targetStep: 3
   targetAnim: {fileID: -6948421234649230737, guid: 78434bca406e9a84d9cd2c246da7d5de, type: 3}

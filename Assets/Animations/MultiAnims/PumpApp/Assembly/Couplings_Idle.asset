@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Couplings_Idle
   m_EditorClassIdentifier: 
   anims:
-  - targetObjPath: Pump
+  - targetObjPath: Pump@Couplings
     animTitle: Couplings_Idle
     delay: 1

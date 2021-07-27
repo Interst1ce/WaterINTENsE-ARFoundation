@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: MechanicalSeal
+  objectTarget: Pump@MechanicalSeal
   sliderTarget: {fileID: 0}
   targetStep: 5
   targetAnim: {fileID: 8641900493767691712, guid: ec50ab01fa7370e4fa1f81a92b73842a, type: 3}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: CouplingBack
+  objectTarget: Pump@Couplings
   sliderTarget: {fileID: 0}
   targetStep: 7
   targetAnim: {fileID: -777443078410608180, guid: 66ac5c203be4db8448fa56246f39b412, type: 3}
