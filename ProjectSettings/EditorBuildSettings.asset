@@ -5,34 +5,34 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu_SludgeJudge.unity
     guid: 2e8c5d83042022447897f8c82c63f30c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SludgeJudge.unity
     guid: 619892c6a29cab24d89a8e49cf1266e2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chloramination.unity
     guid: fbfb90aa3f567a3479c5f1c9fe7c4722
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Titration.unity
     guid: 6df6e1b41dba8624e81898f37081c857
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/pHTesting.unity
     guid: a79b57d75505ba645bf0722b9b322f73
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu_Bioreactor.unity
     guid: 2cc31afe2c804244b8289dfaa2eeeea4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/BioreactorOverview.unity
     guid: 7a251744b3ba6704eb6d18274d48a2aa
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/BioreactorSampling.unity
     guid: 0c57da82bd51e5a44acc854c594d7b67
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/BioreactorResults_Intro.unity
     guid: 3158a73eb43ec9141b0110a488a74ee3
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/BioreactorResults.unity
     guid: 7cfcea3a6a3b2424f924bef3473eaed8
   - enabled: 0
@@ -44,10 +44,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SplashScreen_Pump.unity
     guid: 0535c6c9552c89744a8dd40613dea0dc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu_Operations_PumpApp.unity
     guid: 2e53b483a419fe044bfe8d17102735e0
   - enabled: 0

@@ -2318,7 +2318,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8218683437326392805, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
   m_PrefabInstance: {fileID: 1069143926}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1069143930}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65e4e3998dd9f944bb20665dfb8c8c75, type: 3}
@@ -2335,6 +2335,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3db8800b871eea4b948a0e65ea7ba01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1069143930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7753893311317267498, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
+  m_PrefabInstance: {fileID: 1069143926}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1069143931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069143930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69a891b13b084654cba45792e96b3b63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questions: []
+  qAPanel: {fileID: 0}
+  buttonSound: {fileID: 0}
+  correctSound: {fileID: 0}
+  incorrectSound: {fileID: 0}
+  audioDelay: 0
+  inQuestion: 0
 --- !u!1 &1281475306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8656912489950381655, guid: f7b1e6b341fc73047b556b58b2971657, type: 3}
