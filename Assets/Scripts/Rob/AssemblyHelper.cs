@@ -7,8 +7,7 @@ public class AssemblyHelper : MonoBehaviour
 {
     public List<GameObject> pumpObjects = new List<GameObject>();
     public Dictionary<string, string> animDictionary = new Dictionary<string, string>();
-    [SerializeField]
-    Text debugText;
+   
 
     private Vector3 objectScale;
 
@@ -21,7 +20,7 @@ public class AssemblyHelper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     public void PlayImpellerAnim()
@@ -42,7 +41,7 @@ public class AssemblyHelper : MonoBehaviour
     public void ResizeToNormal(string pumpPart)
     {
         GameObject.Find(pumpPart).transform.localScale = GameObject.Find("Pump@Base").transform.localScale;
-        debugText.text += "resizing, scale is "+ GameObject.Find(pumpPart).transform.localScale.x;
+        
     }
 
     public void ManuallyPlayAnim(string pumpPart)
@@ -53,7 +52,7 @@ public class AssemblyHelper : MonoBehaviour
     public void GetScale(string pumpPart)
     {
         objectScale = GameObject.Find(pumpPart).transform.localScale;
-        debugText.text += "getting scale";
+       
         foreach(GameObject go in pumpObjects)
         {
             go.transform.localScale = new Vector3(0f, 0f, 0f);
@@ -70,5 +69,37 @@ public class AssemblyHelper : MonoBehaviour
         animDictionary.Add("Pump@Motor", "Motor_Place");
         animDictionary.Add("Pump@Shaft", "Shaft_Place");
         animDictionary.Add("Pump@ShaftHousing", "ShaftHousing_Place");
+    }
+
+    public void DisableCollider(string pumpPart)
+    {
+        GameObject.Find(pumpPart).GetComponent<Collider>().enabled = false;
+    }
+    public void EnableCollider(string pumpPart)
+    {
+        GameObject.Find(pumpPart).GetComponent<Collider>().enabled = true;
+    }
+    public IEnumerator TempDisableCollider(string pumpPart)
+    {
+        GameObject.Find(pumpPart).GetComponent<Collider>().enabled = false;
+        yield return new WaitForSeconds(0.5f);
+        GameObject.Find(pumpPart).GetComponent<Collider>().enabled = false;
+        
+    }
+
+    public void StartTempDisableCollider(string pumpPart)
+    {
+        StartCoroutine(TempDisableCollider(pumpPart));
+    }
+
+    public IEnumerator WaitAndResizeToNorm(string pumpPart)
+    {
+        yield return new WaitForSeconds(1f);
+        GameObject.Find(pumpPart).transform.localScale = GameObject.Find("Pump@Base").transform.localScale;
+    }
+
+    public void StartWaitAndResize(string pumpPart)
+    {
+        StartCoroutine(WaitAndResizeToNorm(pumpPart));
     }
 }

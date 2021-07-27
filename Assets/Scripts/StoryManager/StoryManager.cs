@@ -16,8 +16,7 @@ public class StoryManager : MonoBehaviour {
     public AudioSource audioSource;
     HighlightManager highlightManager;
 
-
-
+    
 
     [SerializeField]
     bool reviewMode = false;
@@ -85,6 +84,7 @@ public class StoryManager : MonoBehaviour {
                     if (tap.phase == TouchPhase.Began) {
                         RaycastHit hit;
                         if (Physics.Raycast(Camera.main.ScreenPointToRay(tap.position),out hit)) {
+                            
                             foreach (Target target in steps[currentStep].step.targets) {
                                 interactionMatch = false;
                                 StartCoroutine(DetectInput(target.interaction,tap.position));

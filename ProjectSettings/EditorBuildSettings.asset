@@ -44,10 +44,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SplashScreen_Pump.unity
     guid: 0535c6c9552c89744a8dd40613dea0dc
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu_Operations_PumpApp.unity
     guid: 2e53b483a419fe044bfe8d17102735e0
   - enabled: 0
