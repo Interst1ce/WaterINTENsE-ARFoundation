@@ -7,20 +7,30 @@ public class AssemblyHelper : MonoBehaviour
 {
     public List<GameObject> pumpObjects = new List<GameObject>();
     public Dictionary<string, string> animDictionary = new Dictionary<string, string>();
-   
+
+    [SerializeField]
+    public Color outlineColorDefault = Color.white;
+    [Range(0.1f, 5)]
+    public float outlineThicknessDefault = 1;
 
     private Vector3 objectScale;
+
+    [SerializeField]
+    Text debugText;
 
     // Start is called before the first frame update
     void Start()
     {
         PopulateAnimDict();
+        StartCoroutine(DetectLastStep());
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        StoryManager storyManager = GameObject.Find("EventSystem").GetComponent<StoryManager>();
+        AudioSource audioSource = GameObject.Find("EventSystem").GetComponent<AudioSource>();
+        //debugText.text = "clip name is: " + audioSource.clip.name;
     }
 
     public void PlayImpellerAnim()
@@ -101,5 +111,84 @@ public class AssemblyHelper : MonoBehaviour
     public void StartWaitAndResize(string pumpPart)
     {
         StartCoroutine(WaitAndResizeToNorm(pumpPart));
+    }
+
+    public void MakeLockGlow(string glowObjectName)
+    {
+        GameObject glowObject = GameObject.Find(glowObjectName);
+        if (glowObject.GetComponent<MeshRenderer>().enabled)
+        {
+            Outline outline = glowObject.GetComponent<Outline>();
+            if (outline != null)
+            {
+                outline.enabled = true;
+            }
+            else
+            {
+                outline = glowObject.AddComponent<Outline>();
+                outline.OutlineMode = Outline.Mode.OutlineAll;
+                outline.OutlineColor = outlineColorDefault;
+                outline.OutlineWidth = outlineThicknessDefault;
+                outline.enabled = true;
+            }
+        }
+        
+        
+    }
+
+    public void StopLockGlow(string glowObjectName)
+    {
+        GameObject glowObject = GameObject.Find(glowObjectName);
+        
+        if (glowObject.GetComponent<MeshRenderer>().enabled)
+        {
+            Outline outline = glowObject.GetComponent<Outline>();
+            if (outline != null)
+            {
+                outline.enabled = false;
+            }
+            else
+            {
+                outline = glowObject.AddComponent<Outline>();
+                outline.OutlineMode = Outline.Mode.OutlineAll;
+                outline.OutlineColor = outlineColorDefault;
+                outline.OutlineWidth = outlineThicknessDefault;
+                outline.enabled = false;
+            }
+        }
+
+    }
+
+    public IEnumerator DetectLastStep()
+    {
+        StoryManager storyManager = GameObject.Find("EventSystem").GetComponent<StoryManager>();
+        AudioSource audioSource = GameObject.Find("EventSystem").GetComponent<AudioSource>();
+        while (true)
+        {
+            
+            /*if (storyManager.steps[storyManager.currentStep].step.targets[0].targetAudio.name== "6loto4")
+            {
+                debugText.text += "making lock glow";
+                MakeLockGlow("Lock2");
+                MakeLockGlow("Lock");
+                break;
+            }*/
+            if(audioSource.clip.name == "6loto4")
+            {
+                MakeLockGlow("Lock2");
+                MakeLockGlow("Lock");
+                debugText.text = "should be glowing";
+            }
+            /*else if (audioSource.clip.name == "6loto5" && audioSource.isPlaying)
+            {
+                StopLockGlow("Lock2");
+                StopLockGlow("Lock");
+                break;
+            }*/
+
+            yield return null;
+        }
+        
+        yield return null;
     }
 }

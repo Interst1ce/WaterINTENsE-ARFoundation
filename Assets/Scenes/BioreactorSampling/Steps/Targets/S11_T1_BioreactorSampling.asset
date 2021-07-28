@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: Telescoping_Sampler
+  objectTarget: Scene/TelescopeSampler/Telescoping_Sampler
   sliderTarget: {fileID: 0}
   targetStep: 11
   targetAnim: {fileID: 1827226128182048838, guid: 018ab7041f9d8634fa47cfce7c801a97, type: 3}

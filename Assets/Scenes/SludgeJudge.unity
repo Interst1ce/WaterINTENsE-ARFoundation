@@ -1087,7 +1087,7 @@ PrefabInstance:
     - target: {fileID: 8903520555988982160, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
       propertyPath: missTapAudio
       value: 
-      objectReference: {fileID: 8300000, guid: 5efb52d3d490c64489c823e07fdb6f72, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 8903520555988982160, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
       propertyPath: steps.Array.size
       value: 6

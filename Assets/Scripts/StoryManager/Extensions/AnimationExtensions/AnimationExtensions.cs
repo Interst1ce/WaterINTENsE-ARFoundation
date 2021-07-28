@@ -176,6 +176,8 @@ public class AnimationExtensions : MonoBehaviour {
         yield return new WaitForSeconds(44f);
         pauseMenu.Pause();
     }
+
+    
     /*public IEnumerator StartDisableLockTagMeshLotoValve()
     {
         //yield return new WaitForSeconds(3);
