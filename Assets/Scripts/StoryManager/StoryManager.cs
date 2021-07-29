@@ -16,8 +16,7 @@ public class StoryManager : MonoBehaviour {
     public AudioSource audioSource;
     HighlightManager highlightManager;
 
-    [SerializeField]
-    Text debugText;
+    
 
     [SerializeField]
     bool reviewMode = false;

@@ -560,6 +560,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8e1b7e9f61fc30941baa739302e9e51d, type: 2}
+    - target: {fileID: -422376377624764965, guid: 88b1f9b3c238aeb4aae490362e7e9267, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -89.98021
+      objectReference: {fileID: 0}
+    - target: {fileID: -422376377624764965, guid: 88b1f9b3c238aeb4aae490362e7e9267, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 7.1938585e-31
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 88b1f9b3c238aeb4aae490362e7e9267, type: 3}
       propertyPath: m_Name
       value: ReactorChipsWater
@@ -1491,6 +1499,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: db64b56a4b0e4ba4ebad5ffc9554328d, type: 3}
       propertyPath: m_Name
       value: Outlet
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: db64b56a4b0e4ba4ebad5ffc9554328d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db64b56a4b0e4ba4ebad5ffc9554328d, type: 3}
@@ -9965,7 +9977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3305906339256696094, guid: 4108a055a5c1e814086f4a3a77735ff0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3305906339256696095, guid: 4108a055a5c1e814086f4a3a77735ff0, type: 3}
       propertyPath: m_LocalScale.x
@@ -10099,6 +10111,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1800464774387299340, guid: 36c66a1b80a27884ebe7f3b7d38b62d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.0006042093
+      objectReference: {fileID: 0}
+    - target: {fileID: -1800464774387299340, guid: 36c66a1b80a27884ebe7f3b7d38b62d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.000000009557479
+      objectReference: {fileID: 0}
+    - target: {fileID: -1800464774387299340, guid: 36c66a1b80a27884ebe7f3b7d38b62d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.0009063137
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 36c66a1b80a27884ebe7f3b7d38b62d5, type: 3}
       propertyPath: m_Name
       value: Outlet_Old
@@ -10106,6 +10130,30 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 36c66a1b80a27884ebe7f3b7d38b62d5, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3767844545383426036, guid: 36c66a1b80a27884ebe7f3b7d38b62d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.0000017108822
+      objectReference: {fileID: 0}
+    - target: {fileID: 3767844545383426036, guid: 36c66a1b80a27884ebe7f3b7d38b62d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.0411926
+      objectReference: {fileID: 0}
+    - target: {fileID: 3767844545383426036, guid: 36c66a1b80a27884ebe7f3b7d38b62d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753582676557450992, guid: 36c66a1b80a27884ebe7f3b7d38b62d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.0010982144
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753582676557450992, guid: 36c66a1b80a27884ebe7f3b7d38b62d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.000000010524988
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753582676557450992, guid: 36c66a1b80a27884ebe7f3b7d38b62d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.0005491071
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36c66a1b80a27884ebe7f3b7d38b62d5, type: 3}

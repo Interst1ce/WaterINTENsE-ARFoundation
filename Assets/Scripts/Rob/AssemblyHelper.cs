@@ -113,6 +113,82 @@ public class AssemblyHelper : MonoBehaviour
         StartCoroutine(WaitAndResizeToNorm(pumpPart));
     }
 
+    public void AltGlow(string glowObjectName)
+    {
+        GameObject glowObject = GameObject.Find(glowObjectName);
+        if (glowObject.GetComponent<MeshRenderer>().enabled)
+        {
+            Outline outline = glowObject.GetComponent<Outline>();
+            if (outline != null)
+            {
+                outline.enabled = true;
+                debugText.text += "should glow";
+            }
+            else
+            {
+                outline = glowObject.AddComponent<Outline>();
+                outline.OutlineMode = Outline.Mode.OutlineAll;
+                outline.OutlineColor = outlineColorDefault;
+                outline.OutlineWidth = outlineThicknessDefault;
+                outline.enabled = true;
+                debugText.text += "should glow";
+            }
+        }
+    }
+
+    public void AltGlowWithDelay(string glowObjectName)
+    {
+        StartCoroutine(AltGlowWithDelayCoroutine(glowObjectName));
+    }
+
+    public IEnumerator AltGlowWithDelayCoroutine(string glowObjectName)
+    {
+        GameObject glowObject = GameObject.Find(glowObjectName);
+        yield return new WaitForSeconds(1.5f);
+        if (glowObject.GetComponent<MeshRenderer>().enabled)
+        {
+            Outline outline = glowObject.GetComponent<Outline>();
+            if (outline != null)
+            {
+                outline.enabled = true;
+                debugText.text += "should glow";
+            }
+            else
+            {
+                outline = glowObject.AddComponent<Outline>();
+                outline.OutlineMode = Outline.Mode.OutlineAll;
+                outline.OutlineColor = outlineColorDefault;
+                outline.OutlineWidth = outlineThicknessDefault;
+                outline.enabled = true;
+                debugText.text += "should glow";
+            }
+        }
+    }
+
+    public void EndAltGlow(string glowObjectName)
+    {
+        GameObject glowObject = GameObject.Find(glowObjectName);
+        if (glowObject.GetComponent<MeshRenderer>().enabled)
+        {
+            Outline outline = glowObject.GetComponent<Outline>();
+            if (outline != null)
+            {
+                outline.enabled = false;
+                debugText.text += "should glow";
+            }
+            else
+            {
+                outline = glowObject.AddComponent<Outline>();
+                outline.OutlineMode = Outline.Mode.OutlineAll;
+                outline.OutlineColor = outlineColorDefault;
+                outline.OutlineWidth = outlineThicknessDefault;
+                outline.enabled = false;
+                debugText.text += "should glow";
+            }
+        }
+    }
+
+
     public void MakeLockGlow(string glowObjectName)
     {
         GameObject glowObject = GameObject.Find(glowObjectName);
