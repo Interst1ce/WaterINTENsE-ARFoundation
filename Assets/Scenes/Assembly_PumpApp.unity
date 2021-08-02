@@ -11992,6 +11992,9 @@ MonoBehaviour:
   - {fileID: 1524237902}
   - {fileID: 552839289}
   - {fileID: 691382376}
+  outlineColorDefault: {r: 1, g: 1, b: 1, a: 1}
+  outlineThicknessDefault: 1
+  debugText: {fileID: 0}
 --- !u!1 &1108975975 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3039074022160773291, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
@@ -16488,7 +16491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3305906339256696094, guid: 4108a055a5c1e814086f4a3a77735ff0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3305906339774999567, guid: 4108a055a5c1e814086f4a3a77735ff0, type: 3}
       propertyPath: m_IsActive

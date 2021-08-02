@@ -15547,7 +15547,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gloves: {fileID: 1053976129}
-  debugText: {fileID: 1538043030}
 --- !u!1001 &1069143926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25272,7 +25271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3305906339256696094, guid: 4108a055a5c1e814086f4a3a77735ff0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3305906339774999567, guid: 4108a055a5c1e814086f4a3a77735ff0, type: 3}
       propertyPath: m_IsActive
