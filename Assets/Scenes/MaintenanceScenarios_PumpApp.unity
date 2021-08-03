@@ -123,24 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &64880205 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8002908370672228486, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
-  m_PrefabInstance: {fileID: 232912987}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &64880209
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64880205}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.005, y: 0.003, z: 0.004}
-  m_Center: {x: 0.028931122, y: -0.00592222, z: 0.036440462}
 --- !u!1 &113782094
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,6 +323,7 @@ MonoBehaviour:
   completeAudio: {fileID: 8300000, guid: 1c5a1dc263e330a44b9bd3ae51fe749a, type: 3}
   currentTarget: {fileID: 0}
   pauseMenu: {fileID: 0}
+  cavitationSrc: {fileID: 0}
 --- !u!114 &190088764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,11 +514,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
       propertyPath: m_LocalRotation.y
@@ -547,7 +530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -619,24 +602,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
---- !u!1 &232912988 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 551991520552961171, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
-  m_PrefabInstance: {fileID: 232912987}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &232912989
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232912988}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.023288429, y: 0.013996085, z: 0.01495899}
-  m_Center: {x: -0.028130688, y: 0.0044522835, z: 0.01733285}
 --- !u!1 &261101005 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8656912489950381655, guid: f7b1e6b341fc73047b556b58b2971657, type: 3}
@@ -2553,9 +2518,9 @@ MonoBehaviour:
   resizeSceneButton: {fileID: 911175420}
   valueWithinRangeQ: {fileID: 1461434341}
   pump: {fileID: 340029122}
-  motor: {fileID: 232912988}
-  bearing: {fileID: 1357608534}
-  seal: {fileID: 1812230076}
+  motor: {fileID: 0}
+  bearing: {fileID: 0}
+  seal: {fileID: 0}
   glowMat: {fileID: 2100000, guid: a8066238852c6c7478dd3521c57cc828, type: 2}
   motorMat: {fileID: 4317664046061500746, guid: 2c19a495a9f38f749a1b28e037950101, type: 3}
   bearingMat: {fileID: -5397039260740635198, guid: 0ebc5b5232b9ebb4caedf751a0714e82, type: 3}
@@ -2581,7 +2546,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0ffb9914600e240910bf7a89a8fd98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugText: {fileID: 0}
   sliderName: {fileID: 0}
   sliderPanel: {fileID: 0}
   sliderValue: {fileID: 0}
@@ -2893,24 +2857,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343005880}
   m_CullTransparentMesh: 1
---- !u!1 &1357608534 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -3994145149665672293, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
-  m_PrefabInstance: {fileID: 232912987}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1357608538
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357608534}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0028131104, y: 0.009353705, z: 0.008713031}
-  m_Center: {x: 0.010995312, y: 0.0046864566, z: 0.016568042}
 --- !u!1 &1369275584
 GameObject:
   m_ObjectHideFlags: 0
@@ -3432,24 +3378,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806171276}
   m_CullTransparentMesh: 1
---- !u!1 &1812230076 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1324857736633189442, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
-  m_PrefabInstance: {fileID: 232912987}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1812230080
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1812230076}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.006864098, y: 0.0045961724, z: 0.0070795743}
-  m_Center: {x: 0.020474825, y: 0.0045931204, z: 0.016391775}
 --- !u!1 &1829665199
 GameObject:
   m_ObjectHideFlags: 0
