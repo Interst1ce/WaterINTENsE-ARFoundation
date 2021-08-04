@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targets:
   - {fileID: 11400000, guid: a3584be03ec916743a27822823f0b852, type: 2}
+  - {fileID: 11400000, guid: 8b6d848340af86c439d0d525565c1b8c, type: 2}
   questions: []
