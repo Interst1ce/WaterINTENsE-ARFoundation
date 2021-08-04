@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: HeatField_noCorn
+  objectTarget: HeatField_Collider
   sliderTarget: {fileID: 0}
   targetStep: 3
   targetAnim: {fileID: 0}
