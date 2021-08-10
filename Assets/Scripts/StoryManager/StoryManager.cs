@@ -156,6 +156,8 @@ public class StoryManager : MonoBehaviour {
                 if (target.targetAudio != null) {
                     highlightManager.StartGlow(highlightTargets,Mathf.Max(target.targetAnim.length,target.targetAudio.length));
                 } else highlightManager.StartGlow(highlightTargets,target.targetAnim.length);
+            } else if (target.targetAudio != null) {
+                highlightManager.StartGlow(highlightTargets,target.targetAudio.length);
             } else highlightManager.StartGlow(highlightTargets,1f);
             currentStep = target.targetStep;
         }

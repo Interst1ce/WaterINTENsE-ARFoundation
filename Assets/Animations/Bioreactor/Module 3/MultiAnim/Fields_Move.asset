@@ -16,14 +16,8 @@ MonoBehaviour:
   - targetObjPath: HeatField_noCorn
     animTitle: HeatField_Move
     delay: 0
-  - targetObjPath: Corn_HeatField
-    animTitle: HeatField_Corn_Move
-    delay: 0
   - targetObjPath: WetLand_noCorn
     animTitle: Wetland_Move
-    delay: 0
-  - targetObjPath: Corn_WetLands
-    animTitle: Wetland_Corn_Movw
     delay: 0
   - targetObjPath: StreamField
     animTitle: Stream_Move
