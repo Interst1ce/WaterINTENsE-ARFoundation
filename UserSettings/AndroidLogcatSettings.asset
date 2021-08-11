@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "988bdc4143534d4d34",
         "name": "com.EICCAVR.Bioreactor",
-        "processId": 25423,
+        "processId": 31280,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -198,6 +198,42 @@
             "deviceId": "988bdc4143534d4d34",
             "name": "com.EICCAVR.Bioreactor",
             "processId": 25423,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.Bioreactor",
+            "processId": 18106,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.Bioreactor",
+            "processId": 20914,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.Bioreactor",
+            "processId": 22738,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.Bioreactor",
+            "processId": 23937,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.Bioreactor",
+            "processId": 30220,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.Bioreactor",
+            "processId": 31280,
             "exited": false
         },
         {
