@@ -90,10 +90,11 @@ public class StoryManager : MonoBehaviour {
                                 StartCoroutine(DetectInput(target.interaction,tap.position));
                                 for (int j = 0; j < steps[currentStep].step.targets.Count; j++) {
                                     if (hit.transform.gameObject == objectTargets[currentStep][j] && interactionMatch) {
-                                        if (target.targetStep == steps.Count && currentStep == steps.Count) {
+                                        /*if (target.targetStep == steps.Count && currentStep == steps.Count) {
                                             finished = true;
                                             EndStory(target);
-                                        } else ContinueStory(target);
+                                        } else ContinueStory(target);*/
+                                        ContinueStory(target);
                                     } else {
                                         if (!audioSource.isPlaying) {
                                             PlaySFX(missTapAudio);
@@ -157,10 +158,12 @@ public class StoryManager : MonoBehaviour {
                 highlightManager.StartGlow(highlightTargets,target.targetAudio.length);
             } else highlightManager.StartGlow(highlightTargets,1f);
             currentStep = target.targetStep;
+            if (currentStep == steps.Count) EndStory(target);
         }
     }
 
     async public void EndStory(Target target) {
+        finished = true;
         float seconds = Mathf.Max(target.targetAudio.length,target.targetAnim.length);
         int delay = Mathf.FloorToInt(seconds * 1000) + Mathf.FloorToInt(seconds % 1 * 1000);
 

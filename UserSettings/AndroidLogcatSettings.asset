@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "988bdc4143534d4d34",
         "name": "com.EICCAVR.Bioreactor",
-        "processId": 22308,
+        "processId": 9368,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -35,253 +35,43 @@
         {
             "deviceId": "988bdc4143534d4d34",
             "name": "com.EICCAVR.Bioreactor",
-            "processId": 2436,
-            "exited": true
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 10711,
-            "exited": true
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 11889,
-            "exited": true
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 13761,
-            "exited": true
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 14425,
-            "exited": true
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 15637,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 16594,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 32398,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 1881,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 3393,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 8974,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 9807,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 11110,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 11901,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 12559,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 13297,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 14077,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 14586,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 15865,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 16935,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 19542,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 20550,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 21020,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 21562,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 22133,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 23327,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 24593,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 25423,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 18106,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 20914,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 22738,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 23937,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 30220,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 31280,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 32254,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 1505,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 3723,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
-            "processId": 7021,
-            "exited": false
-        },
-        {
-            "deviceId": "988bdc4143534d4d34",
-            "name": "com.EICCAVR.Bioreactor",
             "processId": 16610,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "988bdc4143534d4d34",
             "name": "com.EICCAVR.Bioreactor",
             "processId": 19316,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "988bdc4143534d4d34",
             "name": "com.EICCAVR.Bioreactor",
             "processId": 23244,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "988bdc4143534d4d34",
             "name": "com.EICCAVR.Bioreactor",
             "processId": 22308,
+            "exited": true
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.Bioreactor",
+            "processId": 24409,
+            "exited": true
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.Bioreactor",
+            "processId": 6991,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.Bioreactor",
+            "processId": 9368,
             "exited": false
         },
         {
