@@ -85,7 +85,6 @@ public class StoryManager : MonoBehaviour {
                     if (tap.phase == TouchPhase.Began) {
                         RaycastHit hit;
                         if (Physics.Raycast(Camera.main.ScreenPointToRay(tap.position),out hit)) {
-                            
                             foreach (Target target in steps[currentStep].step.targets) {
                                 interactionMatch = false;
                                 StartCoroutine(DetectInput(target.interaction,tap.position));
@@ -99,7 +98,6 @@ public class StoryManager : MonoBehaviour {
                                         if (!audioSource.isPlaying) {
                                             PlaySFX(missTapAudio);
                                         }
-
                                     }
                                 }
                             }
@@ -129,9 +127,8 @@ public class StoryManager : MonoBehaviour {
     async void ContinueStory(Target target) {
         //Basically, when 'ContinueStory' gets called, this event gets invoked--functions with custom functionality can be attached to this event, so that they get run here
         steps[currentStep].extensions.Invoke();
-        if (qManager.inQuestion) {
-            await Task.Yield(); //Might actually work and not cause infinite loops
-        } else if (!audioSource.isPlaying && (lastAnim == null || (lastAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !lastAnimator.IsInTransition(0)))) {
+        while (qManager.inQuestion) await Task.Yield();
+        if (!audioSource.isPlaying && (lastAnim == null || (lastAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !lastAnimator.IsInTransition(0)))) {
             highlightManager.glow = false;
             if (!reviewMode) {
                 if (!target.playAudioAfterAnim || target.targetAnim == null) {

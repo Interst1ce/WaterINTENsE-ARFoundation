@@ -95,8 +95,8 @@ public class QuestionManager : MonoBehaviour {
                 StartQuest(currentQuest.step);
             } else {
                 currentQuestIndexOffset = 0;
+                Invoke("DisableUI",0.5f);
                 Destroy(answerLayout);
-                Invoke("DisableUI",1);
                 inQuestion = false;
             }
         } else {
@@ -119,8 +119,8 @@ public class QuestionManager : MonoBehaviour {
                 StartQuest(currentQuest.step);
             } else {
                 currentQuestIndexOffset = 0;
+                Invoke("DisableUI",0.5f);
                 Destroy(answerLayout);
-                Invoke("DisableUI",1);
                 inQuestion = false;
             }
         } else {
