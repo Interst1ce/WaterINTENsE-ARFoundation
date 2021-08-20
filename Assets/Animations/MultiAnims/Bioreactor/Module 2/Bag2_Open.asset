@@ -15,4 +15,4 @@ MonoBehaviour:
   anims:
   - targetObjPath: Scene/Bag2
     animTitle: Bag2_Open
-    delay: 0.5
+    delay: 0

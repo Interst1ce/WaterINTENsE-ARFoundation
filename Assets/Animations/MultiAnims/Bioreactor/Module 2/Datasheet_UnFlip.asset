@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anims:
   - targetObjPath: Scene/Clipboard
+    animTitle: DataSheetFlip
+    delay: 0.05
+  - targetObjPath: Scene/Clipboard
     animTitle: DataSheetUnflip
     delay: 8

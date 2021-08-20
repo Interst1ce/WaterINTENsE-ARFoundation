@@ -128,7 +128,9 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 1.0.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: -6840887902730002018, guid: c18b0c4c190adfa458234b4c5f67279d, type: 2}
+  - {fileID: 4800000, guid: c9f956787b1d945e7b36e0516201fc76, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -238,7 +240,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: H:/Android Keystores/Pump.keystore
+  AndroidKeystoreName: C:/Users/gwyrwas/Documents/Android Keystores/Pump.keystore
   AndroidKeyaliasName: bioreactor_app
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
