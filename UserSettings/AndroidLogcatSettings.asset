@@ -2,8 +2,8 @@
     "m_SelectedDeviceId": "988bdc4143534d4d34",
     "m_SelectedPackage": {
         "deviceId": "988bdc4143534d4d34",
-        "name": "com.EICCAVR.AnalysisTechniques",
-        "processId": 1728,
+        "name": "com.EICCAVR.Bioreactor",
+        "processId": 18290,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -78,6 +78,18 @@
             "deviceId": "988bdc4143534d4d34",
             "name": "com.EICCAVR.AnalysisTechniques",
             "processId": 1728,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.Bioreactor",
+            "processId": 10012,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.Bioreactor",
+            "processId": 18290,
             "exited": false
         },
         {

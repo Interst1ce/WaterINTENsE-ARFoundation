@@ -1,12 +1,27 @@
 fileFormatVersion: 2
-guid: fbd603a6cfb2a3b41816fea23ef71824
+guid: a78d0c3e71dd4424986a03b64d26ec93
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: -623603649343465320
     second: Inlet_Overview_New
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BasicWater
+    second: {fileID: 2100000, guid: e14949a76cf013444928d16eae555887, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: -6478536213147159724, guid: e8f3636a8b07008489c762e925c47447, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: e14949a76cf013444928d16eae555887, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
