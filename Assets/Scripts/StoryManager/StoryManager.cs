@@ -220,14 +220,18 @@ public class StoryManager : MonoBehaviour {
                 if (Mathf.Abs(posDelta.x) > 10) {
                     if (Mathf.Sign(posDelta.x) == -1 && toCheck == Target.Interaction.SwipeLeft) {
                         yield return interactionMatch = true;
+                        break;
                     } else if (Mathf.Sign(posDelta.x) == 1 && toCheck == Target.Interaction.SwipeRight) {
                         yield return interactionMatch = true;
+                        break;
                     }
                 } else if (Mathf.Abs(posDelta.y) > 10) {
                     if (Mathf.Sign(posDelta.y ) == -1 && toCheck == Target.Interaction.SwipeDown) {
-                        yield return interactionMatch = true;
+                        yield return interactionMatch = true; 
+                        break;
                     } else if (Mathf.Sign(posDelta.y) == 1 && toCheck == Target.Interaction.SwipeUp) {
                         yield return interactionMatch = true;
+                        break;
                     }
                 }
             }
