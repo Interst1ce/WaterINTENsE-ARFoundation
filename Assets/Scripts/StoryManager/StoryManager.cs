@@ -217,16 +217,16 @@ public class StoryManager : MonoBehaviour {
             } else {
                 curPos = Input.GetTouch(0).position;
                 posDelta = curPos - startPos;
-                if (Mathf.Abs(posDelta.x) > 1) {
-                    if (Mathf.Sign(posDelta.x) == -1) {
+                if (Mathf.Abs(posDelta.x) > 10) {
+                    if (Mathf.Sign(posDelta.x) == -1 && toCheck == Target.Interaction.SwipeLeft) {
                         yield return interactionMatch = true;
-                    } else if (Mathf.Sign(posDelta.x) == 1) {
+                    } else if (Mathf.Sign(posDelta.x) == 1 && toCheck == Target.Interaction.SwipeRight) {
                         yield return interactionMatch = true;
                     }
-                } else if (Mathf.Abs(posDelta.y) > 1) {
-                    if (Mathf.Sign(posDelta.y) == -1) {
+                } else if (Mathf.Abs(posDelta.y) > 10) {
+                    if (Mathf.Sign(posDelta.y ) == -1 && toCheck == Target.Interaction.SwipeDown) {
                         yield return interactionMatch = true;
-                    } else if (Mathf.Sign(posDelta.y) == 1) {
+                    } else if (Mathf.Sign(posDelta.y) == 1 && toCheck == Target.Interaction.SwipeUp) {
                         yield return interactionMatch = true;
                     }
                 }
