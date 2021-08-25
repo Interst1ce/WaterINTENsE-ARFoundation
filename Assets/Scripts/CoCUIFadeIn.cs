@@ -23,7 +23,7 @@ public class CoCUIFadeIn : MonoBehaviour {
         //iterate through child objects and lerp each textmeshprougui vertex color alpha from 0-1
         float t = 0;
         Color original = text.color;
-        Color fadeTo = new Color(original.r,original.g,original.b,100);
+        Color fadeTo = new Color(original.r,original.g,original.b,1);
         while(t < 1) {
             t += Time.deltaTime;
             Color.Lerp(original,fadeTo,t);
