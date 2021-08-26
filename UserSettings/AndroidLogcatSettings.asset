@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "988bdc4143534d4d34",
         "name": "com.EICCAVR.Bioreactor",
-        "processId": 30135,
+        "processId": 4750,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -108,6 +108,12 @@
             "deviceId": "988bdc4143534d4d34",
             "name": "com.EICCAVR.Bioreactor",
             "processId": 30135,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.Bioreactor",
+            "processId": 4750,
             "exited": false
         },
         {

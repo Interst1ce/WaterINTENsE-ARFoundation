@@ -1485,7 +1485,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.8, z: 0.8}
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0.0055281874, y: -0.0039937105, z: 0.017969547}
 --- !u!82 &1072491907 stripped
 AudioSource:
@@ -2527,7 +2527,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.27896103, y: 0.22837375, z: 0.3379897}
+  m_Size: {x: 0.3, y: 0.3, z: 0.35}
   m_Center: {x: 0.0074186325, y: 0.00960603, z: -0.046166614}
 --- !u!1001 &1979425370
 PrefabInstance:
@@ -2554,7 +2554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3305906339256696094, guid: 4108a055a5c1e814086f4a3a77735ff0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3305906339774999567, guid: 4108a055a5c1e814086f4a3a77735ff0, type: 3}
       propertyPath: m_IsActive
@@ -2641,7 +2641,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Size: {x: 0.4, y: 0.4, z: 0.4}
   m_Center: {x: 0.0021986577, y: 0.0022526835, z: 0.017327238}
 --- !u!1 &2091304582
 GameObject:
