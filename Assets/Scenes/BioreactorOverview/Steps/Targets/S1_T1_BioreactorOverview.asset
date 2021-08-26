@@ -17,6 +17,6 @@ MonoBehaviour:
   objectTarget: Inlet
   sliderTarget: {fileID: 0}
   targetStep: 1
-  targetAnim: {fileID: -623603649343465320, guid: 8aa36ccb55cc78145aa14e40dd0b9a19, type: 3}
+  targetAnim: {fileID: -623603649343465320, guid: 5e2608c2a2f9c7e488c587fed24bb715, type: 3}
   targetAudio: {fileID: 8300000, guid: da9e050ca495dc54d976e301b59a5c6a, type: 3}
   playAudioAfterAnim: 0

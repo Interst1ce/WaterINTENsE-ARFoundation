@@ -1,27 +1,12 @@
 fileFormatVersion: 2
-guid: a78d0c3e71dd4424986a03b64d26ec93
+guid: 5e2608c2a2f9c7e488c587fed24bb715
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: -623603649343465320
-    second: Inlet_Overview_Too_Long
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BasicWater
-    second: {fileID: 2100000, guid: e14949a76cf013444928d16eae555887, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: -6478536213147159724, guid: e8f3636a8b07008489c762e925c47447, type: 3}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.002
-    second: {fileID: 2100000, guid: e14949a76cf013444928d16eae555887, type: 2}
+    second: Inlet_Overview_New
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -50,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Inlet_Overview_Too_Long
+      name: Inlet_Overview_New
       takeName: Scene
       internalID: 0
-      firstFrame: 610
-      lastFrame: 2650
+      firstFrame: 0
+      lastFrame: 706
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -78,7 +63,7 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
