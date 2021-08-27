@@ -122,7 +122,7 @@ public class AssemblyHelper : MonoBehaviour
             if (outline != null)
             {
                 outline.enabled = true;
-                debugText.text += "should glow";
+                //debugText.text += "should glow";
             }
             else
             {
@@ -131,7 +131,7 @@ public class AssemblyHelper : MonoBehaviour
                 outline.OutlineColor = outlineColorDefault;
                 outline.OutlineWidth = outlineThicknessDefault;
                 outline.enabled = true;
-                debugText.text += "should glow";
+                //debugText.text += "should glow";
             }
         }
     }
@@ -151,7 +151,7 @@ public class AssemblyHelper : MonoBehaviour
             if (outline != null)
             {
                 outline.enabled = true;
-                debugText.text += "should glow";
+                //debugText.text += "should glow";
             }
             else
             {
@@ -160,7 +160,7 @@ public class AssemblyHelper : MonoBehaviour
                 outline.OutlineColor = outlineColorDefault;
                 outline.OutlineWidth = outlineThicknessDefault;
                 outline.enabled = true;
-                debugText.text += "should glow";
+                //debugText.text += "should glow";
             }
         }
     }
@@ -174,7 +174,7 @@ public class AssemblyHelper : MonoBehaviour
             if (outline != null)
             {
                 outline.enabled = false;
-                debugText.text += "should glow";
+                //debugText.text += "should glow";
             }
             else
             {
@@ -183,7 +183,7 @@ public class AssemblyHelper : MonoBehaviour
                 outline.OutlineColor = outlineColorDefault;
                 outline.OutlineWidth = outlineThicknessDefault;
                 outline.enabled = false;
-                debugText.text += "should glow";
+                //debugText.text += "should glow";
             }
         }
     }
@@ -253,7 +253,7 @@ public class AssemblyHelper : MonoBehaviour
             {
                 MakeLockGlow("Lock2");
                 MakeLockGlow("Lock");
-                debugText.text = "should be glowing";
+                //debugText.text = "should be glowing";
             }
             /*else if (audioSource.clip.name == "6loto5" && audioSource.isPlaying)
             {
