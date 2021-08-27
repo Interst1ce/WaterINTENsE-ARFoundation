@@ -552,6 +552,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5762050639917953452, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b92c02015c5a8747a602d172f5800bf, type: 2}
     - target: {fileID: -3694501138679088836, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
       propertyPath: m_Name
       value: IntakePiping_side_lp
@@ -611,6 +615,60 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
   m_PrefabInstance: {fileID: 232912987}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &232912989 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6768752926004417018, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
+  m_PrefabInstance: {fileID: 232912987}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &232912990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -984937273539090819, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
+  m_PrefabInstance: {fileID: 232912987}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &232912991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3666120437956642299, guid: 5f4ae50bc1d42284795aac19afbf0bd6, type: 3}
+  m_PrefabInstance: {fileID: 232912987}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &232912992
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232912989}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0056749354, y: 0.0045961724, z: 0.00619333}
+  m_Center: {x: 0.020564973, y: 0.004593117, z: 0.016501606}
+--- !u!65 &232912993
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232912990}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00281311, y: 0.0075305337, z: 0.007646704}
+  m_Center: {x: 0.010995311, y: 0.004632792, z: 0.016516494}
+--- !u!65 &232912994
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232912991}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.023288427, y: 0.013996093, z: 0.014958997}
+  m_Center: {x: -0.028130686, y: 0.0044522854, z: 0.017332857}
 --- !u!1 &261101005 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8656912489950381655, guid: f7b1e6b341fc73047b556b58b2971657, type: 3}
@@ -2558,9 +2616,9 @@ MonoBehaviour:
   resizeSceneButton: {fileID: 911175420}
   valueWithinRangeQ: {fileID: 1461434341}
   pump: {fileID: 340029122}
-  motor: {fileID: 0}
-  bearing: {fileID: 0}
-  seal: {fileID: 0}
+  motor: {fileID: 232912991}
+  bearing: {fileID: 232912990}
+  seal: {fileID: 232912989}
   glowMat: {fileID: 2100000, guid: a8066238852c6c7478dd3521c57cc828, type: 2}
   motorMat: {fileID: 4317664046061500746, guid: 2c19a495a9f38f749a1b28e037950101, type: 3}
   bearingMat: {fileID: -5397039260740635198, guid: 0ebc5b5232b9ebb4caedf751a0714e82, type: 3}
