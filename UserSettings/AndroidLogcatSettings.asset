@@ -2,8 +2,8 @@
     "m_SelectedDeviceId": "988bdc4143534d4d34",
     "m_SelectedPackage": {
         "deviceId": "988bdc4143534d4d34",
-        "name": "com.EICCAVR.Bioreactor",
-        "processId": 20386,
+        "name": "com.EICCAVR.CentrifugalPump",
+        "processId": 12939,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -144,6 +144,24 @@
             "deviceId": "988bdc4143534d4d34",
             "name": "com.EICCAVR.Bioreactor",
             "processId": 20386,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.CentrifugalPump",
+            "processId": 3667,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.CentrifugalPump",
+            "processId": 6091,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.CentrifugalPump",
+            "processId": 12939,
             "exited": false
         },
         {
