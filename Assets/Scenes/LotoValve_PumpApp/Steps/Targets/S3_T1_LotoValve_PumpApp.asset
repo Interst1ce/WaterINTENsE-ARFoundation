@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   interaction: 0
-  objectTarget: Lock
+  objectTarget: PadLock/Lock
   sliderTarget: {fileID: 0}
   targetStep: 3
   targetAnim: {fileID: 7400000, guid: 28cecd4532f05fd43ac7d2e9d14be182, type: 2}
