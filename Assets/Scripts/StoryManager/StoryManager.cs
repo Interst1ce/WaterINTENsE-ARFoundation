@@ -158,7 +158,7 @@ public class StoryManager : MonoBehaviour {
                 highlightManager.StartGlow(highlightTargets,target.targetAudio.length);
             } else highlightManager.StartGlow(highlightTargets,1f);
             currentStep = target.targetStep;
-            if (currentStep == steps.Count) EndStory(target);
+            if (!PauseMenu.paused && currentStep == steps.Count) EndStory(target);
         }
     }
 
