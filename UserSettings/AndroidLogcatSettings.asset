@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "988bdc4143534d4d34",
         "name": "com.EICCAVR.CentrifugalPump",
-        "processId": 29374,
+        "processId": 1307,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -186,6 +186,12 @@
             "deviceId": "988bdc4143534d4d34",
             "name": "com.EICCAVR.CentrifugalPump",
             "processId": 29374,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.CentrifugalPump",
+            "processId": 1307,
             "exited": false
         },
         {
