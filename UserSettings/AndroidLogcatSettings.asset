@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "988bdc4143534d4d34",
         "name": "com.EICCAVR.CentrifugalPump",
-        "processId": 1307,
+        "processId": 17266,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -192,6 +192,30 @@
             "deviceId": "988bdc4143534d4d34",
             "name": "com.EICCAVR.CentrifugalPump",
             "processId": 1307,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.CentrifugalPump",
+            "processId": 13014,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.CentrifugalPump",
+            "processId": 15109,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.CentrifugalPump",
+            "processId": 16846,
+            "exited": false
+        },
+        {
+            "deviceId": "988bdc4143534d4d34",
+            "name": "com.EICCAVR.CentrifugalPump",
+            "processId": 17266,
             "exited": false
         },
         {

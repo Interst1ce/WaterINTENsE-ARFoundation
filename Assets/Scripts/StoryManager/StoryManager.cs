@@ -164,7 +164,10 @@ public class StoryManager : MonoBehaviour {
 
     async public void EndStory(Target target) {
         finished = true;
-        float seconds = Mathf.Max(target.targetAudio.length,target.targetAnim.length);
+        float seconds;
+        if (target.playAudioAfterAnim) {
+            seconds = target.targetAudio.length + target.targetAnim.length;
+        }else seconds = Mathf.Max(target.targetAudio.length,target.targetAnim.length);
         int delay = Mathf.FloorToInt(seconds * 1000) + Mathf.FloorToInt(seconds % 1 * 1000);
 
         //Debug.Log("Waiting: " + delay);
