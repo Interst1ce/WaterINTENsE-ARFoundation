@@ -5,19 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu_SludgeJudge.unity
     guid: 2e8c5d83042022447897f8c82c63f30c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SludgeJudge.unity
     guid: 619892c6a29cab24d89a8e49cf1266e2
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chloramination.unity
     guid: fbfb90aa3f567a3479c5f1c9fe7c4722
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Titration.unity
     guid: 6df6e1b41dba8624e81898f37081c857
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/pHTesting.unity
     guid: a79b57d75505ba645bf0722b9b322f73
   - enabled: 0
@@ -44,49 +44,49 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SplashScreen_Pump.unity
     guid: 0535c6c9552c89744a8dd40613dea0dc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu_Operations_PumpApp.unity
     guid: 2e53b483a419fe044bfe8d17102735e0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu_Maintenance_PumpApp.unity
     guid: 30761e4c84f707a41a55aacd6b52cbda
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu_Safety_PumpApp.unity
     guid: 729dac3a862a1974ebb3e6c76a917a3a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Assembly_PumpApp.unity
     guid: 75907c42db953894db48fc1a4708707d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Operations_PumpApp.unity
     guid: 4d2d3de022e443346ba89cefd606c975
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/OperationsScenarios_LowSuc_PumpApp.unity
     guid: 395a6350c6c36604abb46e6f9802e1f3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/OperationsScenarios_HighD_PumpApp.unity
     guid: 4238ca3555d3a8149ae297b317cc5543
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/OperationsScenarios_Recirc_PumpApp.unity
     guid: 1a035dd0f90197a459e69d79cdab9a9b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/OperationsExplore_PumpApp.unity
     guid: bcd77b47fa78b4a4ab9e50d275bcaf91
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Maintenance_PumpApp.unity
     guid: 22c40ceb6a76fd9418fa66950a8f8a93
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MaintenanceScenarios_PumpApp.unity
     guid: e0c06613d631faa4ba610f89d8b74ba8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PPE_PumpApp.unity
     guid: efccfc48b59f71e4883717696378bae1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LotoCB_PumpApp.unity
     guid: f8c31bb1414dfaa438d8aa1fa56c3271
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LotoValve_PumpApp.unity
     guid: eb8d7f046523b14428d56d885e7c575f
   - enabled: 1
