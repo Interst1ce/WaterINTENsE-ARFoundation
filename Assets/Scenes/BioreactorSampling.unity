@@ -189,7 +189,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -469,7 +469,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -603,7 +603,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -979,7 +979,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1113,7 +1113,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -8294,7 +8294,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -8537,11 +8537,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1092503716006948411, guid: 314d814a9d45f434fbd01266d1121a51, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: -89.98021
       objectReference: {fileID: 0}
     - target: {fileID: 1092503716006948411, guid: 314d814a9d45f434fbd01266d1121a51, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -1.4033418e-14
+      value: -1.40334166e-14
       objectReference: {fileID: 0}
     - target: {fileID: 1092503716006948411, guid: 314d814a9d45f434fbd01266d1121a51, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -8649,7 +8649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4247364582410776042, guid: 314d814a9d45f434fbd01266d1121a51, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: -89.98021
       objectReference: {fileID: 0}
     - target: {fileID: 4247364582410776042, guid: 314d814a9d45f434fbd01266d1121a51, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -8797,7 +8797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8471725213694930044, guid: 314d814a9d45f434fbd01266d1121a51, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: -89.98021
       objectReference: {fileID: 0}
     - target: {fileID: 8471725213694930044, guid: 314d814a9d45f434fbd01266d1121a51, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -9190,7 +9190,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -9529,7 +9529,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -9744,7 +9744,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -9924,7 +9924,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -10152,7 +10152,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -10286,7 +10286,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -10420,7 +10420,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -10602,7 +10602,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -11134,7 +11134,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -11268,7 +11268,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -11467,7 +11467,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -18526,7 +18526,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -18927,7 +18927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8903520555988982160, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
       propertyPath: steps.Array.data[18].extensions.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8903520555988982160, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
       propertyPath: steps.Array.data[20].extensions.m_PersistentCalls.m_Calls.Array.size
@@ -19035,7 +19035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8903520555988982160, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
       propertyPath: steps.Array.data[18].extensions.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8903520555988982160, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
       propertyPath: steps.Array.data[20].extensions.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -19148,7 +19148,7 @@ PrefabInstance:
     - target: {fileID: 8903520555988982160, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
       propertyPath: steps.Array.data[18].extensions.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1069143928}
     - target: {fileID: 8903520555988982160, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
       propertyPath: steps.Array.data[20].extensions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -19367,7 +19367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8903520555988982160, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
       propertyPath: steps.Array.data[18].extensions.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ToggleAltCollider
+      value: PlayMultiAnim
       objectReference: {fileID: 0}
     - target: {fileID: 8903520555988982160, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
       propertyPath: steps.Array.data[20].extensions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -19479,7 +19479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8903520555988982160, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
       propertyPath: steps.Array.data[18].extensions.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SamplingExtras, Assembly-CSharp
+      value: AnimationExtensions, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8903520555988982160, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
       propertyPath: steps.Array.data[20].extensions.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -19590,6 +19590,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8903520555988982160, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
+      propertyPath: steps.Array.data[18].extensions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: f89b6ae11c61b634cb6726c4c715466b, type: 2}
+    - target: {fileID: 8903520555988982160, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
       propertyPath: steps.Array.data[20].extensions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 11400000, guid: f47d697f85e37c84b8fdc23d9861e95b, type: 2}
@@ -19695,7 +19699,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8903520555988982160, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
       propertyPath: steps.Array.data[18].extensions.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: MultiAnim, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8903520555988982160, guid: c37ba9602ba8419479a5b9cd520e30a6, type: 3}
       propertyPath: steps.Array.data[20].extensions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -19911,7 +19915,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -20045,7 +20049,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -20179,7 +20183,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -20313,7 +20317,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -20581,7 +20585,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -20924,7 +20928,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -21352,7 +21356,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -21486,7 +21490,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -21993,7 +21997,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 255
   m_fontColor: {r: 1, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -30088,7 +30092,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -52.209503
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -30108,15 +30112,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7148980929729145060, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.0000075545095
+      value: 0.000013491238
       objectReference: {fileID: 0}
     - target: {fileID: -7148980929729145060, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -9.993761
+      value: 0.01701395
       objectReference: {fileID: 0}
     - target: {fileID: -7148980929729145060, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.00003363276
+      value: -0.00003415096
       objectReference: {fileID: 0}
     - target: {fileID: -7080476283249816269, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_Layer
@@ -30132,23 +30136,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4557204969491305488, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -9.993759
+      value: 0.01701587
       objectReference: {fileID: 0}
     - target: {fileID: -4135627621607227740, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.0000023706336
+      value: 0.0000000040575485
       objectReference: {fileID: 0}
     - target: {fileID: -4135627621607227740, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -9.993755
+      value: 0.017018592
       objectReference: {fileID: 0}
     - target: {fileID: -4135627621607227740, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.000013453104
+      value: -0.000013660378
       objectReference: {fileID: 0}
     - target: {fileID: -3837255680886944796, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -9.99376
+      value: 0.017015362
       objectReference: {fileID: 0}
     - target: {fileID: -3837255680886944796, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -30160,15 +30164,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1674546894155986806, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.0000050842254
+      value: 0.000009845493
       objectReference: {fileID: 0}
     - target: {fileID: -1674546894155986806, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -10.036351
+      value: -0.0000034152577
       objectReference: {fileID: 0}
     - target: {fileID: -1674546894155986806, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.000026902677
+      value: -0.000027320755
       objectReference: {fileID: 0}
     - target: {fileID: -1652591608974809018, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_Layer
@@ -30180,15 +30184,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a4f2eee3c243df3429cc73f015c346c6, type: 2}
     - target: {fileID: -1042623510177932346, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.0000030900865
+      value: 0.0000030900862
       objectReference: {fileID: 0}
     - target: {fileID: -1042623510177932346, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -10.036343
+      value: 0.0000068300305
       objectReference: {fileID: 0}
     - target: {fileID: -1042623510177932346, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -5.0888865e-14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -38621603145786519, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_Layer
@@ -30196,15 +30200,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 147196130981231728, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.0000011853174
+      value: 0.000000002028628
       objectReference: {fileID: 0}
     - target: {fileID: 147196130981231728, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -9.993759
+      value: 0.017017365
       objectReference: {fileID: 0}
     - target: {fileID: 147196130981231728, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.000006726552
+      value: -0.000006830189
       objectReference: {fileID: 0}
     - target: {fileID: 583783173166390907, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_Layer
@@ -30232,15 +30236,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3375435715562583424, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -9.993759
+      value: 0.01701539
       objectReference: {fileID: 0}
     - target: {fileID: 5853642829219208474, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -9.99376
+      value: 0.017015232
       objectReference: {fileID: 0}
     - target: {fileID: 6609493762104327279, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -10.041675
+      value: -1.4082271e-10
       objectReference: {fileID: 0}
     - target: {fileID: 6866880679909356167, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_Layer
@@ -30248,31 +30252,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6906614066236716030, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.000022579492
+      value: -0.000027328875
       objectReference: {fileID: 0}
     - target: {fileID: 6906614066236716030, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -9.993755
+      value: 0.017018592
       objectReference: {fileID: 0}
     - target: {fileID: 6906614066236716030, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.00002690621
+      value: 0.000027320759
       objectReference: {fileID: 0}
     - target: {fileID: 8615146471691865630, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -9.993757
+      value: 0.017018326
       objectReference: {fileID: 0}
     - target: {fileID: 9057180346820182715, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.000009482539
+      value: -0.00000001622699
       objectReference: {fileID: 0}
     - target: {fileID: 9057180346820182715, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -9.993759
+      value: 0.017015232
       objectReference: {fileID: 0}
     - target: {fileID: 9057180346820182715, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.000053812415
+      value: 0.00005464151
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dfff0af08ee99c4789d581a761f0e88, type: 3}

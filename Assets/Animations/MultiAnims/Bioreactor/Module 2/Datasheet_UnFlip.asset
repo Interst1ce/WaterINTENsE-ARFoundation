@@ -18,4 +18,4 @@ MonoBehaviour:
     delay: 0.05
   - targetObjPath: Scene/Clipboard
     animTitle: DataSheetUnflip
-    delay: 8
+    delay: 6.5

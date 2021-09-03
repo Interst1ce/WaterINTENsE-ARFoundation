@@ -127,10 +127,10 @@ public class StoryManager : MonoBehaviour {
 
     async void ContinueStory(Target target) {
         //Basically, when 'ContinueStory' gets called, this event gets invoked--functions with custom functionality can be attached to this event, so that they get run here
-        while (qManager.inQuestion) await Task.Yield();
         if (!audioSource.isPlaying && (lastAnim == null || (lastAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !lastAnimator.IsInTransition(0)))) {
             steps[currentStep].extensions.Invoke();
             highlightManager.glow = false;
+            while (qManager.inQuestion) await Task.Yield();
             if (!reviewMode) {
                 if (!target.playAudioAfterAnim || target.targetAnim == null) {
                     PlayAudio(target.targetAudio);

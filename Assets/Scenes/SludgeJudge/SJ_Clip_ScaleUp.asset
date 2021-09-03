@@ -10,15 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd55bc23b3e646e41a4444fc89f4597d, type: 3}
-  m_Name: Bag3_Open
+  m_Name: SJ_Clip_ScaleUp
   m_EditorClassIdentifier: 
   anims:
-  - targetObjPath: Scene/Bag3
-    animTitle: Bag3_ToCooler
-    delay: 0.05
-  - targetObjPath: Scene/Cooler
-    animTitle: Cooler_Open
-    delay: 0.05
-  - targetObjPath: Scene/Cooler
-    animTitle: Cooler_Close
-    delay: 5
+  - targetObjPath: Clipboard_1
+    animTitle: BlowUp
+    delay: 0

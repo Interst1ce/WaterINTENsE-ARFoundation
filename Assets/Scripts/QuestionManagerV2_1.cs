@@ -59,25 +59,25 @@ public class QuestionManagerV2_1 : MonoBehaviour {
             panel.Find("Enter").GetComponent<Button>().onClick.AddListener(delegate { CheckNumpad(numInput); });
             int i = 0;
             foreach (Transform button in panel.Find("NumGrid")) {
-                Debug.Log("Index: " + i + " Value: " + numGrid[i]);
+                //Debug.Log("Index: " + i + " Value: " + numGrid[i]);
                 int v = numGrid[i];
                 button.GetComponent<Button>().onClick.AddListener(delegate { UpdateNumInput(v); });
                 i++;
             }
             panel.Find("Zero").GetComponent<Button>().onClick.AddListener(delegate { UpdateNumInput(0); });
-            Debug.Log("Numpad Listeners Added");
+            //Debug.Log("Numpad Listeners Added");
         } else {
             int i = 0;
             foreach (Transform ansBut in answerLayout.transform) {
                 ansBut.GetComponent<Button>().onClick.AddListener(delegate { CheckAnswer(i); });
                 i++;
             }
-            Debug.Log("Multiple Choice Listeners Added");
+            //Debug.Log("Multiple Choice Listeners Added");
         }
-        Debug.Log("Updating UI");
+        //Debug.Log("Updating UI");
         //StartCoroutine(UpdateUI(1,currentQuest,audioDelay));
         //qAPanel.SetActive(true);
-        Debug.Log("UI Finished Updating");
+        //Debug.Log("UI Finished Updating");
     }
 
     void CheckAnswer(int choice) {

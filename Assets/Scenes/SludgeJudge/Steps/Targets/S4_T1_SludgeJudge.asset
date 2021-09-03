@@ -17,6 +17,6 @@ MonoBehaviour:
   objectTarget: Clipboard_1
   sliderTarget: {fileID: 0}
   targetStep: 4
-  targetAnim: {fileID: 1827226128182048838, guid: 1df142017197cd84db501222159d5457, type: 3}
+  targetAnim: {fileID: 0}
   targetAudio: {fileID: 0}
   playAudioAfterAnim: 0
